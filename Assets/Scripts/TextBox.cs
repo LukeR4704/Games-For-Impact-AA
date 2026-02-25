@@ -10,7 +10,7 @@ public class TextBox : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
 
     [Header("Typing")]
-    [SerializeField] private float wordDelay = 0.15f;
+    [SerializeField] private float letterDelay = 0.03f;
 
     [Header("Input System")]
     [SerializeField] private InputActionReference clickAction;
@@ -72,12 +72,10 @@ public class TextBox : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
-        string[] words = line.Split(' ');
-
-        foreach (string word in words)
+        foreach (char c in line)
         {
-            dialogueText.text += word + " ";
-            yield return new WaitForSeconds(wordDelay);
+            dialogueText.text += c;
+            yield return new WaitForSeconds(letterDelay);
         }
 
         isTyping = false;

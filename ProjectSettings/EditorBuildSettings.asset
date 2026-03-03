@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/SpareRoom.unity
     guid: 24dad47663046dc408458ea8b5c5db3f
+  - enabled: 1
+    path: Assets/Scenes/BarryScene.unity
+    guid: 3c412a12d3eff8f4d85b8e7a575c8c1c
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: dc9cc970addfe3049b45945ddfa6c7c2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -20,6 +20,11 @@ public class TextBox : MonoBehaviour
     public UnityEvent onLineComplete;
     public UnityEvent onDialogueComplete;
 
+    public bool IsLastLine()
+    {
+        return currentLineIndex == lines.Length - 1;
+    }
+
     private string[] lines;
     private int currentLineIndex;
     private Coroutine typingCoroutine;

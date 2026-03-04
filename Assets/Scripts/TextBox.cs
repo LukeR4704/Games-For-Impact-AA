@@ -20,6 +20,12 @@ public class TextBox : MonoBehaviour
     public UnityEvent onLineComplete;
     public UnityEvent onDialogueComplete;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip blipSound;
+    [SerializeField] private int lettersPerBlip = 2;
+    [SerializeField] private float pitchVariation = 0.1f;
+
     public bool IsLastLine()
     {
         return currentLineIndex == lines.Length - 1;
@@ -77,9 +83,21 @@ public class TextBox : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
-        foreach (char c in line)
+        for (int i = 0; i < line.Length; i++)
         {
-            dialogueText.text += c;
+            dialogueText.text += line[i];
+
+            // Play blip every few letters (skip spaces)
+            if (i % lettersPerBlip == 0 && line[i] != ' ')
+            {
+                if (blipSound != null && audioSource != null && !audioSource.isPlaying)
+                {
+                    audioSource.clip = blipSound;
+                    audioSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
+                    audioSource.Play();
+                }
+            }
+
             yield return new WaitForSeconds(letterDelay);
         }
 
@@ -91,6 +109,9 @@ public class TextBox : MonoBehaviour
     {
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
+        
+        if (audioSource != null)
+            audioSource.Stop();
 
         dialogueText.text = lines[currentLineIndex];
         isTyping = false;

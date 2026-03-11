@@ -16,6 +16,8 @@ public class ChoiceUI : MonoBehaviour
         rightChoice = right;
         textBox = targetTextBox;
 
+        textBox.SetInputEnabled(false);
+
         leftButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = left.choiceText;
         rightButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = right.choiceText;
 
@@ -31,6 +33,8 @@ public class ChoiceUI : MonoBehaviour
     private void SelectChoice(DialogueChoice choice)
     {
         gameObject.SetActive(false);
+        textBox.SetInputEnabled(true);
+        textBox.ForceEndDialogue();
         textBox.StartDialogue(choice.nextDialogue);
     }
 }

@@ -19,6 +19,16 @@ public class TextBox : MonoBehaviour
     public UnityEvent onLineStart;
     public UnityEvent onLineComplete;
     public UnityEvent onDialogueComplete;
+    private bool inputEnabled = true;
+    private bool dialogueActive = false;
+    public bool IsDialogueActive()
+    {
+        return dialogueActive;
+    }
+    public void ForceEndDialogue()
+    {
+        dialogueActive = false;
+    }
 
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
@@ -29,6 +39,11 @@ public class TextBox : MonoBehaviour
     public bool IsLastLine()
     {
         return currentLineIndex == lines.Length - 1;
+    }
+
+    public void SetInputEnabled(bool enabled)
+    {
+        inputEnabled = enabled;
     }
 
     private string[] lines;
@@ -50,6 +65,11 @@ public class TextBox : MonoBehaviour
 
     public void StartDialogue(string[] dialogueLines)
     {
+        if(dialogueActive)
+            return;
+        
+        dialogueActive = true;
+
         lines = dialogueLines;
         currentLineIndex = 0;
         gameObject.SetActive(true);
@@ -58,6 +78,9 @@ public class TextBox : MonoBehaviour
 
     private void OnClick(InputAction.CallbackContext context)
     {
+        if (!inputEnabled)
+            return;
+        
         if (isTyping)
         {
             FinishLineInstantly();
@@ -134,6 +157,7 @@ public class TextBox : MonoBehaviour
 
     private void EndDialogue()
     {
+        dialogueActive = false;
         onDialogueComplete?.Invoke();
         gameObject.SetActive(false);
     }

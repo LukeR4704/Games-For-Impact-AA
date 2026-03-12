@@ -14,8 +14,12 @@ public class DialogueTrigger : MonoBehaviour
 
     private bool choicesShown;
 
-    private void Start()
+    public void TriggerDialogue()
     {
+        if (textBox.IsDialogueActive())
+            return;
+
+        choicesShown = false; //reset choices so you can choose a different option
         textBox.onLineComplete.AddListener(OnLineComplete);
         textBox.StartDialogue(dialogue);
     }

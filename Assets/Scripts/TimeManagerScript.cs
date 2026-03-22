@@ -17,6 +17,7 @@ public class TimeManagerScript : MonoBehaviour
     public int finalHour = 3;
     public string[] timeOfDay;
 
+    public string dayStartScene, finalScene;
     [SerializeField] private TextMeshProUGUI dayText, hourText;
 
 
@@ -68,6 +69,7 @@ public class TimeManagerScript : MonoBehaviour
             dayText.text = "Day : " + currentDay.ToString();
             hourText.text = "Hour : " + timeOfDay[currentHour];
 
+            SceneManager.LoadScene(dayStartScene);
         }
 
         else if(currentDay > finalDay)
@@ -79,7 +81,7 @@ public class TimeManagerScript : MonoBehaviour
 
     public void ProceedToEnding()
     {
-        SceneManager.LoadScene("EndingScene");
+        SceneManager.LoadScene(finalScene);
     }
 
 

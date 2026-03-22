@@ -430,6 +430,8 @@ MonoBehaviour:
   currentHour: 0
   finalHour: 3
   timeOfDay: []
+  dayStartScene: BarryScene
+  finalScene: EndingScene
   dayText: {fileID: 8193825928245245225}
   hourText: {fileID: 5308091922108104764}
 --- !u!1 &4457320093112922853

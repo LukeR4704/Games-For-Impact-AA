@@ -978,7 +978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 636171912692272099, guid: dc1240fd7d71e51428952b6a9a06678d, type: 3}
+  m_Sprite: {fileID: -6862966645357384329, guid: cfa4531d66786884da6ff956dc636607, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1253,10 +1253,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 43012220}
-    - target: {fileID: 205253211117014363, guid: cc209ba6bbf622944bbd89793649b292, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLocation
-      objectReference: {fileID: 0}
     - target: {fileID: 2371441999101977219, guid: cc209ba6bbf622944bbd89793649b292, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1341,10 +1337,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 43012220}
-    - target: {fileID: 3984497780106178904, guid: cc209ba6bbf622944bbd89793649b292, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLocation
-      objectReference: {fileID: 0}
     - target: {fileID: 7044940476455176393, guid: cc209ba6bbf622944bbd89793649b292, type: 3}
       propertyPath: m_Name
       value: MapPanel

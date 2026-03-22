@@ -130,7 +130,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: DialogueScene
+          m_StringArgument: Hallway
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1860443472136186569
@@ -537,7 +537,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: KidDialogue
+          m_StringArgument: KidsBedroom
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &7044940476455176393

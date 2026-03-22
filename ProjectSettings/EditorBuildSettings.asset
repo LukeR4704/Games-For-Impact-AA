@@ -6,29 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Hallway.unity
+    guid: 5db95773f0c0c5749a7e96316a52e0e2
   - enabled: 1
-    path: Assets/Scenes/LukeScene.unity
-    guid: b2249b09341bc3a4d8a72b9e840b7260
-  - enabled: 1
-    path: Assets/Scenes/Rooms/Basement.unity
-    guid: b02d56fb00440ad40bd6a4190e6cda2d
-  - enabled: 1
-    path: Assets/Scenes/Rooms/FrontDoor.unity
-    guid: 3fd2fe0d75707934f8a3641233c16f5a
-  - enabled: 1
-    path: Assets/Scenes/Rooms/Kitchen.unity
-    guid: 36200190d504bdd4eb2e8bb576527c77
-  - enabled: 1
-    path: Assets/Scenes/Rooms/SpareRoom.unity
-    guid: 24dad47663046dc408458ea8b5c5db3f
-  - enabled: 1
-    path: Assets/Scenes/BarryScene.unity
-    guid: 3c412a12d3eff8f4d85b8e7a575c8c1c
-  - enabled: 1
-    path: Assets/Scenes/EndingScene.unity
-    guid: dc9cc970addfe3049b45945ddfa6c7c2
+    path: Assets/Scenes/KidsBedroom.unity
+    guid: ce299ebde8ecaa942a12c1a5a74fe82d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

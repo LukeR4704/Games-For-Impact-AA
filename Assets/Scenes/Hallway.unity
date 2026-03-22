@@ -240,10 +240,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1452551914}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -738,7 +738,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 638692617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 971277141}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &638692617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +1164,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1bae86d727f5949bc814cf4ed710e3, type: 3}
+--- !u!1 &971277140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971277142}
+  - component: {fileID: 971277141}
+  m_Layer: 0
+  m_Name: DialogueTrigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &971277141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971277140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff41284d8a1c8b0498218d8f11cc6984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  textBox: {fileID: 1044746273}
+  dialogue:
+  - Yes I guess you wouldn't...
+  - So... erm...
+  - What do you do for work?
+  choiceUI: {fileID: 1893663839}
+  leftChoice:
+    choiceText: I'm a nurse
+    nextDialogue:
+    - Ah, really?
+    - My wife was a nurse.
+    - And a damn good one too... heh.
+  rightChoice:
+    choiceText: I'm a school teacher
+    nextDialogue:
+    - Ah, really?
+    - My daughter is a teacher.
+    - I hope she's doing well...
+--- !u!4 &971277142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971277140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1280, y: 370, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1044746269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,12 +1467,10 @@ MonoBehaviour:
   choiceUI: {fileID: 1893663839}
   leftChoice:
     choiceText: Hopefully not long
-    nextDialogue:
-    - Yes... Hopefully not.
+    nextDialogue: []
   rightChoice:
     choiceText: I have no idea
-    nextDialogue:
-    - I guess you wouldn't.
+    nextDialogue: []
 --- !u!4 &1083053943
 Transform:
   m_ObjectHideFlags: 0
@@ -1522,6 +1594,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1452551913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1452551915}
+  - component: {fileID: 1452551914}
+  m_Layer: 0
+  m_Name: DialogueTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1452551914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452551913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff41284d8a1c8b0498218d8f11cc6984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  textBox: {fileID: 1044746273}
+  dialogue:
+  - I wouldn't be too upset if it lasted a bit longer...
+  choiceUI: {fileID: 1893663839}
+  leftChoice:
+    choiceText: Why?
+    nextDialogue:
+    - Erm...
+    - Well, I don't have anyone to talk to so...
+    - I appreciate that you let me stay with you and talk with you.
+    - Truly, thank you.
+  rightChoice:
+    choiceText: I would
+    nextDialogue:
+    - Ah, yes...
+    - Silly me, I suppose it wouldn't be ideal.
+    - I apologise for my rudeness.
+--- !u!4 &1452551915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452551913}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1280, y: 370, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482028383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,4 +2518,6 @@ SceneRoots:
   - {fileID: 494868032}
   - {fileID: 1167864141}
   - {fileID: 1083053943}
+  - {fileID: 1452551915}
+  - {fileID: 971277142}
   - {fileID: 791318244}

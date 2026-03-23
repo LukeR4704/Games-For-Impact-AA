@@ -69,6 +69,7 @@ public class TimeManagerScript : MonoBehaviour
             dayText.text = "Day : " + currentDay.ToString();
             hourText.text = "Hour : " + timeOfDay[currentHour];
 
+
             SceneManager.LoadScene(dayStartScene);
         }
 

@@ -201,7 +201,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7702743159281481866
 MonoBehaviour:
@@ -429,7 +429,11 @@ MonoBehaviour:
   finalDay: 4
   currentHour: 0
   finalHour: 3
-  timeOfDay: []
+  timeOfDay:
+  - Morning
+  - Afternoon
+  - Evening
+  - Night
   dayStartScene: BarryScene
   finalScene: EndingScene
   dayText: {fileID: 8193825928245245225}

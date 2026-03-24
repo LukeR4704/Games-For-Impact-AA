@@ -2,8 +2,10 @@ using UnityEngine;
 using System.Collections.Generic;
 public class RoomScript : MonoBehaviour
 {
+    //nvmd all of this is silly
     [SerializeField] private EventItems[] day1, day2, day3, day4, day5;
     [SerializeField] private Transform npcLocation;
+    [SerializeField] private TextBox textBox;
     private EventItems curEvent;
     private int curTime;
     private int curDay;
@@ -14,8 +16,8 @@ public class RoomScript : MonoBehaviour
     void Awake()
     {
         List<EventItems[]> eventList = new List<EventItems[]>(){ day1, day2, day3, day4, day5 };
-        curTime = TimeManagerScript.instance.currentHour;
-        curDay = TimeManagerScript.instance.currentDay;
+        curTime = TimeManagerScript.Instance.currentHour;
+        curDay = TimeManagerScript.Instance.currentDay;
 
         try //exception catch to load the default room if theres no event
         {
@@ -47,7 +49,9 @@ public class RoomScript : MonoBehaviour
     {
         if (curEvent.npcObj != null)
         {
-            Instantiate(curEvent.npcObj, npcLocation);
+            GameObject npc = Instantiate(curEvent.npcObj, npcLocation);
+            //npc.GetComponentInChildren<DialogueTrigger>().textBox = textBox;
+
         }
         else
         {

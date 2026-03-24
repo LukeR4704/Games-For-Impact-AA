@@ -1,6 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class TimeManagerScript : MonoBehaviour
@@ -8,41 +7,33 @@ public class TimeManagerScript : MonoBehaviour
     //this class is a singleton. it will only ever be created once in the game, and all other instances will be erased on Awake().
     //while it includes a function to carry itself over between scene transitions, extras are to be placed in every scene to ease debugging. 
 
-    public static TimeManagerScript instance;
+    public static TimeManagerScript Instance { get; private set;}
 
     public int currentDay = 0;
-    public int finalDay = 4;
+    public int finalDay = 2;
 
     public int currentHour = 0;
-    public int finalHour = 3;
-    public string[] timeOfDay;
+    public int finalHour = 2;
 
-    public string dayStartScene, finalScene;
-    [SerializeField] private TextMeshProUGUI dayText, hourText;
+    public UnityEvent passTime, passDay;
 
 
 
     private void Awake()
     {
-        if (instance != null & instance != this)
+        if (Instance != null & Instance != this)
         {
             Destroy(gameObject);
         }
 
         else
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
 
     }
 
-
-    private void Start()
-    {
-        NextDay();
-        IncrementTime(0);
-    }
 
     public void IncrementTime(int timeSpent)
     {
@@ -50,7 +41,7 @@ public class TimeManagerScript : MonoBehaviour
         if (currentHour <= finalHour)
         {
             
-            hourText.text = "Hour : " + timeOfDay[currentHour];
+            passTime?.Invoke();
         }
         else
         {
@@ -66,15 +57,15 @@ public class TimeManagerScript : MonoBehaviour
             currentDay++;
             currentHour = 0;
 
-            dayText.text = "Day : " + currentDay.ToString();
-            hourText.text = "Hour : " + timeOfDay[currentHour];
+            passDay?.Invoke();
 
-
-            SceneManager.LoadScene(dayStartScene);
+            //SceneManager.LoadScene(dayStartScene);
         }
 
         else if(currentDay > finalDay)
         {
+            currentDay = 0;
+            currentHour = 0;
             ProceedToEnding();
         }
 
@@ -82,7 +73,7 @@ public class TimeManagerScript : MonoBehaviour
 
     public void ProceedToEnding()
     {
-        SceneManager.LoadScene(finalScene);
+        //SceneManager.LoadScene(finalScene);
     }
 
 
@@ -90,10 +81,9 @@ public class TimeManagerScript : MonoBehaviour
     {
         currentDay = 0;
         currentHour = 0;
-        NextDay();
-        IncrementTime(0);
+        passDay?.Invoke();
 
-        SceneManager.LoadScene("BarryScene");
+        //SceneManager.LoadScene("BarryScene");
     }
 
 }

@@ -3,11 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
+    public static MapManager Instance { get; private set; }
     public GameObject mapPanel;
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance != null & Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void ToggleMap()

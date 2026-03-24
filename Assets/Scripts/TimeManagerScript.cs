@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeManagerScript : MonoBehaviour
 {
@@ -12,6 +15,10 @@ public class TimeManagerScript : MonoBehaviour
 
     public int currentHour = 0;
     public int finalHour = 3;
+    public string[] timeOfDay;
+
+    public string dayStartScene, finalScene;
+    [SerializeField] private TextMeshProUGUI dayText, hourText;
 
 
 
@@ -19,7 +26,7 @@ public class TimeManagerScript : MonoBehaviour
     {
         if (instance != null & instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         else
@@ -30,11 +37,20 @@ public class TimeManagerScript : MonoBehaviour
 
     }
 
-    public void IncrementTime()
+
+    private void Start()
     {
+        NextDay();
+        IncrementTime(0);
+    }
+
+    public void IncrementTime(int timeSpent)
+    {
+        currentHour += timeSpent;
         if (currentHour <= finalHour)
         {
-            currentHour++;
+            
+            hourText.text = "Hour : " + timeOfDay[currentHour];
         }
         else
         {
@@ -48,9 +64,36 @@ public class TimeManagerScript : MonoBehaviour
         if (currentDay <= finalDay)
         {
             currentDay++;
+            currentHour = 0;
+
+            dayText.text = "Day : " + currentDay.ToString();
+            hourText.text = "Hour : " + timeOfDay[currentHour];
+
+
+            SceneManager.LoadScene(dayStartScene);
+        }
+
+        else if(currentDay > finalDay)
+        {
+            ProceedToEnding();
         }
 
     }
 
+    public void ProceedToEnding()
+    {
+        SceneManager.LoadScene(finalScene);
+    }
+
+
+    public void ResetAll()
+    {
+        currentDay = 0;
+        currentHour = 0;
+        NextDay();
+        IncrementTime(0);
+
+        SceneManager.LoadScene("BarryScene");
+    }
 
 }

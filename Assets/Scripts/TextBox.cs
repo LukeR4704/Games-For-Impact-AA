@@ -21,13 +21,19 @@ public class TextBox : MonoBehaviour
     public UnityEvent onDialogueComplete;
     private bool inputEnabled = true;
     private bool dialogueActive = false;
+    
     public bool IsDialogueActive()
     {
         return dialogueActive;
     }
+
     public void ForceEndDialogue()
     {
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
         dialogueActive = false;
+        isTyping = false;
     }
 
     [Header("Audio")]
@@ -65,13 +71,21 @@ public class TextBox : MonoBehaviour
 
     public void StartDialogue(string[] dialogueLines)
     {
-        if(dialogueActive)
+        if (dialogueLines == null || dialogueLines.Length == 0)
+        {
+            Debug.LogWarning("Dialogue is empty!");
             return;
-        
+        }
+
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
         dialogueActive = true;
+        inputEnabled = true;
 
         lines = dialogueLines;
         currentLineIndex = 0;
+
         gameObject.SetActive(true);
         ShowLine();
     }
@@ -93,6 +107,12 @@ public class TextBox : MonoBehaviour
 
     private void ShowLine()
     {
+        if (lines == null || currentLineIndex >= lines.Length)
+        {
+            EndDialogue();
+            return;
+        }
+
         onLineStart?.Invoke();
 
         if (typingCoroutine != null)

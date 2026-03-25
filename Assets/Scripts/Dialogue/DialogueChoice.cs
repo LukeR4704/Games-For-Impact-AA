@@ -4,5 +4,5 @@ using UnityEngine;
 public class DialogueChoice
 {
     public string choiceText;
-    public string[] nextDialogue;
+    public DialogueNode nextNode;
 }

@@ -17,6 +17,7 @@ public class TimeManagerScript : MonoBehaviour
 
     public UnityEvent passTime, passDay;
 
+    public string dayStartScene, endingScene;
 
 
     private void Awake()
@@ -31,6 +32,8 @@ public class TimeManagerScript : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
+
 
     }
 
@@ -59,7 +62,7 @@ public class TimeManagerScript : MonoBehaviour
 
             passDay?.Invoke();
 
-            //SceneManager.LoadScene(dayStartScene);
+            SceneManager.LoadScene(dayStartScene);
         }
 
         else if(currentDay > finalDay)
@@ -73,7 +76,7 @@ public class TimeManagerScript : MonoBehaviour
 
     public void ProceedToEnding()
     {
-        //SceneManager.LoadScene(finalScene);
+        SceneManager.LoadScene(endingScene);
     }
 
 
@@ -83,7 +86,8 @@ public class TimeManagerScript : MonoBehaviour
         currentHour = 0;
         passDay?.Invoke();
 
-        //SceneManager.LoadScene("BarryScene");
+        
+        SceneManager.LoadScene(dayStartScene);
     }
 
 }

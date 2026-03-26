@@ -11,8 +11,23 @@ public class UI_Script : MonoBehaviour
 
     private bool debugActive = false;
 
+    public static UI_Script Instance { get; private set; }
+
     private void Start()
     {
+        if (Instance != null & Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+
+
         debugButtons.SetActive(false);
         TimeUpdate();
         TimeManagerScript.Instance.passTime.AddListener(TimeUpdate);

@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/KidsBedroom.unity
     guid: ce299ebde8ecaa942a12c1a5a74fe82d
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Bathroom.unity
+    guid: a6e67706cc26de6449d4df021b85cb94
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Bedroom.unity
+    guid: 77dfc19bba4d9dc40915ddbda8cad1a2
+  - enabled: 1
+    path: Assets/Scenes/Rooms/NeighboursApartment.unity
+    guid: beb3ad9b93299174aafb66b14774ce29
+  - enabled: 1
+    path: Assets/Scenes/Rooms/OtherApartment.unity
+    guid: cfd8370b2d2e1b945bf4f7f25989447b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

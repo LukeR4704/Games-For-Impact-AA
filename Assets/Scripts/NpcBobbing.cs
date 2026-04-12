@@ -11,7 +11,8 @@ public class NpcBobbing : MonoBehaviour
     {
         if (bobbing)
         {
-            transform.position += new Vector3(0, Mathf.Lerp(-5, 5, 0.5f), 0);
+            transform.position += new Vector3(0, Mathf.Lerp(-100, 100, 0.5f), 0);
+            Debug.Log(Mathf.Lerp(-100, 100, 0.5f));
         }
     }
 }

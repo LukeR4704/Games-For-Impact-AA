@@ -155,7 +155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6515562773376772392
 RectTransform:
   m_ObjectHideFlags: 0
@@ -428,19 +428,14 @@ MonoBehaviour:
   finalDay: 2
   currentHour: 0
   finalHour: 2
-  timeOfDay:
-  - Morning
-  - Afternoon
-  - Evening
-  - Night
   passTime:
     m_PersistentCalls:
       m_Calls: []
   passDay:
     m_PersistentCalls:
       m_Calls: []
-  dayStartScene: BarryScene
-  finalScene: EndingScene
+  dayStartScene: Hallway
+  endingScene: Bedroom
 --- !u!1 &4457320093112922853
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1819448138294212647
 RectTransform:
   m_ObjectHideFlags: 0

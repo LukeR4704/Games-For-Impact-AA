@@ -110,6 +110,7 @@ public class TextBox : MonoBehaviour
         if (lines == null || currentLineIndex >= lines.Length)
         {
             EndDialogue();
+            TimeManagerScript.Instance.IncrementTime(1);
             return;
         }
 

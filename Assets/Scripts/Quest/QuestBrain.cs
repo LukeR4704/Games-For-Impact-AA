@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
 
-public class QuestLogSingleton : MonoBehaviour
+public class QuestBrain : MonoBehaviour
 {
-    public static QuestLogSingleton instance;
-    public List<QuestData> activeQuests = new List<QuestData>(); 
+    public static QuestBrain instance;
+    public List<QuestData> activeQuests = new List<QuestData>();
+    public bool[] questsStarted;
+
 
 
     private void Awake()

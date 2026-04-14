@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6892576985336868413}
-  - component: {fileID: 1866971232491657017}
+  - component: {fileID: 989885411615002219}
   m_Layer: 0
   m_Name: RoomCore
-  m_TagString: Untagged
+  m_TagString: SceneCore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1866971232491657017
+--- !u!114 &989885411615002219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,33 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 918581733393398455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8418e89d5749fd74898e448404021220, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b6847f183fdb4a428a8d1cf46f2c4bd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RoomScript
-  day1:
+  m_EditorClassIdentifier: '::'
+  day:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  day2:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  day3:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  day4:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  day5:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  npcLocation: {fileID: 0}
+  interactPoint: {fileID: 0}
   textBox: {fileID: 0}

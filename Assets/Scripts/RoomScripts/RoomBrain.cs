@@ -1,11 +1,16 @@
 using UnityEngine;
 
-public class HallwayScript : MonoBehaviour
+public class RoomBrain : MonoBehaviour
 {
     private int curTime;
     private int curDay;
 
     [SerializeField] GameObject[] day;
+
+    public int roomID;
+    public TextBox textBox;
+    public InteractionPointBrain interactPoints;
+    public Transform[] questPoints;
 
 
 

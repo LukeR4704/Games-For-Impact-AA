@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a283a59fe06ece64ea48e656be2adf88, type: 3}
+  m_Name: TestQuestData2
+  m_EditorClassIdentifier: Assembly-CSharp::QuestData
+  questName: This is the second test
+  questID: 1
+  questStep: 0
+  questStepDesc:
+  - this is the second test. I am putting in too much dialogue to get a feel for
+    the limit with the current format of the text.
+  - 
+  - 

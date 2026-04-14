@@ -5,31 +5,55 @@ public class InteractionPointBrain : MonoBehaviour
 {
 
     private Button[] buttons;
+    public TextBox textBox;
+    public bool looking = false;
 
     void Start()
     {
         UnloadInteractionPoints();
+        textBox.onLineStart.AddListener(UnloadInteractionPoints);
+        textBox.onDialogueComplete.AddListener(LoadInteractionPoints);
     }
 
-
+    //disables interaction points regardless of state
     public void UnloadInteractionPoints()
     {
         buttons = GetComponentsInChildren<Button>(true);
 
-        foreach(Button intPoint in buttons)
+        foreach(Button interactPoint in buttons)
         {
-            intPoint.interactable = false;
+            interactPoint.interactable = false;
         }
     }
 
+    //enables interaction buttons if the player is in the "looking" state
     public void LoadInteractionPoints()
     {
         buttons = GetComponentsInChildren<Button>(true);
 
-        foreach (Button intPoint in buttons)
+        if (looking)
         {
-            intPoint.interactable = true;
+            foreach (Button interactPoint in buttons)
+            {
+                interactPoint.interactable = true;
+            }
         }
+
+        
+
     }
+
+    public void StartLooking()
+    {
+        looking = true;
+        LoadInteractionPoints();
+    }
+
+    public void StopLooking()
+    {
+        looking = false;
+        UnloadInteractionPoints();
+    }
+
 
 }

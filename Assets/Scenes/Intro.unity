@@ -682,7 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroTextBox
   dialogueText: {fileID: 1433019532}
-  letterDelay: 0.05
+  letterDelay: 0.08
   lineDelay: 1.5
   onDialogueComplete:
     m_PersistentCalls:

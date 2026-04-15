@@ -2197,9 +2197,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1781928261008366341, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d030c8ee6d1b6c04da1763649da0d53f, type: 2}
+    - target: {fileID: 1781928261008366341, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7361367235693350562, guid: d030c8ee6d1b6c04da1763649da0d53f, type: 2}
+    - target: {fileID: 1781928261008366341, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781928261008366341, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2232304295444719847, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
       propertyPath: m_Name
       value: CoreUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d030c8ee6d1b6c04da1763649da0d53f, type: 2}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7361367235693350562, guid: d030c8ee6d1b6c04da1763649da0d53f, type: 2}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2635240370902430325, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
       propertyPath: m_Pivot.x
@@ -3008,8 +3056,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: John
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d030c8ee6d1b6c04da1763649da0d53f, type: 2}
+  m_sharedMaterial: {fileID: -1234953294484026894, guid: 89d9f857eb9988b408083ad364c05baa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3075,7 +3123,7 @@ MonoBehaviour:
   m_margin: {x: -7.9983063, y: 0, z: -13.997131, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1970921587
@@ -3145,8 +3193,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d030c8ee6d1b6c04da1763649da0d53f, type: 2}
+  m_sharedMaterial: {fileID: -1234953294484026894, guid: 89d9f857eb9988b408083ad364c05baa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3212,7 +3260,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1992794395

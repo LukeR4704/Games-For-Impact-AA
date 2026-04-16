@@ -222,6 +222,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4000989109503991024, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000989109503991024, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4634387618651963801, guid: fcbe496a01ddae24ea9a41adca4ba2ac, type: 3}
     - target: {fileID: 4291986597515655806, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -230,6 +238,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadLocation
       objectReference: {fileID: 0}
+    - target: {fileID: 4310959576670266468, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310959576670266468, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4634387618651963801, guid: fcbe496a01ddae24ea9a41adca4ba2ac, type: 3}
     - target: {fileID: 4930216773625543705, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
       propertyPath: m_Name
       value: MapPanel
@@ -242,6 +258,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6032099612962480579, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032099612962480579, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4634387618651963801, guid: fcbe496a01ddae24ea9a41adca4ba2ac, type: 3}
+    - target: {fileID: 7352302888188165187, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352302888188165187, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8055532149925635995, guid: 497a6c75f7886cb4faaf6154ea5a96f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

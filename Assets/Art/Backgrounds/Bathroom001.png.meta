@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dc1240fd7d71e51428952b6a9a06678d
+guid: c7f554e20c1e21a44b9e496eb158fef4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 636171912692272099
-    second: HospitalBackgroundTest_0
+      213: 8440808754454007069
+    second: Bathroom001_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HospitalBackgroundTest_0
+      name: Bathroom001_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3eb8a18ebf224d800800000000000000
-      internalID: 636171912692272099
+      spriteID: d1d0d3247d6c32570800000000000000
+      internalID: 8440808754454007069
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HospitalBackgroundTest_0: 636171912692272099
+      Bathroom001_0: 8440808754454007069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

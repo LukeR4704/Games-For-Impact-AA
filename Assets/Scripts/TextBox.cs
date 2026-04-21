@@ -137,7 +137,7 @@ public class TextBox : MonoBehaviour
                 if (blipSound != null && audioSource != null && !audioSource.isPlaying)
                 {
                     audioSource.clip = blipSound;
-                    audioSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
+                    // audioSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
                     audioSource.Play();
                 }
             }

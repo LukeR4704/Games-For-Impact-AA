@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 28c926eba9b888f43b6d59d8739d8ec3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -811081735848697650
+    second: NpcFullSheets_0
+  - first:
+      213: 1777333246189531708
+    second: NpcFullSheets_1
+  - first:
+      213: -3933978961100923336
+    second: NpcFullSheets_2
+  - first:
+      213: 5828300218566313546
+    second: NpcFullSheets_3
+  - first:
+      213: 8759315411788281992
+    second: NpcFullSheets_4
+  - first:
+      213: 8375273594244858098
+    second: NpcFullSheets_5
+  - first:
+      213: 6516804320175915038
+    second: NpcFullSheets_6
+  - first:
+      213: 5400970087479053948
+    second: NpcFullSheets_7
+  - first:
+      213: -5366372241694360503
+    second: NpcFullSheets_8
+  - first:
+      213: 1631647427984113246
+    second: NpcFullSheets_9
+  - first:
+      213: 7989395878782332441
+    second: NpcFullSheets_10
+  - first:
+      213: 4870294908302830971
+    second: NpcFullSheets_11
+  - first:
+      213: 5672305413126345907
+    second: NpcFullSheets_12
+  - first:
+      213: -7182143933681558523
+    second: NpcFullSheets_13
+  - first:
+      213: -903718817748777724
+    second: NpcFullSheets_14
+  - first:
+      213: 575103914919230656
+    second: NpcFullSheets_15
+  - first:
+      213: 6879850630732747082
+    second: NpcFullSheets_16
+  - first:
+      213: 2544935649215439760
+    second: NpcFullSheets_17
+  - first:
+      213: 648873124148905600
+    second: NpcFullSheets_18
+  - first:
+      213: -1805765647586669824
+    second: NpcFullSheets_19
+  - first:
+      213: -8136972247109299450
+    second: NpcFullSheets_20
+  - first:
+      213: 5088554428060542205
+    second: NpcFullSheets_21
+  - first:
+      213: -8410219384491372061
+    second: NpcFullSheets_22
+  - first:
+      213: 8940073399827201787
+    second: NpcFullSheets_23
+  - first:
+      213: 5353092548268702779
+    second: NpcFullSheets_24
+  - first:
+      213: -8828601195218144959
+    second: NpcFullSheets_25
+  - first:
+      213: 2066682364006655358
+    second: NpcFullSheets_26
+  - first:
+      213: -5176065438083738704
+    second: NpcFullSheets_27
+  - first:
+      213: 380861992303270473
+    second: NpcFullSheets_28
+  - first:
+      213: -7201969615810468396
+    second: NpcFullSheets_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NpcFullSheets_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 126
+        width: 121
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec06ee265757eb4f0800000000000000
+      internalID: -811081735848697650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c327e92bb2b5aa810800000000000000
+      internalID: 1777333246189531708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 125
+        width: 117
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e18bd5af2b769c0800000000000000
+      internalID: -3933978961100923336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_3
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 125
+        width: 121
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a460afb4b2842e050800000000000000
+      internalID: 5828300218566313546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_4
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 888be3b45f65f8970800000000000000
+      internalID: 8759315411788281992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_5
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 125
+        width: 117
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f08ca9b5f2fa3470800000000000000
+      internalID: 8375273594244858098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_6
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 126
+        width: 121
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1001de6007507a50800000000000000
+      internalID: 6516804320175915038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_7
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e03b2dda914fa40800000000000000
+      internalID: 5400970087479053948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_8
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 125
+        width: 117
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c7a41e0e0d685b0800000000000000
+      internalID: -5366372241694360503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_9
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 126
+        width: 121
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e3cafd0b6c4a610800000000000000
+      internalID: 1631647427984113246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_10
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e6accd83900ee60800000000000000
+      internalID: 7989395878782332441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_11
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 125
+        width: 117
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7da8c84a63c69340800000000000000
+      internalID: 4870294908302830971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_12
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 126
+        width: 121
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4dbe658b318be40800000000000000
+      internalID: 5672305413126345907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_13
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c1f2b1526e35c90800000000000000
+      internalID: -7182143933681558523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_14
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 125
+        width: 117
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4058f3bf5885573f0800000000000000
+      internalID: -903718817748777724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 97
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc72bda6fd2bf700800000000000000
+      internalID: 575103914919230656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 95
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41929892b32a7f50800000000000000
+      internalID: 6879850630732747082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_17
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 0
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093e6b34d7d615320800000000000000
+      internalID: 2544935649215439760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_18
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 97
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08681352ba2410900800000000000000
+      internalID: 648873124148905600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_19
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 0
+        width: 95
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b4efbf5b1a0f6e0800000000000000
+      internalID: -1805765647586669824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_20
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60396df4adaa31f80800000000000000
+      internalID: -8136972247109299450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_21
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 0
+        width: 97
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df42ac0ca4d2e9640800000000000000
+      internalID: 5088554428060542205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_22
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 95
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e199407706e84b80800000000000000
+      internalID: -8410219384491372061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_23
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 0
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe7e9ef365811c70800000000000000
+      internalID: 8940073399827201787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_24
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 0
+        width: 97
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3cb85d8f410a4a40800000000000000
+      internalID: 5353092548268702779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_25
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 0
+        width: 95
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141fe672df18a7580800000000000000
+      internalID: -8828601195218144959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_26
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 0
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e756e2a09a45eac10800000000000000
+      internalID: 2066682364006655358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_27
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 0
+        width: 97
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b397d478ebea28b0800000000000000
+      internalID: -5176065438083738704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_28
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 0
+        width: 95
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a1fafc6f7194500800000000000000
+      internalID: 380861992303270473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NpcFullSheets_29
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 0
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5e576cac67d0c90800000000000000
+      internalID: -7201969615810468396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NpcFullSheets_0: -811081735848697650
+      NpcFullSheets_1: 1777333246189531708
+      NpcFullSheets_10: 7989395878782332441
+      NpcFullSheets_11: 4870294908302830971
+      NpcFullSheets_12: 5672305413126345907
+      NpcFullSheets_13: -7182143933681558523
+      NpcFullSheets_14: -903718817748777724
+      NpcFullSheets_15: 575103914919230656
+      NpcFullSheets_16: 6879850630732747082
+      NpcFullSheets_17: 2544935649215439760
+      NpcFullSheets_18: 648873124148905600
+      NpcFullSheets_19: -1805765647586669824
+      NpcFullSheets_2: -3933978961100923336
+      NpcFullSheets_20: -8136972247109299450
+      NpcFullSheets_21: 5088554428060542205
+      NpcFullSheets_22: -8410219384491372061
+      NpcFullSheets_23: 8940073399827201787
+      NpcFullSheets_24: 5353092548268702779
+      NpcFullSheets_25: -8828601195218144959
+      NpcFullSheets_26: 2066682364006655358
+      NpcFullSheets_27: -5176065438083738704
+      NpcFullSheets_28: 380861992303270473
+      NpcFullSheets_29: -7201969615810468396
+      NpcFullSheets_3: 5828300218566313546
+      NpcFullSheets_4: 8759315411788281992
+      NpcFullSheets_5: 8375273594244858098
+      NpcFullSheets_6: 6516804320175915038
+      NpcFullSheets_7: 5400970087479053948
+      NpcFullSheets_8: -5366372241694360503
+      NpcFullSheets_9: 1631647427984113246
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

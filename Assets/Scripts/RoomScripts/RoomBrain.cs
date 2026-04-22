@@ -25,6 +25,19 @@ public class RoomBrain : MonoBehaviour
 
     void LoadEvents()
     {
-        day[curDay].SetActive(true);
+        int i = 0;
+        foreach(GameObject g in day)
+        {
+            if(i != curDay)
+            {
+                day[i].SetActive(false);
+            }
+            else if (i == curDay)
+            {
+                day[i].SetActive(true);
+            }
+            i++;
+        }
+        
     }
 }

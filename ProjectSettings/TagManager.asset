@@ -6,7 +6,7 @@ TagManager:
   tags:
   - TextBox
   - QuestLog
-  - SceneCore
+  - RoomBrain
   layers:
   - Default
   - TransparentFX

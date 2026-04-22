@@ -6,6 +6,7 @@ public class QuestBrain : MonoBehaviour
 {
     public static QuestBrain instance;
     public List<QuestData> activeQuests = new List<QuestData>();
+    public List<GameObject> activeQuestObjs = new List<GameObject>();
     public bool[] questsStarted;
 
 

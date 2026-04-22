@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TestQuestData
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
   questName: Get Francis dry
+  questID: 0
   questStep: 0
   questStepDesc:
   - Francis wants a dry towel

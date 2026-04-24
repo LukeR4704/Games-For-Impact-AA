@@ -222,55 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - Hi, miss!
-    choices:
-    - choiceText: Hello
-      nextNode:
-        dialogue:
-        - Can I talk to you?
-        choices:
-        - choiceText: Sure
-          nextNode:
-            dialogue:
-            - I don't like school.
-            choices:
-            - choiceText: Why not?
-              nextNode:
-                dialogue:
-                - Homework's the worst.
-                - That's why I'm talking to you.
-                - To avoid it.
-                choices: []
-            - choiceText: Same
-              nextNode:
-                dialogue:
-                - I don't think you should be saying that.
-                - Shouldn't you be telling me positive stuff about school?
-                choices: []
-        - choiceText: About what?
-          nextNode:
-            dialogue:
-            - Anything, I guess.
-            - I just don't want to do my homework.
-            choices: []
-    - choiceText: Where are your parents?
-      nextNode:
-        dialogue:
-        - Well, my Mom left us after I was born.
-        - And my Dad doesn't talk to me much...
-        choices:
-        - choiceText: Oh...
-          nextNode:
-            dialogue:
-            - Yeah...
-            - ...
-            choices: []
-        - choiceText: I'll talk to you
-          nextNode:
-            dialogue:
-            - Really?
-            - Thank you. You're really nice.
-            choices: []
+    - I'm John. Nice to meet you.
+    choices: []
 --- !u!4 &180207490
 Transform:
   m_ObjectHideFlags: 0

@@ -1120,50 +1120,8 @@ MonoBehaviour:
   startingNode:
     dialogue:
     - Good evening.
-    - I wanted to thank you for your hospitality in allowing me to stay temporarily.
-    - How long do you think this flood will last?
-    choices:
-    - choiceText: Hopefully not long
-      nextNode:
-        dialogue:
-        - I wouldn't be too upset if it lasted a bit longer...
-        choices:
-        - choiceText: Why?
-          nextNode:
-            dialogue:
-            - Erm...
-            - Well, I don't have anyone to talk to so...
-            - I appreciate that you let me stay with you and talk with you.
-            - Truly, thank you.
-            choices: []
-        - choiceText: I would
-          nextNode:
-            dialogue:
-            - Ah, yes...
-            - Silly me, I suppose it wouldn't be ideal.
-            - I apologise for my rudeness.
-            choices: []
-    - choiceText: I have no idea
-      nextNode:
-        dialogue:
-        - Yes I guess you wouldn't...
-        - So... erm...
-        - What do you do for work?
-        choices:
-        - choiceText: 'Nurse '
-          nextNode:
-            dialogue:
-            - Ah, really?
-            - My wife was a nurse.
-            - And a damn good one too... heh.
-            choices: []
-        - choiceText: Teacher
-          nextNode:
-            dialogue:
-            - Ah, really?
-            - My daughter is a teacher.
-            - I hope she's doing well...
-            choices: []
+    - My name is Agnes.
+    choices: []
 --- !u!4 &1083053943
 Transform:
   m_ObjectHideFlags: 0
@@ -2242,7 +2200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: John
+  m_text: Agnes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb415aedfe44a6549b2590aa317dc475, type: 2}
   m_sharedMaterial: {fileID: -4702094216337620026, guid: fb415aedfe44a6549b2590aa317dc475, type: 2}

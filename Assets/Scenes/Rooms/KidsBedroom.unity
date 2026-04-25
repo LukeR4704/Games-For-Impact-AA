@@ -292,54 +292,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - Hi, miss!
+    - text: This is my neutral face
+      faceToShow: {fileID: 1364797963}
     choices:
-    - choiceText: Hello
+    - choiceText: Show me shocked
       nextNode:
         dialogue:
-        - Can I talk to you?
+        - text: This is my shocked face
+          faceToShow: {fileID: 37669064}
         choices:
-        - choiceText: Sure
+        - choiceText: Sad
           nextNode:
             dialogue:
-            - I don't like school.
-            choices:
-            - choiceText: Why not?
-              nextNode:
-                dialogue:
-                - Homework's the worst.
-                - That's why I'm talking to you.
-                - To avoid it.
-                choices: []
-            - choiceText: Same
-              nextNode:
-                dialogue:
-                - I don't think you should be saying that.
-                - Shouldn't you be telling me positive stuff about school?
-                choices: []
-        - choiceText: About what?
-          nextNode:
-            dialogue:
-            - Anything, I guess.
-            - I just don't want to do my homework.
+            - text: This is my sad face
+              faceToShow: {fileID: 464262689}
             choices: []
-    - choiceText: Where are your parents?
+        - choiceText: Angry
+          nextNode:
+            dialogue:
+            - text: This is my angry face
+              faceToShow: {fileID: 1285793367}
+            choices: []
+    - choiceText: Show me happy
       nextNode:
         dialogue:
-        - Well, my Mom left us after I was born.
-        - And my Dad doesn't talk to me much...
+        - text: This is my happy face
+          faceToShow: {fileID: 1284924271}
         choices:
-        - choiceText: Oh...
+        - choiceText: Sad
           nextNode:
             dialogue:
-            - Yeah...
-            - ...
+            - text: This is my sad face
+              faceToShow: {fileID: 464262689}
             choices: []
-        - choiceText: I'll talk to you
+        - choiceText: Angry
           nextNode:
             dialogue:
-            - Really?
-            - Thank you. You're really nice.
+            - text: This is my angry face
+              faceToShow: {fileID: 1285793367}
             choices: []
 --- !u!4 &180207490
 Transform:
@@ -686,6 +676,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 799222076177754167, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2232304295444719847, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
       propertyPath: m_Name
       value: CoreUI
@@ -768,6 +762,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2635240370902430325, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930829546620491574, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2572,7 +2570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - Mam, I'm hungry...
+    - text: 
+      faceToShow: {fileID: 0}
     choices: []
 --- !u!4 &1491197733
 Transform:
@@ -3169,6 +3168,7 @@ MonoBehaviour:
   blipSound: {fileID: 8300000, guid: d14090150015d65429f5a82882a47451, type: 3}
   lettersPerBlip: 10
   pitchVariation: 0.15
+  faceParent: {fileID: 1409173447}
 --- !u!114 &1937500176
 MonoBehaviour:
   m_ObjectHideFlags: 0

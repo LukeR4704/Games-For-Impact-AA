@@ -420,8 +420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - Hi, miss!
-    - My name is David.
+    - text: Hey... I'm David.
+      faceToShow: {fileID: 2135094245}
     choices: []
 --- !u!4 &180207490
 Transform:
@@ -2597,6 +2597,7 @@ MonoBehaviour:
   blipSound: {fileID: 8300000, guid: d14090150015d65429f5a82882a47451, type: 3}
   lettersPerBlip: 10
   pitchVariation: 0.15
+  faceParent: {fileID: 869468661}
 --- !u!114 &1908057787
 MonoBehaviour:
   m_ObjectHideFlags: 0

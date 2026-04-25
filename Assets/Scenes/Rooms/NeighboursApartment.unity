@@ -222,7 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - I'm John. Nice to meet you.
+    - text: I'm John. Whaddya want?
+      faceToShow: {fileID: 639010263}
     choices: []
 --- !u!4 &180207490
 Transform:
@@ -2240,6 +2241,7 @@ MonoBehaviour:
   blipSound: {fileID: 8300000, guid: 8c2fcf8f48faf08429bc768b2519ede4, type: 3}
   lettersPerBlip: 10
   pitchVariation: 0.15
+  faceParent: {fileID: 1296600557}
 --- !u!1 &1257499986
 GameObject:
   m_ObjectHideFlags: 0

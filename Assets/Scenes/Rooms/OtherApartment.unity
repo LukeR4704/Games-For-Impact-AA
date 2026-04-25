@@ -432,7 +432,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - Heya, I'm Niamh
+    - text: Sup? I'm Niamh.
+      faceToShow: {fileID: 1694657495}
     choices: []
 --- !u!4 &180207490
 Transform:
@@ -1715,6 +1716,7 @@ MonoBehaviour:
   blipSound: {fileID: 8300000, guid: 8c2fcf8f48faf08429bc768b2519ede4, type: 3}
   lettersPerBlip: 10
   pitchVariation: 0.15
+  faceParent: {fileID: 1060184330}
 --- !u!114 &992913997
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -873,6 +873,7 @@ MonoBehaviour:
   blipSound: {fileID: 8300000, guid: 8c2fcf8f48faf08429bc768b2519ede4, type: 3}
   lettersPerBlip: 10
   pitchVariation: 0.15
+  faceParent: {fileID: 816150020}
 --- !u!114 &803564823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,8 +1120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - Good evening.
-    - My name is Agnes.
+    - text: Oh, hello, I'm Agnes.
+      faceToShow: {fileID: 570162663}
     choices: []
 --- !u!4 &1083053943
 Transform:

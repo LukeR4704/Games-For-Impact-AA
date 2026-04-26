@@ -2379,7 +2379,7 @@ PrefabInstance:
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 180207489}
+      objectReference: {fileID: 1997395445}
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2570,9 +2570,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: 
-      faceToShow: {fileID: 0}
-    choices: []
+    - text: Mam, I'm hungry.
+      faceToShow: {fileID: 464262689}
+    - text: Could you get me some food?
+      faceToShow: {fileID: 1364797963}
+    choices:
+    - choiceText: Sure, baby
+      nextNode:
+        dialogue:
+        - text: Thanks, Mam.
+          faceToShow: {fileID: 1284924271}
+        - text: I'd like a sandwich, please.
+          faceToShow: {fileID: 1364797963}
+        choices: []
+    - choiceText: What do you want?
+      nextNode:
+        dialogue:
+        - text: I'd like a sandwich, please.
+          faceToShow: {fileID: 1364797963}
+        choices: []
 --- !u!4 &1491197733
 Transform:
   m_ObjectHideFlags: 0
@@ -3207,6 +3223,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723866809}
   m_CullTransparentMesh: 1
+--- !u!1 &1997395444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997395446}
+  - component: {fileID: 1997395445}
+  m_Layer: 0
+  m_Name: Day2Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1997395445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997395444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff41284d8a1c8b0498218d8f11cc6984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  startingNode:
+    dialogue:
+    - text: Morning.
+      faceToShow: {fileID: 464262689}
+    choices:
+    - choiceText: You OK?
+      nextNode:
+        dialogue:
+        - text: No. I didn't sleep great last night.
+          faceToShow: {fileID: 1364797963}
+        - text: I'm cold.
+          faceToShow: {fileID: 1364797963}
+        choices:
+        - choiceText: You also stink
+          nextNode:
+            dialogue:
+            - text: Really?
+              faceToShow: {fileID: 37669064}
+            - text: Fine, I'll go shower.
+              faceToShow: {fileID: 1285793367}
+            - text: I don't have a towel though...
+              faceToShow: {fileID: 1364797963}
+            choices: []
+        - choiceText: What's that smell?
+          nextNode:
+            dialogue:
+            - text: Probably me.
+              faceToShow: {fileID: 464262689}
+            - text: I'll go shower.
+              faceToShow: {fileID: 464262689}
+            - text: I need a towel though...
+              faceToShow: {fileID: 1364797963}
+            choices: []
+    - choiceText: You stink
+      nextNode:
+        dialogue:
+        - text: Harsh.
+          faceToShow: {fileID: 37669064}
+        - text: But fair. I'll go shower. I need a towel though.
+          faceToShow: {fileID: 1364797963}
+        - text: I was also cold last night. Could you get me a blanket also please?
+          faceToShow: {fileID: 1364797963}
+        choices:
+        - choiceText: Of course
+          nextNode:
+            dialogue:
+            - text: Thanks, Mam. You're the best.
+              faceToShow: {fileID: 1284924271}
+            choices: []
+        - choiceText: That's a lot
+          nextNode:
+            dialogue:
+            - text: I'm sorry. I appreciate all you do for me...
+              faceToShow: {fileID: 464262689}
+            choices: []
+--- !u!4 &1997395446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997395444}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1280, y: 370, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3217,6 +3332,7 @@ SceneRoots:
   - {fileID: 601406040}
   - {fileID: 180207490}
   - {fileID: 1491197733}
+  - {fileID: 1997395446}
   - {fileID: 225251591}
   - {fileID: 625972081}
   - {fileID: 677466706}

@@ -50,7 +50,8 @@ MonoBehaviour:
   - {fileID: 6500795049821519296, guid: e35971f6774e59247a11e890b65520a3, type: 3}
   - {fileID: 9197858381749593870, guid: 50aeb2e394079dc4abd5d18149652004, type: 3}
   questNPC: []
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: dddf5d3bed2d7be40b640d39cb8f9f0a, type: 2}
+  questItem: {fileID: 11400000, guid: 44a7f675869677b4391d2b1d468c0bef, type: 2}
 --- !u!114 &8492030935267231844
 MonoBehaviour:
   m_ObjectHideFlags: 0

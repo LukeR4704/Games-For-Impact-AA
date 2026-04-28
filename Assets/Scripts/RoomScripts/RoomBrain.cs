@@ -9,6 +9,7 @@ public class RoomBrain : MonoBehaviour
 
     public int roomID;
     public TextBox textBox;
+    public Transform ui;
     public InteractionPointBrain interactPoints;
     public Transform[] questPoints;
 

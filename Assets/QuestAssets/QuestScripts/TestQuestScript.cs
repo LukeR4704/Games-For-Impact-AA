@@ -8,7 +8,9 @@ public class TestQuestScript : MonoBehaviour
     [SerializeField] GameObject[] questInteraction;
     [SerializeField] GameObject[] questNPC;
     public QuestData data;
+    [SerializeField] private Item questItem;
     private QuestEventBrain brain;
+    
     
 
 
@@ -61,6 +63,7 @@ public class TestQuestScript : MonoBehaviour
             case 1:
                 if(curRoom.roomID == 9)
                 {
+                    Inventory_Brain.instance.AddItem(questItem);
                     Debug.Log("Quest step 1 active");
                     CreateInteractPoint(1, 1);
                 };
@@ -70,6 +73,7 @@ public class TestQuestScript : MonoBehaviour
 
                 if(curRoom.roomID == 9)
                 {
+                    Inventory_Brain.instance.RemoveItem(questItem);
                     Debug.Log("Quest step 2 active");
                     CloseQuest();
                 };

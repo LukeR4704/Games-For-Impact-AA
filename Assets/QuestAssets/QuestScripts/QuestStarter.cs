@@ -28,6 +28,7 @@ public class QuestStarter : MonoBehaviour
 
     private void AddQuest()
     {
+        data.questStep = 0;
         Instantiate(questObject, QuestBrain.instance.transform);
         Debug.Log("Quest started" + data.questName);
         QuestBrain.instance.activeQuests.Add(data);

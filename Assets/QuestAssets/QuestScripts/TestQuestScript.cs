@@ -31,10 +31,6 @@ public class TestQuestScript : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        Debug.Log("I still exist!");
-    }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     

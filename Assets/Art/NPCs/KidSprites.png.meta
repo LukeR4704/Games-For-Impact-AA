@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: dc1240fd7d71e51428952b6a9a06678d
+guid: e72d7302669cf284fa21450915fcf7bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 636171912692272099
-    second: HospitalBackgroundTest_0
+      213: -6898319050122290712
+    second: KidSprites_0
+  - first:
+      213: 6067584067782860286
+    second: KidSprites_1
+  - first:
+      213: 890036001805793591
+    second: KidSprites_2
+  - first:
+      213: -8220619821774496875
+    second: KidSprites_3
+  - first:
+      213: -3602612859901119957
+    second: KidSprites_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HospitalBackgroundTest_0
+      name: KidSprites_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 256
+        x: 148
+        y: 126
+        width: 88
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3eb8a18ebf224d800800000000000000
-      internalID: 636171912692272099
+      spriteID: 8e9962e6f5f3440a0800000000000000
+      internalID: -6898319050122290712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSprites_1
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd540def83643450800000000000000
+      internalID: 6067584067782860286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSprites_2
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73971fc270b0a5c00800000000000000
+      internalID: 890036001805793591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSprites_3
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b9899a3dd7aed80800000000000000
+      internalID: -8220619821774496875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSprites_4
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 126
+        width: 88
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22f65ef0b2f00ec0800000000000000
+      internalID: -3602612859901119957
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HospitalBackgroundTest_0: 636171912692272099
+      KidSprites_0: -6898319050122290712
+      KidSprites_1: 6067584067782860286
+      KidSprites_2: 890036001805793591
+      KidSprites_3: -8220619821774496875
+      KidSprites_4: -3602612859901119957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

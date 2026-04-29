@@ -52,7 +52,8 @@ public class TextBox : MonoBehaviour
         inputEnabled = enabled;
     }
 
-    private string[] lines;
+    [SerializeField] private Transform faceParent; // parent holding all faces
+    private DialogueLine[] lines;
     private int currentLineIndex;
     private Coroutine typingCoroutine;
     private bool isTyping;
@@ -69,7 +70,7 @@ public class TextBox : MonoBehaviour
         clickAction.action.Disable();
     }
 
-    public void StartDialogue(string[] dialogueLines)
+    public void StartDialogue(DialogueLine[] dialogueLines)
     {
         if (dialogueLines == null || dialogueLines.Length == 0)
         {
@@ -88,6 +89,24 @@ public class TextBox : MonoBehaviour
 
         gameObject.SetActive(true);
         ShowLine();
+    }
+
+    private void ShowFaces(GameObject face)
+    {
+        if (faceParent == null)
+            return;
+
+        // Disable all faces
+        foreach (Transform child in faceParent)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        // Enable selected one
+        if (face != null)
+        {
+            face.SetActive(true);
+        }
     }
 
     private void OnClick(InputAction.CallbackContext context)
@@ -119,7 +138,9 @@ public class TextBox : MonoBehaviour
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
-        typingCoroutine = StartCoroutine(TypeLine(lines[currentLineIndex]));
+        ShowFaces(lines[currentLineIndex].faceToShow);
+
+        typingCoroutine = StartCoroutine(TypeLine(lines[currentLineIndex].text));
     }
 
     private IEnumerator TypeLine(string line)
@@ -137,7 +158,7 @@ public class TextBox : MonoBehaviour
                 if (blipSound != null && audioSource != null && !audioSource.isPlaying)
                 {
                     audioSource.clip = blipSound;
-                    audioSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
+                    // audioSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
                     audioSource.Play();
                 }
             }
@@ -157,7 +178,7 @@ public class TextBox : MonoBehaviour
         if (audioSource != null)
             audioSource.Stop();
 
-        dialogueText.text = lines[currentLineIndex];
+        dialogueText.text = lines[currentLineIndex].text;
         isTyping = false;
         onLineComplete?.Invoke();
     }

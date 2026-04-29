@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: dc1240fd7d71e51428952b6a9a06678d
+guid: 2138444d107d585418188b6409ff4a26
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 636171912692272099
-    second: HospitalBackgroundTest_0
+      213: -4172595788662644363
+    second: Vol Up White_0
+  - first:
+      213: -968503477141799184
+    second: Vol Up White_1
+  - first:
+      213: 4711899853331101193
+    second: Vol Up White_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HospitalBackgroundTest_0
+      name: Vol Up White_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 256
+        x: 26
+        y: 51
+        width: 316
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3eb8a18ebf224d800800000000000000
-      internalID: 636171912692272099
+      spriteID: 571e871dc36f716c0800000000000000
+      internalID: -4172595788662644363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vol Up White_1
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 157
+        width: 80
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe7b39083f2f82f0800000000000000
+      internalID: -968503477141799184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vol Up White_2
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 86
+        width: 129
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906f30fa3f7046140800000000000000
+      internalID: 4711899853331101193
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HospitalBackgroundTest_0: 636171912692272099
+      Vol Up White_0: -4172595788662644363
+      Vol Up White_1: -968503477141799184
+      Vol Up White_2: 4711899853331101193
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

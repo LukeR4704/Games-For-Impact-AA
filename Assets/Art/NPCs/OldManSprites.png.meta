@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: dc1240fd7d71e51428952b6a9a06678d
+guid: 34d28f669f01dbd4aafd1cc97abd167a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 636171912692272099
-    second: HospitalBackgroundTest_0
+      213: -8085488405504872995
+    second: OldManSprites_0
+  - first:
+      213: -1890706909675858888
+    second: OldManSprites_1
+  - first:
+      213: 2018462684673227171
+    second: OldManSprites_2
+  - first:
+      213: -3780963037574181914
+    second: OldManSprites_3
+  - first:
+      213: 367709316139184068
+    second: OldManSprites_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HospitalBackgroundTest_0
+      name: OldManSprites_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 256
+        x: 12
+        y: 10
+        width: 97
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3eb8a18ebf224d800800000000000000
-      internalID: 636171912692272099
+      spriteID: ddda75a42239acf80800000000000000
+      internalID: -8085488405504872995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManSprites_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 10
+        width: 97
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834d462451cd2c5e0800000000000000
+      internalID: -1890706909675858888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManSprites_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 10
+        width: 97
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a934501e15030c10800000000000000
+      internalID: 2018462684673227171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManSprites_3
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 10
+        width: 97
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb42845622578bc0800000000000000
+      internalID: -3780963037574181914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManSprites_4
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 10
+        width: 97
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfe311ccad5a1500800000000000000
+      internalID: 367709316139184068
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HospitalBackgroundTest_0: 636171912692272099
+      OldManSprites_0: -8085488405504872995
+      OldManSprites_1: -1890706909675858888
+      OldManSprites_2: 2018462684673227171
+      OldManSprites_3: -3780963037574181914
+      OldManSprites_4: 367709316139184068
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

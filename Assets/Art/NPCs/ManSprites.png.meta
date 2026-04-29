@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: dc1240fd7d71e51428952b6a9a06678d
+guid: 1c9249c970c8aa1489d6a251e7ac6ef5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 636171912692272099
-    second: HospitalBackgroundTest_0
+      213: -5888144383823788696
+    second: ManSprites_0
+  - first:
+      213: 2132807765129932159
+    second: ManSprites_1
+  - first:
+      213: -5304067979099779279
+    second: ManSprites_2
+  - first:
+      213: 1198954264287172837
+    second: ManSprites_3
+  - first:
+      213: 1818630795917355072
+    second: ManSprites_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HospitalBackgroundTest_0
+      name: ManSprites_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 256
+        x: 4
+        y: 126
+        width: 121
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3eb8a18ebf224d800800000000000000
-      internalID: 636171912692272099
+      spriteID: 865c8ff21eb194ea0800000000000000
+      internalID: -5888144383823788696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManSprites_1
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 125
+        width: 121
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7da3cebc51499d10800000000000000
+      internalID: 2132807765129932159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManSprites_2
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 126
+        width: 143
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13fcb31764a2466b0800000000000000
+      internalID: -5304067979099779279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManSprites_3
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 126
+        width: 121
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8d6c01d8a83a010800000000000000
+      internalID: 1198954264287172837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManSprites_4
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 126
+        width: 160
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0486d38c2131d3910800000000000000
+      internalID: 1818630795917355072
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HospitalBackgroundTest_0: 636171912692272099
+      ManSprites_0: -5888144383823788696
+      ManSprites_1: 2132807765129932159
+      ManSprites_2: -5304067979099779279
+      ManSprites_3: 1198954264287172837
+      ManSprites_4: 1818630795917355072
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

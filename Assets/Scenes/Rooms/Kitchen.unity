@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: It's nice of you to do this for me.
+    - text: It's nice of you to do this for me, sis.
       faceToShow: {fileID: 1768651032}
     choices: []
 --- !u!1 &1292855493
@@ -1695,9 +1695,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: You're so nice, thank you.
+    - text: Thanks so much, sis.
       faceToShow: {fileID: 1628594948}
-    - text: I'll invite you over sometime. I'll introduce you to my husband.
+    - text: When this flood is over, you should come have dinner with me and Cody.
       faceToShow: {fileID: 1392735173}
     choices: []
 --- !u!1 &1392735173

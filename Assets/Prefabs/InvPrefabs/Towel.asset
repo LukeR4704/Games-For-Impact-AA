@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f3cb4bbd8f991143b7bae8c51129783, type: 3}
-  m_Name: FirstAidKit
+  m_Name: Towel
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemSprite: {fileID: 1472795138476724220, guid: 4a35d66ee5910754ea39114eae961291, type: 3}
-  itemName: First-Aid Kit
-  itemID: 1
-  itemDesc: A first-aid kit.
+  itemSprite: {fileID: 1833677072696494111, guid: 23bb454424f409e4da25f4778556d588, type: 3}
+  itemName: Towel
+  itemID: 3
+  itemDesc: Dry towels are a commodity around here.

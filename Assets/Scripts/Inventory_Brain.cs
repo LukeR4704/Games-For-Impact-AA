@@ -1,7 +1,6 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class Inventory_Brain : MonoBehaviour
 {
@@ -10,8 +9,10 @@ public class Inventory_Brain : MonoBehaviour
     public Transform invUI;
     public GameObject[] itemCatalogue;
     public List<Item> inventory = new List<Item>();
-    
 
+    public Item grabbedItem;
+
+    public UnityEvent giveItem;
 
     private void Awake()
     {

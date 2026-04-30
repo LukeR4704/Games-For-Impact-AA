@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class Inv_Opener : MonoBehaviour
+public class InventoryScript : MonoBehaviour
 {
     private Transform ui;
     [SerializeField] private Transform[] ItemSlot;
+
 
     private void OnEnable()
     {
@@ -17,10 +18,10 @@ public class Inv_Opener : MonoBehaviour
         InvUpdate();
     }
 
-    // Update is called once per frame
     
     public void LoadInv()
     {
+        Debug.Log(Inventory_Brain.instance.inventory);
         gameObject.SetActive(true);
 
 
@@ -65,5 +66,13 @@ public class Inv_Opener : MonoBehaviour
 
         gameObject.SetActive(false);
 
+    }
+
+    public void GiveItem()
+    {
+        if(Inventory_Brain.instance.grabbedItem != null)
+        {
+
+        }
     }
 }

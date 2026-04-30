@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f3cb4bbd8f991143b7bae8c51129783, type: 3}
-  m_Name: Matches
+  m_Name: Water
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemSprite: {fileID: -1657023481718098757, guid: 6f3da7b0621dee949a250f8d9d89a4ae, type: 3}
-  itemName: Matches
-  itemID: 0
-  itemDesc: A lightly used box of matches.
+  itemSprite: {fileID: 4521822187492785387, guid: 399c6bc295423974f941a2d7f8e81dfe, type: 3}
+  itemName: Water
+  itemID: 4
+  itemDesc: A bottle of clean water.

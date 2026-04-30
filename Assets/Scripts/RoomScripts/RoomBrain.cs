@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RoomBrain : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class RoomBrain : MonoBehaviour
 
     [SerializeField] GameObject[] day;
 
+    public EventSystem eventSystem;
     public int roomID;
     public TextBox textBox;
     public Transform ui;

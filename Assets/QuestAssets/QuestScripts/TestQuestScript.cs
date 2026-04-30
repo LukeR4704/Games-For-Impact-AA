@@ -54,7 +54,7 @@ public class TestQuestScript : MonoBehaviour
                 if (curRoom.roomID == 9)
                 {
                     Debug.Log("Quest step 0 active");
-                    Inventory_Brain.instance.AddItem(questItem[3]);
+                    Inventory_Brain.instance.AddItem(questItem[1]);
                     CreateInteractPoint(0, 0);
                 }
                 ;

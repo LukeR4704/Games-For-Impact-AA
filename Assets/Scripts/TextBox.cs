@@ -93,18 +93,19 @@ public class TextBox : MonoBehaviour
 
     private void ShowFaces(GameObject face)
     {
-        if (faceParent == null)
-            return;
-
-        // Disable all faces
-        foreach (Transform child in faceParent)
-        {
-            child.gameObject.SetActive(false);
-        }
-
-        // Enable selected one
         if (face != null)
         {
+            if (faceParent == null)
+                return;
+
+            // Disable all faces
+            foreach (Transform child in faceParent)
+            {
+                child.gameObject.SetActive(false);
+            }
+
+            // Enable selected one
+
             face.SetActive(true);
         }
     }

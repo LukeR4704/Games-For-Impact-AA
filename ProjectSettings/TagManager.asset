@@ -7,6 +7,9 @@ TagManager:
   - TextBox
   - QuestLog
   - RoomBrain
+  - SceneCore
+  - NPC
+  - MainCanvas
   layers:
   - Default
   - TransparentFX

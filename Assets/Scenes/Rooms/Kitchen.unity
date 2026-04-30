@@ -1697,7 +1697,7 @@ MonoBehaviour:
     dialogue:
     - text: You're so nice, thank you.
       faceToShow: {fileID: 1628594948}
-    - text: You should come over to my place sometime. I'll introduce you to my boyfriend.
+    - text: I'll invite you over sometime. I'll introduce you to my husband.
       faceToShow: {fileID: 1392735173}
     choices: []
 --- !u!1 &1392735173
@@ -1986,6 +1986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoreUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2309106673616697003, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2635240370902430325, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2065,6 +2069,10 @@ PrefabInstance:
     - target: {fileID: 2635240370902430325, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608678497851748213, guid: 986ee08c7a6f79741be2ae8f9209397b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2177,7 +2185,7 @@ PrefabInstance:
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 180207489}
+      objectReference: {fileID: 1292855495}
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2820,7 +2828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29, y: -20.429047}
+  m_AnchoredPosition: {x: 29, y: -50}
   m_SizeDelta: {x: 2000, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003232014

@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LadySprites_0
+      name: Neutral
       rect:
         serializedVersion: 2
         x: 269
@@ -133,7 +133,7 @@ TextureImporter:
         width: 99
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadySprites_1
+      name: Shock
       rect:
         serializedVersion: 2
         x: 647
@@ -155,7 +155,7 @@ TextureImporter:
         width: 99
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,7 +169,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadySprites_2
+      name: Happy
       rect:
         serializedVersion: 2
         x: 1025
@@ -177,7 +177,7 @@ TextureImporter:
         width: 99
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadySprites_3
+      name: Sad
       rect:
         serializedVersion: 2
         x: 1403
@@ -199,7 +199,7 @@ TextureImporter:
         width: 99
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadySprites_4
+      name: Angry
       rect:
         serializedVersion: 2
         x: 1781
@@ -221,7 +221,7 @@ TextureImporter:
         width: 99
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 135de7a9ab6ca3e4980d3ead25690b46
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LadySprites_0: 3815325189468067743
-      LadySprites_1: -4510692140103912364
-      LadySprites_2: 7885108929670044492
-      LadySprites_3: 7467685176260215529
-      LadySprites_4: 8642680412272233182
+      Angry: 8642680412272233182
+      Happy: 7885108929670044492
+      Neutral: 3815325189468067743
+      Sad: 7467685176260215529
+      Shock: -4510692140103912364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ManSprites_0
+      name: Neutral
       rect:
         serializedVersion: 2
         x: 4
@@ -133,7 +133,7 @@ TextureImporter:
         width: 121
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManSprites_1
+      name: Shock
       rect:
         serializedVersion: 2
         x: 382
@@ -155,7 +155,7 @@ TextureImporter:
         width: 121
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,7 +169,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManSprites_2
+      name: Happy
       rect:
         serializedVersion: 2
         x: 738
@@ -177,7 +177,7 @@ TextureImporter:
         width: 143
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManSprites_3
+      name: Sad
       rect:
         serializedVersion: 2
         x: 1138
@@ -199,7 +199,7 @@ TextureImporter:
         width: 121
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,15 +213,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManSprites_4
+      name: Mad
       rect:
         serializedVersion: 2
-        x: 1477
+        x: 1516
         y: 126
-        width: 160
+        width: 121
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3183d205159fcac43bda9f24a3bb965f
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ManSprites_0: -5888144383823788696
-      ManSprites_1: 2132807765129932159
-      ManSprites_2: -5304067979099779279
-      ManSprites_3: 1198954264287172837
-      ManSprites_4: 1818630795917355072
+      Happy: -5304067979099779279
+      Mad: 1818630795917355072
+      Neutral: -5888144383823788696
+      Sad: 1198954264287172837
+      Shock: 2132807765129932159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OldManSprites_0
+      name: Neutral
       rect:
         serializedVersion: 2
         x: 12
@@ -133,7 +133,7 @@ TextureImporter:
         width: 97
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OldManSprites_1
+      name: Shock
       rect:
         serializedVersion: 2
         x: 390
@@ -155,7 +155,7 @@ TextureImporter:
         width: 97
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,7 +169,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OldManSprites_2
+      name: Happy
       rect:
         serializedVersion: 2
         x: 768
@@ -177,7 +177,7 @@ TextureImporter:
         width: 97
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OldManSprites_3
+      name: Sad
       rect:
         serializedVersion: 2
         x: 1146
@@ -199,7 +199,7 @@ TextureImporter:
         width: 97
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OldManSprites_4
+      name: Angry
       rect:
         serializedVersion: 2
         x: 1524
@@ -221,7 +221,7 @@ TextureImporter:
         width: 97
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4262c0581b8713a45aa65828891bb7c3
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      OldManSprites_0: -8085488405504872995
-      OldManSprites_1: -1890706909675858888
-      OldManSprites_2: 2018462684673227171
-      OldManSprites_3: -3780963037574181914
-      OldManSprites_4: 367709316139184068
+      Angry: 367709316139184068
+      Happy: 2018462684673227171
+      Neutral: -8085488405504872995
+      Sad: -3780963037574181914
+      Shock: -1890706909675858888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

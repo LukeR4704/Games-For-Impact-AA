@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OldWomanSprites_0
+      name: Neutral
       rect:
         serializedVersion: 2
         x: 260
@@ -133,7 +133,7 @@ TextureImporter:
         width: 125
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OldWomanSprites_1
+      name: Shocked
       rect:
         serializedVersion: 2
         x: 638
@@ -155,7 +155,7 @@ TextureImporter:
         width: 117
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,7 +169,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OldWomanSprites_2
+      name: Happy
       rect:
         serializedVersion: 2
         x: 1016
@@ -177,7 +177,7 @@ TextureImporter:
         width: 117
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OldWomanSprites_3
+      name: Sad
       rect:
         serializedVersion: 2
         x: 1394
@@ -199,7 +199,7 @@ TextureImporter:
         width: 117
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OldWomanSprites_4
+      name: Angry
       rect:
         serializedVersion: 2
         x: 1772
@@ -221,7 +221,7 @@ TextureImporter:
         width: 117
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 899ad4d3524e02941a2ed818eacbe312
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      OldWomanSprites_0: 3185588548725735100
-      OldWomanSprites_1: -3811247662602270659
-      OldWomanSprites_2: -2134218339362003524
-      OldWomanSprites_3: -6624237788458454543
-      OldWomanSprites_4: -898122193228850585
+      Angry: -898122193228850585
+      Happy: -2134218339362003524
+      Neutral: 3185588548725735100
+      Sad: -6624237788458454543
+      Shocked: -3811247662602270659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

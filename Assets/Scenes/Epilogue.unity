@@ -223,7 +223,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: KidsBedroom
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &170852941
@@ -295,26 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroController
   introTextBox: {fileID: 1433019534}
   introDialogue:
-  - 'Ireland
-
-    2036'
-  - 'A disastrous flood has hit
-
-    your apartment building.'
-  - 'You have no power.
-
-    You have limited resources.
-
-    You have a child.'
-  - 'You are unable to leave. However,
-
-    your child must remain safe.'
-  - 'Use the inherent kindness of
-
-    others to live through this flood.'
-  - 'You will survive.
-
-    You must survive.'
+  - You made it to the end.
 --- !u!4 &234441277
 Transform:
   m_ObjectHideFlags: 0
@@ -784,7 +765,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: KidsBedroom
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1891882058

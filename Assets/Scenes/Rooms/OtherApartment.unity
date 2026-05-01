@@ -1634,7 +1634,7 @@ MonoBehaviour:
     dialogue:
     - text: Hey, thanks miss.
       faceToShow: {fileID: 555416977}
-    - text: That was mighty kind of ya.
+    - text: That was really kind of you to help me out.
       faceToShow: {fileID: 1694657495}
     choices: []
 --- !u!1 &886205910

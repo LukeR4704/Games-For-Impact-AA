@@ -11,6 +11,8 @@ public class PickUpScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     Vector2 posBeforeDrag;
     public Item item;
 
+    private bool dragging = false;
+
     private EventSystem eventSystem;
     private GraphicRaycaster raycaster;
     
@@ -20,26 +22,37 @@ public class PickUpScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     }
 
+    void Update()
+    {
+        if (dragging)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Pointer.current.position.ReadValue(), DragSpeed() * Time.deltaTime);
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         
         posBeforeDrag = transform.position;
         parentBeforeDrag = transform.parent;
         Inventory_Brain.instance.grabbedItem = item;
+
+        dragging = true;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        
-        transform.position = Pointer.current.position.ReadValue();
+        //transform.position = Vector3.MoveTowards(transform.position, Pointer.current.position.ReadValue(), 2 * Time.deltaTime);
+//transform.position = Pointer.current.position.ReadValue();
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
 
         CheckForNPC(eventData);
+        dragging = false;
         Inventory_Brain.instance.grabbedItem = null;
         transform.SetParent(parentBeforeDrag);
         transform.position = posBeforeDrag;
@@ -66,4 +79,14 @@ public class PickUpScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         return false;
             
     }
+
+    private float DragSpeed()
+    {
+        float distance = Vector2.Distance(transform.position, Pointer.current.position.ReadValue());
+
+        float speed = distance * 10;
+        speed = Mathf.Clamp(speed, 800, 7000);
+        return speed;
+    }
+
 }

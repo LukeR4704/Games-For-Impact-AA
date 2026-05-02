@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1083053942}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
@@ -1279,8 +1279,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tasks
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d030c8ee6d1b6c04da1763649da0d53f, type: 2}
-  m_sharedMaterial: {fileID: -7361367235693350562, guid: d030c8ee6d1b6c04da1763649da0d53f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb415aedfe44a6549b2590aa317dc475, type: 2}
+  m_sharedMaterial: {fileID: -4702094216337620026, guid: fb415aedfe44a6549b2590aa317dc475, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2728,17 +2728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452a330be15e90840af476cd04b3709f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!114 &1083053942 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4403849529305645706, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
-  m_PrefabInstance: {fileID: 1505973390378233377}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff41284d8a1c8b0498218d8f11cc6984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
 --- !u!1 &1099907580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3786,11 +3775,19 @@ PrefabInstance:
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1083053942}
+      objectReference: {fileID: 0}
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TriggerDialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 5266713820574550194, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266713820574550194, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4634387618651963801, guid: fcbe496a01ddae24ea9a41adca4ba2ac, type: 3}
     - target: {fileID: 5570599024914849179, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -3903,6 +3900,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6322032398553160827, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6322032398553160827, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8146466408823398426, guid: ced8ff55b96517e48b51504bf654243c, type: 3}
     - target: {fileID: 7126425750351374235, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4493,7 +4498,7 @@ PrefabInstance:
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1083053942}
+      objectReference: {fileID: 0}
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TriggerDialogue
@@ -4902,10 +4907,28 @@ MonoBehaviour:
         LIGHT IT UP LETS GO'
       faceToShow: {fileID: 0}
     choices: []
-  talkNodes: []
+  talkNodes:
+  - dialogue:
+    - text: 'Hello, this is testing dialogue. '
+      faceToShow: {fileID: 0}
+    - text: The unity inspector seems to hate me for nesting so much in the serialised
+        fields.
+      faceToShow: {fileID: 0}
+    - text: Oh well. This dialogue means there is no quest active that requires my
+        voice.
+      faceToShow: {fileID: 0}
+    choices: []
+  - dialogue:
+    - text: Oh hey, you activated a quest involving me.
+      faceToShow: {fileID: 0}
+    - text: I'm going to do nothing but allude to whatever I wanted.
+      faceToShow: {fileID: 0}
+    - text: Until you hand me the right item that is (matches pls)
+      faceToShow: {fileID: 0}
+    choices: []
   itemID: 0
   questState: 0
---- !u!114 &1763339607
+--- !u!114 &1763339611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5520,8 +5543,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: NPC
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 2436345081072356829, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 1598786333636918911, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9118166796095310719, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
@@ -5535,7 +5560,7 @@ PrefabInstance:
       addedObject: {fileID: 1763339606}
     - targetCorrespondingSourceObject: {fileID: 9118166796095310719, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1763339607}
+      addedObject: {fileID: 1763339611}
   m_SourcePrefab: {fileID: 100100000, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
 --- !u!1001 &3944505406747373368
 PrefabInstance:

@@ -8,12 +8,15 @@ public class RoomBrain : MonoBehaviour
 
     [SerializeField] GameObject[] day;
 
+    [Header("Assign major room components.")] 
     public EventSystem eventSystem;
     public int roomID;
     public TextBox textBox;
     public Transform ui;
     public InteractionPointBrain interactPoints;
     public Transform[] questPoints;
+    public DialogueBrancher brancher;
+    
 
 
 

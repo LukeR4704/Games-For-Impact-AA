@@ -28,7 +28,14 @@ public class QuestLog : MonoBehaviour
             logNumber++;
             TextMeshProUGUI logEntry;
             logEntry = Instantiate(questLogPrefab, questLogGrid).GetComponentInChildren<TextMeshProUGUI>();
-            logEntry.text = logNumber + ": " + quest.questStepDesc[quest.questStep];
+            try
+            {
+                logEntry.text = logNumber + ": " + quest.questStepDesc[quest.questStep];
+            }
+            catch
+            {
+                logEntry.text = logNumber + ": " + quest.questName;
+            }
         }
         logOpen = true;
     }

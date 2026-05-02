@@ -84,8 +84,8 @@ public class PickUpScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         float distance = Vector2.Distance(transform.position, Pointer.current.position.ReadValue());
 
-        float speed = distance * 10;
-        speed = Mathf.Clamp(speed, 800, 7000);
+        float speed = 1000 + (distance * 8);
+        speed = Mathf.Clamp(speed, 1000, 5000);
         return speed;
     }
 

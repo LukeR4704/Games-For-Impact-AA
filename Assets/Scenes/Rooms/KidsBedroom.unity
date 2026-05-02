@@ -1130,14 +1130,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6640142048919865512, guid: c4eb9e4511c94254db6c1a4f7f0dea5a, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6850786452639084678, guid: c4eb9e4511c94254db6c1a4f7f0dea5a, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1526311330}
     - target: {fileID: 7260066813871173705, guid: c4eb9e4511c94254db6c1a4f7f0dea5a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
@@ -1212,18 +1204,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8578447867072691124, guid: c4eb9e4511c94254db6c1a4f7f0dea5a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8578447867072691124, guid: c4eb9e4511c94254db6c1a4f7f0dea5a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8578447867072691124, guid: c4eb9e4511c94254db6c1a4f7f0dea5a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8578447867072691124, guid: c4eb9e4511c94254db6c1a4f7f0dea5a, type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8578447867072691124, guid: c4eb9e4511c94254db6c1a4f7f0dea5a, type: 3}

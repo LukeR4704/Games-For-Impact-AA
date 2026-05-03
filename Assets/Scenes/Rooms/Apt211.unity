@@ -1108,8 +1108,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
-    dialogue: []
-    choices: []
+    dialogue:
+    - text: Hi, miss.
+      faceToShow: {fileID: 886205910}
+    choices:
+    - choiceText: Hi
+      nextNode:
+        dialogue:
+        - text: ...
+          faceToShow: {fileID: 886205910}
+        choices: []
+    - choiceText: Are you OK?
+      nextNode:
+        dialogue:
+        - text: 'Um. My period started and I don''t have any [P/T]'
+          faceToShow: {fileID: 787306032}
+        - text: Could you please grab me some?
+          faceToShow: {fileID: 787306032}
+        choices:
+        - choiceText: Yes of course
+          nextNode:
+            dialogue:
+            - text: Thank you, miss. I appreciate it.
+              faceToShow: {fileID: 1694657495}
+            choices: []
+        - choiceText: Sorry I can't
+          nextNode:
+            dialogue:
+            - text: Seriously?
+              faceToShow: {fileID: 555416977}
+            - text: Why not?
+              faceToShow: {fileID: 1616891206}
+            choices: []
 --- !u!1 &433780221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1581,7 @@ PrefabInstance:
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 881475181}
+      objectReference: {fileID: 401718318}
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

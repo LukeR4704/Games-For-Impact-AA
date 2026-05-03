@@ -1946,7 +1946,7 @@ MonoBehaviour:
         dialogue:
         - text: Oh, OK.
           faceToShow: {fileID: 570162663}
-        - text: I guess I'll just suffer through the pain I suppose.
+        - text: I'll just suffer through the pain I suppose.
           faceToShow: {fileID: 515352277}
         choices: []
 --- !u!1 &1167864137

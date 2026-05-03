@@ -2580,11 +2580,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 9056870382952436215, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
   m_PrefabInstance: {fileID: 1406952043}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1406952045 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2726152500911029991, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
-  m_PrefabInstance: {fileID: 1406952043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408850611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,9 +3201,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1406952045}
+      - m_Target: {fileID: 1406952044}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: 
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

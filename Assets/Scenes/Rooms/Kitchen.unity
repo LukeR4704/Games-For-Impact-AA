@@ -2129,10 +2129,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2091886965}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2091886964}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3949,11 +3949,6 @@ PrefabInstance:
 --- !u!82 &2091886964 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 9056870382952436215, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
-  m_PrefabInstance: {fileID: 2091886963}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2091886965 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2726152500911029991, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
   m_PrefabInstance: {fileID: 2091886963}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2119725063

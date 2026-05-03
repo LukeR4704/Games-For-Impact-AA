@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: 
+    - text: There's nobody here.
       faceToShow: {fileID: 0}
     choices: []
 --- !u!4 &847639186

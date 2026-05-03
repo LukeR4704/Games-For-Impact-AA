@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: Ah, thank you my dear.
+    - text: Ah, thank you dear.
       faceToShow: {fileID: 570162663}
     - text: I didn't think you'd actually do this for me.
       faceToShow: {fileID: 515352277}
@@ -1926,8 +1926,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
-    dialogue: []
-    choices: []
+    dialogue:
+    - text: This hallway is disgusting. Trash bags everywhere.
+      faceToShow: {fileID: 1689451554}
+    - text: Oh, hello dear. Sorry you had to hear that outburst.
+      faceToShow: {fileID: 570162663}
+    - text: You wouldn't mind helping clean this up, would you? I'm afraid my old
+        bones won't allow me to.
+      faceToShow: {fileID: 768083869}
+    choices:
+    - choiceText: I'll help
+      nextNode:
+        dialogue:
+        - text: Oh, thank you dear. You're very sweet.
+          faceToShow: {fileID: 1848513843}
+        choices: []
+    - choiceText: No, sorry
+      nextNode:
+        dialogue:
+        - text: Oh, OK.
+          faceToShow: {fileID: 570162663}
+        - text: I guess I'll just suffer through the pain I suppose.
+          faceToShow: {fileID: 515352277}
+        choices: []
 --- !u!1 &1167864137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,7 +3761,7 @@ PrefabInstance:
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 229313457}
+      objectReference: {fileID: 1139937528}
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

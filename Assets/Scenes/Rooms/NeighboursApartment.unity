@@ -4075,8 +4075,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
-    dialogue: []
-    choices: []
+    dialogue:
+    - text: Hello there.
+      faceToShow: {fileID: 1189405829}
+    - text: Would you be so kind as to grab me some water for my plant?
+      faceToShow: {fileID: 1189405829}
+    - text: 'She''s starting to wilt and I have no running water in my apartment. '
+      faceToShow: {fileID: 965436795}
+    choices:
+    - choiceText: Of course
+      nextNode:
+        dialogue: []
+        choices: []
+    - choiceText: 
+      nextNode:
+        dialogue: []
+        choices: []
 --- !u!1001 &2003453408
 PrefabInstance:
   m_ObjectHideFlags: 0

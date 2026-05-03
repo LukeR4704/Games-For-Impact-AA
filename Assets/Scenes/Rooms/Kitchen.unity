@@ -829,8 +829,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
-    dialogue: []
-    choices: []
+    dialogue:
+    - text: Hey, sis, do you mind grabbing me that book from Lucas' room?
+      faceToShow: {fileID: 1768651032}
+    - text: He said I could read it once he was done.
+      faceToShow: {fileID: 1392735173}
+    choices:
+    - choiceText: No problem
+      nextNode:
+        dialogue:
+        - text: Thanks Em, you're the best!
+          faceToShow: {fileID: 1392735173}
+        choices: []
+    - choiceText: Grab it yourself
+      nextNode:
+        dialogue:
+        - text: Wow, rude, only thought I'd ask.
+          faceToShow: {fileID: 620682679}
+        - text: I'll make dinner tonight if you help.
+          faceToShow: {fileID: 2135094245}
+        choices: []
 --- !u!1001 &467539176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2353,7 +2371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: Thanks so much, sis.
+    - text: Thanks so much, Em.
       faceToShow: {fileID: 1628594948}
     - text: When this flood is over, you should come have dinner with me and Cody.
       faceToShow: {fileID: 1392735173}

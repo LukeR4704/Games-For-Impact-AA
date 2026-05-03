@@ -2580,11 +2580,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 9056870382952436215, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
   m_PrefabInstance: {fileID: 1406952043}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1406952045 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2726152500911029991, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
-  m_PrefabInstance: {fileID: 1406952043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408850611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,9 +3201,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1406952045}
+      - m_Target: {fileID: 1406952044}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: 
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3238,7 +3233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2ac8f9c65108b1842a10947ef459fb2c, type: 3}
+  m_Sprite: {fileID: -7762350047352875558, guid: 9f9b5aea83298744ca42caecd22284ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3273,7 +3268,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 100, y: -100}
-  m_SizeDelta: {x: 287.5, y: 287.5}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1610132083
 PrefabInstance:

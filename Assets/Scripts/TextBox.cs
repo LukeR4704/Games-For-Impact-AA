@@ -14,6 +14,7 @@ public class TextBox : MonoBehaviour
 
     [Header("Input System")]
     [SerializeField] private InputActionReference clickAction;
+    [SerializeField] private ButtonCooldown buttonCooldown;
 
     [Header("Events")]
     public UnityEvent onLineStart;
@@ -201,6 +202,10 @@ public class TextBox : MonoBehaviour
     private void EndDialogue()
     {
         dialogueActive = false;
+        
+        if (buttonCooldown != null)
+            buttonCooldown.TriggerCooldown();
+
         onDialogueComplete?.Invoke();
         gameObject.SetActive(false);
     }

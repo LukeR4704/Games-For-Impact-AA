@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &170852939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 234441277}
   - component: {fileID: 234441276}
   m_Layer: 0
-  m_Name: IntroController
+  m_Name: EndingController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroController
   introTextBox: {fileID: 1433019534}
   introDialogue:
-  - You made it to the end.
+  - You made it.
+  - 'ActionAid has arrived and
+
+    provided supplies to
+
+    outlast the flood.'
+  - "Thanks to ActionAid's incredible\nefforts, people all across\nthe world have
+    access to food,\nwater, shelter, sanitary products, \nand medicine during\nhumanitarian
+    emergencies. "
+  - 'To learn more about
+
+    ActionAid''s work, visit their
+
+    website by clicking
+    the
+
+    button on the main menu.'
 --- !u!4 &234441277
 Transform:
   m_ObjectHideFlags: 0
@@ -322,6 +338,10 @@ PrefabInstance:
     - target: {fileID: 2726152500911029991, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
       propertyPath: m_Name
       value: Button Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726152500911029991, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5934005742377071588, guid: 0cf8a7e49b5e29c4386a50c25031eca9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -613,7 +633,7 @@ GameObject:
   - component: {fileID: 1433019532}
   - component: {fileID: 1433019534}
   m_Layer: 5
-  m_Name: IntroText
+  m_Name: EndingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +656,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1.8085938, y: -38.677185}
-  m_SizeDelta: {x: 1200, y: 200}
+  m_SizeDelta: {x: 1250, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433019532
 MonoBehaviour:

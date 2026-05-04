@@ -306,12 +306,21 @@ MonoBehaviour:
     You have limited resources.
 
     You have a child.'
-  - 'You are unable to leave. However,
+  - 'You are unable to leave.
 
-    your child must remain safe.'
-  - 'Use the inherent kindness of
+    Your child must remain safe.'
+  - However, all is not lost.
+  - 'ActionAid is on their way
 
-    others to live through this flood.'
+    to provide support.'
+  - 'They will provide essential aid
+
+    and must needed resources,
+
+    but until
+    they arrive you have to
+
+    help yourself.'
   - 'You will survive.
 
     You must survive.'

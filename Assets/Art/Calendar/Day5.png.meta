@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc2c4fe8c8b4f844888c46012ccbb8b2
+guid: c5afb6bbaf6a4444fb040495fe8ad469
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3780459961248577023
-    second: Sandwich_001_0
+      213: 6241566998892548270
+    second: Day5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sandwich_001_0
+      name: Day5_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 7
-        width: 64
-        height: 55
+        y: 2
+        width: 252
+        height: 208
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff5fec51e44e67430800000000000000
-      internalID: 3780459961248577023
+      spriteID: ea09ac2cd108e9650800000000000000
+      internalID: 6241566998892548270
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sandwich_001_0: 3780459961248577023
+      Day5_0: 6241566998892548270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

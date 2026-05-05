@@ -10,12 +10,17 @@ public class RoomBrain : MonoBehaviour
 
     [Header("Assign major room components.")] 
     public EventSystem eventSystem;
-    public int roomID;
     public TextBox textBox;
     public Transform ui;
     public InteractionPointBrain interactPoints;
-    public Transform[] questPoints;
     public DialogueBrancher brancher;
+
+    [Header("Refer to cheat sheet")]
+    public int roomID;
+
+    [Header("Assign where quest items will spawn")]
+    public Transform[] questPoints;
+    
     
 
 

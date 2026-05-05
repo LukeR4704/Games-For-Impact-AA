@@ -4,10 +4,12 @@ using UnityEngine.Rendering;
 
 public class QuestBrain : MonoBehaviour
 {
+    
     public static QuestBrain instance;
     public List<QuestData> activeQuests = new List<QuestData>();
     public List<GameObject> activeQuestObjs = new List<GameObject>();
     public bool[] questsStarted;
+    public int mainQuestState = 0; //0 = not started, 1 = active, 2 = finished
 
 
 
@@ -23,9 +25,25 @@ public class QuestBrain : MonoBehaviour
             Destroy(this);
         }
 
+        
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        TimeManagerScript.Instance.passDay.AddListener(ClearLog);
+    }
+
+    private void ClearLog()
+    {
+        activeQuestObjs.Clear();
+        activeQuests.Clear();
+
+        foreach (Transform child in transform)
+        {
+            Destroy(child);
+        }
+    }
 
 
 

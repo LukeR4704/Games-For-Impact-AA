@@ -68,11 +68,8 @@ public class InventoryScript : MonoBehaviour
 
     }
 
-    public void GiveItem()
+    public void GiveItem(Item item)
     {
-        if(Inventory_Brain.instance.grabbedItem != null)
-        {
-
-        }
+        Inventory_Brain.instance.inventory.Remove(item);
     }
 }

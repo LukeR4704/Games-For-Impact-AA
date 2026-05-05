@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class QuestLog : MonoBehaviour
 {
@@ -22,19 +23,45 @@ public class QuestLog : MonoBehaviour
 
     public void OpenList()
     {
+        TextMeshProUGUI logEntry;
         int logNumber = 0;
+        //check if theres a main quest active
+        switch (QuestBrain.instance.mainQuestState)
+        {
+            case 0:
+                logEntry = Instantiate(questLogPrefab, questLogGrid).GetComponentInChildren<TextMeshProUGUI>();
+                logEntry.text = "Check up on your son.";
+                break;
+
+            case 1:
+                break;
+
+                case 2:
+                logEntry = Instantiate(questLogPrefab, questLogGrid).GetComponentInChildren<TextMeshProUGUI>();
+                logEntry.text = "Turn in for the night.";
+                break;
+        }
+
         foreach(QuestData quest in QuestBrain.instance.activeQuests)
         {
             logNumber++;
-            TextMeshProUGUI logEntry;
+            
             logEntry = Instantiate(questLogPrefab, questLogGrid).GetComponentInChildren<TextMeshProUGUI>();
             try
             {
-                logEntry.text = logNumber + ": " + quest.questStepDesc[quest.questStep];
+                if (quest.isOptional)
+                {
+                    logEntry.text = "Optional: " + quest.questStepDesc[quest.questStep];
+                }
+                else
+                {
+                    logEntry.text = quest.questStepDesc[quest.questStep];
+
+                }
             }
             catch
             {
-                logEntry.text = logNumber + ": " + quest.questName;
+                logEntry.text = quest.questName;
             }
         }
         logOpen = true;

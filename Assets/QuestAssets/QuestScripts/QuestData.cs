@@ -8,5 +8,6 @@ public class QuestData : ScriptableObject
     public int questID;
     public int questStep;
     public string[] questStepDesc;
+    public bool isOptional;
 
 }

@@ -8,6 +8,7 @@ public class Inventory_Brain : MonoBehaviour
     public static Inventory_Brain instance;
     public Transform invUI;
     public GameObject[] itemCatalogue;
+    //public Item[] itemData;
     public List<Item> inventory = new List<Item>();
 
     public Item grabbedItem;

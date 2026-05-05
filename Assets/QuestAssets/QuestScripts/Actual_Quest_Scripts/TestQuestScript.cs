@@ -8,7 +8,7 @@ public class TestQuestScript : MonoBehaviour
     [SerializeField] GameObject[] questInteraction;
     [SerializeField] GameObject[] questNPC;
     public QuestData data;
-    [SerializeField] private Item[] questItem;
+    [SerializeField] private Item questItem;
     private QuestEventBrain brain;
     
     
@@ -51,10 +51,15 @@ public class TestQuestScript : MonoBehaviour
         {
             case 0:
 
+                if (!data.isOptional)
+                {
+                    QuestBrain.instance.mainQuestState = 1;
+                }
+
                 if (curRoom.roomID == 9)
                 {
                     Debug.Log("Quest step 0 active");
-                    Inventory_Brain.instance.AddItem(questItem[1]);
+                    Inventory_Brain.instance.AddItem(questItem);
                     CreateInteractPoint(0, 0);
                 }
                 ;
@@ -64,7 +69,7 @@ public class TestQuestScript : MonoBehaviour
             case 1:
                 if(curRoom.roomID == 9)
                 {
-                    Inventory_Brain.instance.AddItem(questItem[0]);
+                    Inventory_Brain.instance.AddItem(questItem);
                     Debug.Log("Quest step 1 active");
                     CreateInteractPoint(1, 1);
                 };
@@ -74,7 +79,7 @@ public class TestQuestScript : MonoBehaviour
 
                 if(curRoom.roomID == 9)
                 {
-                    Inventory_Brain.instance.RemoveItem(questItem[0]);
+                    Inventory_Brain.instance.RemoveItem(questItem);
                     Debug.Log("Quest step 2 active");
                     CloseQuest();
                 };
@@ -107,6 +112,10 @@ public class TestQuestScript : MonoBehaviour
     //method that erases the quest object and removes it from the active quest list
     public void CloseQuest()
     {
+        if (!data.isOptional)
+        {
+            QuestBrain.instance.mainQuestState = 2;
+        }
         QuestBrain.instance.activeQuests.Remove(data);
         Destroy(gameObject);
     }

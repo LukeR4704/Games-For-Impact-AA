@@ -1121,7 +1121,7 @@ MonoBehaviour:
     - choiceText: Are you OK?
       nextNode:
         dialogue:
-        - text: 'Um. My period started and I don''t have any [P/T]'
+        - text: Um. My period started and I ran out of pads...
           faceToShow: {fileID: 787306032}
         - text: Could you please grab me some?
           faceToShow: {fileID: 787306032}

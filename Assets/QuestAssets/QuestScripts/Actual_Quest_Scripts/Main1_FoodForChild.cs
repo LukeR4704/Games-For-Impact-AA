@@ -1,4 +1,3 @@
-using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -59,9 +58,9 @@ public class Main1_FoodForChild : MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 0)
+                    if (curRoom.roomID == 2) //kitchen, sandwich
                     {
-
+                        CreateInteractPoint(0, 0);
                     }
                     ;
 
@@ -69,7 +68,7 @@ public class Main1_FoodForChild : MonoBehaviour
 
                 //this is when you find the item and must now bring it back to the required npc
                 case 1:
-                    if (curRoom.roomID == 0)
+                    if (curRoom.roomID == 1)
                     {
 
                     }

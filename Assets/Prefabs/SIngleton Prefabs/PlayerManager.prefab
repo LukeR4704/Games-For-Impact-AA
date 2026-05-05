@@ -47,8 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   activeQuests: []
   activeQuestObjs: []
-  questsStarted: 000000000000
-  mainQuestActive: 0
+  questCatalogue:
+  - {fileID: 2229469834428379918, guid: 367c432304102d5468b54c2c732d024d, type: 3}
+  mainQuestState: 0
 --- !u!114 &453638224236361292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,12 +69,6 @@ MonoBehaviour:
   - {fileID: 5304214913223239841, guid: e66fd10a54cd9c945bc65b377e6451e5, type: 3}
   - {fileID: 5552139956647040551, guid: 6f0d2d95d89b8014695f152307f2b2f6, type: 3}
   - {fileID: 8055893679693738568, guid: 7acdaea9720ddf74e844caccf742c401, type: 3}
-  itemData:
-  - {fileID: 11400000, guid: 44a7f675869677b4391d2b1d468c0bef, type: 2}
-  - {fileID: 11400000, guid: 81ce16bac9d77ee4491e701d81d3ed09, type: 2}
-  - {fileID: 11400000, guid: a2a0fd92a1a2455449643553072decb8, type: 2}
-  - {fileID: 11400000, guid: 124c447061060824e943b4b7b5c01a5d, type: 2}
-  - {fileID: 11400000, guid: 620c03dae4b0340418d827bd18f50d71, type: 2}
   inventory: []
   grabbedItem: {fileID: 0}
   giveItem:

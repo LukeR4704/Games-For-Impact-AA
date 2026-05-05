@@ -8,7 +8,7 @@ public class QuestBrain : MonoBehaviour
     public static QuestBrain instance;
     public List<QuestData> activeQuests = new List<QuestData>();
     public List<GameObject> activeQuestObjs = new List<GameObject>();
-    public bool[] questsStarted;
+    public GameObject[] questCatalogue;
     public int mainQuestState = 0; //0 = not started, 1 = active, 2 = finished
 
 
@@ -43,6 +43,12 @@ public class QuestBrain : MonoBehaviour
         {
             Destroy(child);
         }
+    }
+
+    public void StartQuest(QuestData quest)
+    {
+        activeQuests.Add(quest);
+        Instantiate(questCatalogue[quest.questID]);
     }
 
 

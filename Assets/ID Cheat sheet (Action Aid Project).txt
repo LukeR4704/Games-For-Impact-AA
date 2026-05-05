@@ -1,0 +1,18 @@
+ID Cheat sheet (Action Aid Project)
+
+Items:
+0: FirstAidKit
+1: Matches
+2: Medicine
+3: Towel
+4: Water Bottle
+5: Sanitation Kit
+6: Sandwich
+
+Rooms:
+0: Bedroom
+1: KidsRoom
+2: Kitchen
+3: Hallway
+4: Apt211
+5: Apt212

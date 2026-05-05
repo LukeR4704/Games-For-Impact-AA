@@ -4,15 +4,11 @@ public class QuestStarter : MonoBehaviour
 {
 
     public QuestData data;
-    public TextBox textBox;
-    public GameObject questObject;
+    private TextBox textBox;
+    
 
     private void Start()
     {
-        if (QuestBrain.instance.questsStarted[data.questID])
-        {
-            Destroy(gameObject);
-        }
         textBox = GameObject.FindGameObjectWithTag("RoomBrain").GetComponent<RoomBrain>().textBox;
     }
 
@@ -20,22 +16,15 @@ public class QuestStarter : MonoBehaviour
 
     public void StartQuest()
     {
-        if (!QuestBrain.instance.questsStarted[data.questID])
-        {
             textBox.onDialogueComplete.AddListener(AddQuest);
-        }
+
     }
 
     private void AddQuest()
     {
         data.questStep = 0;
-        Instantiate(questObject, QuestBrain.instance.transform);
-        Debug.Log("Quest started" + data.questName);
-        QuestBrain.instance.activeQuests.Add(data);
-        QuestBrain.instance.questsStarted[data.questID] = true;
+        QuestBrain.instance.StartQuest(data);
         textBox.onDialogueComplete.RemoveListener(AddQuest);
-        
-        gameObject.SetActive(false);
 
     }
 

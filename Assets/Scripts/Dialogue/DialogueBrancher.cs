@@ -6,6 +6,9 @@ public class DialogueBrancher : MonoBehaviour
     public DialogueNode[] talkNodes;
     public int itemID;
     public int questState = 0;
+    [Header("Does talking initiate a quest?")]
+    [SerializeField] private bool questOrigin;
+    [SerializeField] private QuestStarter starter;
 
     private DialogueTrigger trigger;
     
@@ -18,6 +21,13 @@ public class DialogueBrancher : MonoBehaviour
     {
         trigger.startingNode = talkNodes[questState];
         trigger.TriggerDialogue();
+        if (questState == 0)
+        {
+            starter.StartQuest();
+            questState++;
+        }
+        
+
     }
 
     public void TriggerDialogueItem()

@@ -1510,6 +1510,7 @@ MonoBehaviour:
   dialogueText: {fileID: 347880810}
   letterDelay: 0.03
   clickAction: {fileID: 3001919216989983466, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  buttonCooldown: {fileID: 0}
   onLineStart:
     m_PersistentCalls:
       m_Calls: []
@@ -3048,8 +3049,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
   data: {fileID: 11400000, guid: 60c0bdc24e1fa344985cbec8d19e0e56, type: 2}
-  textBox: {fileID: 416650843}
-  questObject: {fileID: 0}
 --- !u!1 &1123637559
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,8 +3215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   data: {fileID: 11400000, guid: dddf5d3bed2d7be40b640d39cb8f9f0a, type: 2}
-  textBox: {fileID: 416650843}
-  questObject: {fileID: 4468852950478847122, guid: 8ead9de2ba78fc34bab568b0205029b7, type: 3}
 --- !u!1 &1208033083
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,6 +4929,8 @@ MonoBehaviour:
     choices: []
   itemID: 0
   questState: 0
+  questOrigin: 1
+  starter: {fileID: 1763339614}
 --- !u!114 &1763339611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4947,6 +4946,19 @@ MonoBehaviour:
   startingNode:
     dialogue: []
     choices: []
+--- !u!114 &1763339614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763339594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 10b9df8dc9714604497792f12404397e, type: 2}
 --- !u!1 &1799696105
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,6 +5577,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9118166796095310719, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1763339611}
+    - targetCorrespondingSourceObject: {fileID: 9118166796095310719, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1763339614}
   m_SourcePrefab: {fileID: 100100000, guid: 4bd435ae21307f84ca66663748511a9c, type: 3}
 --- !u!1001 &3944505406747373368
 PrefabInstance:

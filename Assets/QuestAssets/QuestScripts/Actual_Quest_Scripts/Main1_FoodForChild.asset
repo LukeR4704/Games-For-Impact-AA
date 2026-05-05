@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a283a59fe06ece64ea48e656be2adf88, type: 3}
   m_Name: Main1_FoodForChild
   m_EditorClassIdentifier: Assembly-CSharp::QuestData
-  questName: Get food for David
+  questName: Get food for Lucas
   questID: 0
   questStep: 0
   questStepDesc:
-  - David wants something different. Maybe ask around?
+  - Lucas wants something different. I should ask around.
   isOptional: 0

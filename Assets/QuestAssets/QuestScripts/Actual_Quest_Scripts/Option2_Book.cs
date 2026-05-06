@@ -7,7 +7,6 @@ public class Option2_Book: MonoBehaviour
     public int questStep = 0;
     private RoomBrain curRoom;
     [SerializeField] GameObject[] questInteraction;
-    [SerializeField] GameObject[] questNPC;
     public Item questItem;
     public QuestData data;
     private QuestEventBrain brain;
@@ -37,6 +36,11 @@ public class Option2_Book: MonoBehaviour
     {
         curRoom = GameObject.FindGameObjectWithTag("RoomBrain").GetComponent<RoomBrain>();
         QuestUpdate();
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
 

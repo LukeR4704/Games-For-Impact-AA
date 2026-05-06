@@ -384,9 +384,10 @@ MonoBehaviour:
   talkNodes: []
   itemID: 0
   questState: 0
-  questItem: 0
+  questItem: 
   questDay: 0
   starter: {fileID: 0}
+  childRoom: 0
 --- !u!114 &180207492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1334,6 +1335,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3111116066499450354, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: currentDay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3519341065931946936, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
       propertyPath: m_Name
       value: TimeManager
@@ -1856,6 +1861,8 @@ GameObject:
   m_Component:
   - component: {fileID: 840816615}
   - component: {fileID: 840816614}
+  - component: {fileID: 840816617}
+  - component: {fileID: 840816616}
   m_Layer: 0
   m_Name: Day3Dialogue
   m_TagString: Untagged
@@ -1925,6 +1932,108 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180207490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &840816616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840816613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 4b2a80b306203b94c90c9ce5e97f6279, type: 2}
+--- !u!114 &840816617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840816613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue:
+    - text: Mam, I don't feel well.
+      faceToShow: {fileID: 464262689}
+    - text: I have a headache.
+      faceToShow: {fileID: 464262689}
+    - text: Can you get me something to help please?
+      faceToShow: {fileID: 1364797963}
+    choices:
+    - choiceText: Paracetamol
+      nextNode:
+        dialogue:
+        - text: That's good.
+          faceToShow: {fileID: 1284924271}
+        - text: And some water as well please.
+          faceToShow: {fileID: 1284924271}
+        choices: []
+    - choiceText: Flat 7-Up
+      nextNode:
+        dialogue:
+        - text: I don't think that'll help
+          faceToShow: {fileID: 37669064}
+        choices:
+        - choiceText: Sure it will!
+          nextNode:
+            dialogue:
+            - text: No I think paracetamol and water will do.
+              faceToShow: {fileID: 1285793367}
+            choices: []
+        - choiceText: OK, something else then
+          nextNode:
+            dialogue:
+            - text: Yes, paracetamol and some water please
+              faceToShow: {fileID: 1284924271}
+            choices: []
+  itemNodes: []
+  talkNodes:
+  - dialogue:
+    - text: Mam, I don't feel well.
+      faceToShow: {fileID: 464262689}
+    - text: I have a headache.
+      faceToShow: {fileID: 464262689}
+    - text: Can you get me something to help please?
+      faceToShow: {fileID: 1364797963}
+    choices:
+    - choiceText: Paracetamol
+      nextNode:
+        dialogue:
+        - text: That's good.
+          faceToShow: {fileID: 1284924271}
+        - text: And some water as well please.
+          faceToShow: {fileID: 1284924271}
+        choices: []
+    - choiceText: Flat 7-Up
+      nextNode:
+        dialogue:
+        - text: I don't think that'll help
+          faceToShow: {fileID: 37669064}
+        choices:
+        - choiceText: Sure it will!
+          nextNode:
+            dialogue:
+            - text: No I think paracetamol and water will do.
+              faceToShow: {fileID: 1285793367}
+            choices: []
+        - choiceText: OK, something else then
+          nextNode:
+            dialogue:
+            - text: Yes, paracetamol and some water please
+              faceToShow: {fileID: 1284924271}
+            choices: []
+  itemID: 0
+  questState: 0
+  questItem: 0200000004000000
+  questDay: 2
+  starter: {fileID: 840816616}
+  childRoom: 1
 --- !u!1 &863860098
 GameObject:
   m_ObjectHideFlags: 0
@@ -3781,9 +3890,10 @@ MonoBehaviour:
         choices: []
   itemID: 0
   questState: 0
-  questItem: 6
+  questItem: 
   questDay: 0
   starter: {fileID: 1491197734}
+  childRoom: 1
 --- !u!1 &1526311328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4836,6 +4946,7 @@ GameObject:
   - component: {fileID: 1997395446}
   - component: {fileID: 1997395445}
   - component: {fileID: 1997395447}
+  - component: {fileID: 1997395448}
   m_Layer: 0
   m_Name: Day2Dialogue
   m_TagString: Untagged
@@ -4992,7 +5103,19 @@ MonoBehaviour:
             - text: I'm sorry. I appreciate all you do for me...
               faceToShow: {fileID: 464262689}
             choices: []
-  itemNodes: []
+  itemNodes:
+  - dialogue:
+    - text: What's that?
+      faceToShow: {fileID: 1285793367}
+    choices: []
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 1284924271}
+    choices: []
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 1284924271}
+    choices: []
   talkNodes:
   - dialogue:
     - text: Morning.
@@ -5050,9 +5173,23 @@ MonoBehaviour:
             choices: []
   itemID: 0
   questState: 0
-  questItem: 0
-  questDay: 0
-  starter: {fileID: 0}
+  questItem: 0300000007000000
+  questDay: 1
+  starter: {fileID: 1997395448}
+  childRoom: 1
+--- !u!114 &1997395448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997395444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 8fd46a64d51ee5f459202c5a09eb3132, type: 2}
 --- !u!1 &2102590070
 GameObject:
   m_ObjectHideFlags: 0

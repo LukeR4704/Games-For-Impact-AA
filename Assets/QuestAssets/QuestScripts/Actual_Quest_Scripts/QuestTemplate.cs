@@ -7,7 +7,6 @@ public class QuestTemplate : MonoBehaviour
     public int questStep = 0;
     private RoomBrain curRoom;
     [SerializeField] GameObject[] questInteraction;
-    [SerializeField] GameObject[] questNPC;
     public Item questItem;
     public QuestData data;
     private QuestEventBrain brain;
@@ -39,6 +38,10 @@ public class QuestTemplate : MonoBehaviour
         QuestUpdate();
     }
 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
     //run this whenever the quest status is updated
     public void QuestUpdate()

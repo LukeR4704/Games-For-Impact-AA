@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9172981622141859796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4353832949090475686}
+  - component: {fileID: 9072745226018654408}
+  - component: {fileID: 5557928930523108614}
+  m_Layer: 0
+  m_Name: Main2_Towel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4353832949090475686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172981622141859796}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 413.77335, y: 175.42735, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9072745226018654408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172981622141859796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b91874d04561b41933172fb70dcecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Main2_Towel
+  questStep: 0
+  questInteraction:
+  - {fileID: 4405775052809463277, guid: d2fadb3ff67bc72478c0d7101c1579ad, type: 3}
+  - {fileID: 4112833244120768047, guid: 9bab255584baffe49aa50df2b1a93880, type: 3}
+  questItem:
+  - {fileID: 11400000, guid: 124c447061060824e943b4b7b5c01a5d, type: 2}
+  - {fileID: 11400000, guid: e7caabedb896f5944b11b32cd4fc03a8, type: 2}
+  data: {fileID: 11400000, guid: 8fd46a64d51ee5f459202c5a09eb3132, type: 2}
+--- !u!114 &5557928930523108614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172981622141859796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cadc39e79c7475479c03e962510e36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestEventBrain
+  questProg:
+    m_PersistentCalls:
+      m_Calls: []
+  questClose:
+    m_PersistentCalls:
+      m_Calls: []

@@ -6,7 +6,6 @@ public class Main1_FoodForChild : MonoBehaviour
     public int questStep = 0;
     private RoomBrain curRoom;
     [SerializeField] GameObject[] questInteraction;
-    [SerializeField] GameObject[] questNPC;
     public Item questItem;
     public QuestData data;
     private QuestEventBrain brain;
@@ -41,6 +40,11 @@ public class Main1_FoodForChild : MonoBehaviour
         QuestUpdate();
     }
 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
 
     //run this whenever the quest status is updated
     public void QuestUpdate()
@@ -58,7 +62,7 @@ public class Main1_FoodForChild : MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 2) //kitchen, sandwich
+                    if (curRoom.roomID == 2 && !Inventory_Brain.instance.inventory.Contains(questItem)) //kitchen, sandwich
                     {
                         CreateInteractPoint(0, 0);
                     }
@@ -123,7 +127,6 @@ public class Main1_FoodForChild : MonoBehaviour
             QuestBrain.instance.mainQuestState = 2;
         }
         QuestBrain.instance.activeQuests.Remove(data);
-        SceneManager.sceneLoaded -= OnSceneLoaded;
         Destroy(gameObject);
 
     }
@@ -135,6 +138,7 @@ public class Main1_FoodForChild : MonoBehaviour
         {   
             Debug.Log("Correct item given!");
             curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
+            Inventory_Brain.instance.inventory.Remove(questItem);
             return;
             
         }
@@ -149,7 +153,6 @@ public class Main1_FoodForChild : MonoBehaviour
     {
         Debug.Log("Correct item taken!");
         ProgQuest();
-        Inventory_Brain.instance.inventory.Remove(questItem);
         curRoom.textBox.onDialogueComplete.RemoveListener(CorrectItem);
     }
 

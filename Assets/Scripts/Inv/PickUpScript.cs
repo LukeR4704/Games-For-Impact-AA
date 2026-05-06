@@ -13,7 +13,7 @@ public class PickUpScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     private bool dragging = false;
 
-    private EventSystem eventSystem;
+    //private readonly EventSystem eventSystem;
     private GraphicRaycaster raycaster;
     
     void Start()
@@ -70,6 +70,7 @@ public class PickUpScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             if (raycastResult.gameObject.CompareTag("NPC"))
             {
                 Debug.Log("Npc given item!");
+                Inventory_Brain.instance.giveItem.Invoke();
                 DialogueBrancher branch = GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().brancher;
                 branch.itemID = item.itemID;
                 branch.TriggerDialogueItem();

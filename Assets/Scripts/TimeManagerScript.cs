@@ -74,6 +74,11 @@ public class TimeManagerScript : MonoBehaviour
 
     }
 
+    public void CalendarToRooms()
+    {
+        SceneManager.LoadScene("Bedroom");
+    }
+
     public void ProceedToEnding()
     {
         SceneManager.LoadScene("EndingScene");

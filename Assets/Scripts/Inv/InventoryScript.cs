@@ -10,9 +10,14 @@ public class InventoryScript : MonoBehaviour
     [SerializeField] private Transform[] ItemSlot;
     [SerializeField] private Transform parentObj;
 
+    private void Start()
+    {
+        Inventory_Brain.instance.giveItem.AddListener(InvUpdate);
+    }
 
     private void OnEnable()
     {
+
         ui = GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().ui;
         foreach (Transform child in ui)
         {

@@ -146,6 +146,7 @@ public class Option2_Book: MonoBehaviour
         Debug.Log(i + " and " + p);
         GameObject obj = Instantiate(questInteraction[i], curRoom.questPoints[p]);
         obj.GetComponent<QuestInteraction>().questObj = gameObject;
+        
     }
 
 }

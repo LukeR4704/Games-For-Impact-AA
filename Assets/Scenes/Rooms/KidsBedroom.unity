@@ -4835,6 +4835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1997395446}
   - component: {fileID: 1997395445}
+  - component: {fileID: 1997395447}
   m_Layer: 0
   m_Name: Day2Dialogue
   m_TagString: Untagged
@@ -4924,6 +4925,134 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180207490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1997395447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997395444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue:
+    - text: 
+      faceToShow: {fileID: 0}
+    choices:
+    - choiceText: You OK?
+      nextNode:
+        dialogue:
+        - text: No. I didn't sleep great last night.
+          faceToShow: {fileID: 1364797963}
+        - text: I'm cold.
+          faceToShow: {fileID: 1364797963}
+        choices:
+        - choiceText: You also stink
+          nextNode:
+            dialogue:
+            - text: Really?
+              faceToShow: {fileID: 37669064}
+            - text: Fine, I'll go shower.
+              faceToShow: {fileID: 1285793367}
+            - text: I don't have a towel though...
+              faceToShow: {fileID: 1364797963}
+            choices: []
+        - choiceText: What's that smell?
+          nextNode:
+            dialogue:
+            - text: Probably me.
+              faceToShow: {fileID: 464262689}
+            - text: I'll go shower.
+              faceToShow: {fileID: 464262689}
+            - text: I need a towel though...
+              faceToShow: {fileID: 1364797963}
+            choices: []
+    - choiceText: You stink
+      nextNode:
+        dialogue:
+        - text: Harsh.
+          faceToShow: {fileID: 37669064}
+        - text: But fair. I'll go shower. I need a towel though.
+          faceToShow: {fileID: 1364797963}
+        - text: I was also cold last night. Could you get me a blanket also please?
+          faceToShow: {fileID: 1364797963}
+        choices:
+        - choiceText: Of course
+          nextNode:
+            dialogue:
+            - text: Thanks, Mam. You're the best.
+              faceToShow: {fileID: 1284924271}
+            choices: []
+        - choiceText: That's a lot
+          nextNode:
+            dialogue:
+            - text: I'm sorry. I appreciate all you do for me...
+              faceToShow: {fileID: 464262689}
+            choices: []
+  itemNodes: []
+  talkNodes:
+  - dialogue:
+    - text: Morning.
+      faceToShow: {fileID: 464262689}
+    choices:
+    - choiceText: You OK?
+      nextNode:
+        dialogue:
+        - text: No. I didn't sleep great last night.
+          faceToShow: {fileID: 1364797963}
+        - text: I'm cold.
+          faceToShow: {fileID: 1364797963}
+        choices:
+        - choiceText: You also stink
+          nextNode:
+            dialogue:
+            - text: Really?
+              faceToShow: {fileID: 37669064}
+            - text: Fine, I'll go shower.
+              faceToShow: {fileID: 1285793367}
+            - text: I don't have a towel though...
+              faceToShow: {fileID: 1364797963}
+            choices: []
+        - choiceText: What's that smell?
+          nextNode:
+            dialogue:
+            - text: Probably me.
+              faceToShow: {fileID: 464262689}
+            - text: I'll go shower.
+              faceToShow: {fileID: 464262689}
+            - text: I need a towel though...
+              faceToShow: {fileID: 1364797963}
+            choices: []
+    - choiceText: You stink
+      nextNode:
+        dialogue:
+        - text: Harsh.
+          faceToShow: {fileID: 37669064}
+        - text: But fair. I'll go shower. I need a towel though.
+          faceToShow: {fileID: 1364797963}
+        - text: I was also cold last night. Could you get me a blanket also please?
+          faceToShow: {fileID: 1364797963}
+        choices:
+        - choiceText: Of course
+          nextNode:
+            dialogue:
+            - text: Thanks, Mam. You're the best.
+              faceToShow: {fileID: 1284924271}
+            choices: []
+        - choiceText: That's a lot
+          nextNode:
+            dialogue:
+            - text: I'm sorry. I appreciate all you do for me...
+              faceToShow: {fileID: 464262689}
+            choices: []
+  itemID: 0
+  questState: 0
+  questItem: 0
+  questDay: 0
+  starter: {fileID: 0}
 --- !u!1 &2102590070
 GameObject:
   m_ObjectHideFlags: 0

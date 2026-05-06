@@ -70,10 +70,12 @@ public class Main1_FoodForChild : MonoBehaviour
                 case 1:
                     if (curRoom.roomID == 1)
                     {
+                        Debug.Log("Waiting for item");
                         Inventory_Brain.instance.giveItem.AddListener(CheckIfCorrectItem);
                     }
                     else
                     {
+                        Debug.Log("No longer waiting for item");
                         Inventory_Brain.instance.giveItem.RemoveListener(CheckIfCorrectItem);
                     }
                         ;
@@ -121,26 +123,31 @@ public class Main1_FoodForChild : MonoBehaviour
             QuestBrain.instance.mainQuestState = 2;
         }
         QuestBrain.instance.activeQuests.Remove(data);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         Destroy(gameObject);
 
     }
 
     //this is called when the player hands over an item while in the correct room for the quest. it will check if the item is correct, then incremement the quest while removing the player's item.
-    void CheckIfCorrectItem()
+    public void CheckIfCorrectItem()
     {
         if (Inventory_Brain.instance.grabbedItem.itemID == questItem.itemID)
-        {
+        {   
+            Debug.Log("Correct item given!");
             curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
             return;
+            
         }
         else
         {
+            Debug.Log("Wrong item given!");
             return;
         }
     }
 
     void CorrectItem()
     {
+        Debug.Log("Correct item taken!");
         ProgQuest();
         Inventory_Brain.instance.inventory.Remove(questItem);
         curRoom.textBox.onDialogueComplete.RemoveListener(CorrectItem);

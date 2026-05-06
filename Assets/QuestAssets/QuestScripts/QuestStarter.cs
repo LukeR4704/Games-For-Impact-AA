@@ -18,12 +18,14 @@ public class QuestStarter : MonoBehaviour
     {
             textBox.onDialogueComplete.AddListener(AddQuest);
 
+
     }
 
     private void AddQuest()
     {
         data.questStep = 0;
         QuestBrain.instance.StartQuest(data);
+        gameObject.GetComponent<DialogueBrancher>().questState++;
         textBox.onDialogueComplete.RemoveListener(AddQuest);
 
     }

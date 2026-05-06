@@ -1,16 +1,29 @@
+using UnityEngine.UI;
 using UnityEngine;
 
 public class ChildManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject[] theChildren;
+    [SerializeField] private Button talk;
+
+
+
+    void OnEnable()
     {
+        int d = TimeManagerScript.Instance.currentDay;
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        theChildren[d].SetActive(true);
+
+        RoomBrain b = GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>();
+        b.starter = theChildren[d].GetComponent<QuestStarter>();
+        b.brancher = theChildren[d].GetComponent<DialogueBrancher>();
+        talk.onClick.RemoveAllListeners();
+        talk.onClick.AddListener(theChildren[d].GetComponent<DialogueBrancher>().TriggerDialogueQuest);
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

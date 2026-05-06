@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 37669066}
   m_Layer: 5
   m_Name: ShockedLittleKid
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,78 +322,25 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180207490}
-  - component: {fileID: 180207489}
   - component: {fileID: 180207491}
+  - component: {fileID: 180207492}
+  - component: {fileID: 180207494}
   m_Layer: 0
   m_Name: Dialogues
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &180207489
-MonoBehaviour:
+--- !u!224 &180207490
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180207488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff41284d8a1c8b0498218d8f11cc6984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
-  startingNode:
-    dialogue:
-    - text: This is my neutral face
-      faceToShow: {fileID: 1364797963}
-    choices:
-    - choiceText: Show me shocked
-      nextNode:
-        dialogue:
-        - text: This is my shocked face
-          faceToShow: {fileID: 37669064}
-        choices:
-        - choiceText: Sad
-          nextNode:
-            dialogue:
-            - text: This is my sad face
-              faceToShow: {fileID: 464262689}
-            choices: []
-        - choiceText: Angry
-          nextNode:
-            dialogue:
-            - text: This is my angry face
-              faceToShow: {fileID: 1285793367}
-            choices: []
-    - choiceText: Show me happy
-      nextNode:
-        dialogue:
-        - text: This is my happy face
-          faceToShow: {fileID: 1284924271}
-        choices:
-        - choiceText: Sad
-          nextNode:
-            dialogue:
-            - text: This is my sad face
-              faceToShow: {fileID: 464262689}
-            choices: []
-        - choiceText: Angry
-          nextNode:
-            dialogue:
-            - text: This is my angry face
-              faceToShow: {fileID: 1285793367}
-            choices: []
---- !u!4 &180207490
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180207488}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1280, y: 370, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -405,6 +352,11 @@ Transform:
   - {fileID: 2102590072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 378.2085, y: 228.19028}
+  m_SizeDelta: {x: 203.0087, y: 192.7078}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180207491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +387,33 @@ MonoBehaviour:
   questItem: 0
   questDay: 0
   starter: {fileID: 0}
+--- !u!114 &180207492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180207488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e990a6bd0e31d1348bd86f84d5d9e83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  theChildren:
+  - {fileID: 1491197731}
+  - {fileID: 1997395444}
+  - {fileID: 840816613}
+  - {fileID: 1610416606}
+  - {fileID: 1848591071}
+  talk: {fileID: 1373096474}
+--- !u!222 &180207494
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180207488}
+  m_CullTransparentMesh: 1
 --- !u!1001 &225251591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -663,7 +642,7 @@ GameObject:
   - component: {fileID: 464262691}
   m_Layer: 5
   m_Name: SadLittleKid
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,7 +794,7 @@ GameObject:
   - component: {fileID: 601406041}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: MainCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1347,6 +1326,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebff84af0c670a499b16e939765e243, type: 3}
+--- !u!1001 &761755505
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3519341065931946936, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_Name
+      value: TimeManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 448.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 298.5543
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282099020670098063, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
 --- !u!1 &764653154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,7 +2913,7 @@ GameObject:
   - component: {fileID: 1284924273}
   m_Layer: 5
   m_Name: HappyLittleKid
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2952,7 +2988,7 @@ GameObject:
   - component: {fileID: 1285793369}
   m_Layer: 5
   m_Name: AngryLittleKid
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3164,7 +3200,7 @@ GameObject:
   - component: {fileID: 1364797965}
   m_Layer: 5
   m_Name: NeutralLittleKid
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3394,7 +3430,7 @@ PrefabInstance:
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 180207489}
+      objectReference: {fileID: 0}
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3569,7 +3605,7 @@ GameObject:
   - component: {fileID: 1409173447}
   m_Layer: 5
   m_Name: KidFaces
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3618,6 +3654,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1491197733}
   - component: {fileID: 1491197732}
+  - component: {fileID: 1491197735}
+  - component: {fileID: 1491197734}
   m_Layer: 0
   m_Name: Day1Dialogue
   m_TagString: Untagged
@@ -3673,6 +3711,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180207490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1491197734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491197731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 10b9df8dc9714604497792f12404397e, type: 2}
+--- !u!114 &1491197735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491197731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue:
+    - text: Yay, thanks Mam. I love you.
+      faceToShow: {fileID: 1284924271}
+    - text: Goodnight.
+      faceToShow: {fileID: 1364797963}
+    choices: []
+  itemNodes:
+  - dialogue:
+    - text: 'Huh?
+
+        What''s this?'
+      faceToShow: {fileID: 0}
+    - text: 'Huh?
+
+        What''s this?'
+      faceToShow: {fileID: 0}
+    choices: []
+  - dialogue:
+    - text: Yay! Thanks mam!
+      faceToShow: {fileID: 1284924271}
+    choices: []
+  talkNodes:
+  - dialogue:
+    - text: Mam, I'm hungry.
+      faceToShow: {fileID: 464262689}
+    - text: Could you get me some food?
+      faceToShow: {fileID: 1364797963}
+    choices:
+    - choiceText: Sure, baby
+      nextNode:
+        dialogue:
+        - text: Thanks, Mam.
+          faceToShow: {fileID: 1284924271}
+        - text: I'd like a sandwich, please.
+          faceToShow: {fileID: 1364797963}
+        choices: []
+    - choiceText: What do you want?
+      nextNode:
+        dialogue:
+        - text: I'd like a sandwich, please.
+          faceToShow: {fileID: 1364797963}
+        choices: []
+  itemID: 0
+  questState: 0
+  questItem: 6
+  questDay: 0
+  starter: {fileID: 1491197734}
 --- !u!1 &1526311328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,6 +4539,7 @@ MonoBehaviour:
   rightButton: {fileID: 765282315}
   questAvailable: 0
   bedChoice: 0
+  childChoice: 1
 --- !u!1 &1723866809
 GameObject:
   m_ObjectHideFlags: 0
@@ -5044,3 +5156,4 @@ SceneRoots:
   - {fileID: 764653156}
   - {fileID: 1257521680}
   - {fileID: 730090822}
+  - {fileID: 761755505}

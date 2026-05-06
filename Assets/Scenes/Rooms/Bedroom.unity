@@ -3419,7 +3419,7 @@ GameObject:
   - component: {fileID: 1546325915}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: MainCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4097,6 +4097,7 @@ MonoBehaviour:
   rightButton: {fileID: 805399553}
   questAvailable: 0
   bedChoice: 1
+  childChoice: 0
 --- !u!1001 &1894434900
 PrefabInstance:
   m_ObjectHideFlags: 0

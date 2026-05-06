@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 989885411615002219}
   m_Layer: 0
   m_Name: RoomCore
-  m_TagString: SceneCore
+  m_TagString: RoomBrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6847f183fdb4a428a8d1cf46f2c4bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  day:
-  - {fileID: 0}
-  - {fileID: 0}
-  interactPoint: {fileID: 0}
+  eventSystem: {fileID: 0}
   textBox: {fileID: 0}
+  ui: {fileID: 0}
+  interactPoints: {fileID: 0}
+  starter: {fileID: 0}
+  roomID: 0
+  questPoints: []

@@ -9,10 +9,13 @@ public class ChoiceUI : MonoBehaviour
 
     public bool questAvailable;
     [SerializeField] private bool bedChoice;
+    [SerializeField] private bool childChoice;
     private TextBox textBox;
+    private QuestStarter starter;
 
     public void ShowChoices(DialogueChoice[] choices, TextBox targetTextBox)
     {
+        starter = GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().starter;
         textBox = targetTextBox;
 
         textBox.SetInputEnabled(false);
@@ -31,7 +34,7 @@ public class ChoiceUI : MonoBehaviour
             {
                 leftButton.onClick.AddListener(GoToBed);
             }
-            if (questAvailable)
+            if (questAvailable || childChoice)
             {
                 leftButton.onClick.AddListener(AcceptQuest);
 
@@ -45,6 +48,13 @@ public class ChoiceUI : MonoBehaviour
 
             rightButton.onClick.RemoveAllListeners();
             rightButton.onClick.AddListener(() => Select(choices[1]));
+
+            if (childChoice)
+            {
+                rightButton.onClick.AddListener(AcceptQuest);
+
+            }
+
         }
 
         gameObject.SetActive(true);
@@ -65,7 +75,7 @@ public class ChoiceUI : MonoBehaviour
 
     private void AcceptQuest()
     {
-        gameObject.GetComponent<QuestStarter>().StartQuest();
+        starter.StartQuest();
         questAvailable = false;
     }
 

@@ -49,7 +49,7 @@ public class QuestBrain : MonoBehaviour
     public void StartQuest(QuestData quest)
     {
         activeQuests.Add(quest);
-        Instantiate(questCatalogue[quest.questID]);
+        Instantiate(questCatalogue[quest.questID], transform);
     }
 
 

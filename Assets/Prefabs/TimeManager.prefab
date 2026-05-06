@@ -425,17 +425,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManagerScript
   currentDay: 0
-  finalDay: 2
+  finalDay: 4
   currentHour: 0
-  finalHour: 2
+  finalHour: 1
   passTime:
     m_PersistentCalls:
       m_Calls: []
   passDay:
     m_PersistentCalls:
       m_Calls: []
-  dayStartScene: Hallway
-  endingScene: Bedroom
 --- !u!1 &4457320093112922853
 GameObject:
   m_ObjectHideFlags: 0

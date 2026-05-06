@@ -35,11 +35,6 @@ public class DialogueBrancher : MonoBehaviour
         {
             trigger.startingNode = talkNodes[questState];
             trigger.TriggerDialogue();
-            if (questState == 0)
-            {
-                starter.StartQuest();
-                questState++;
-            }
         }
         
 

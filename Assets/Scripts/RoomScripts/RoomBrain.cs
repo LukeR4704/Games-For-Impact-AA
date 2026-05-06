@@ -13,6 +13,7 @@ public class RoomBrain : MonoBehaviour
     public TextBox textBox;
     public Transform ui;
     public InteractionPointBrain interactPoints;
+    public QuestStarter starter;
     public DialogueBrancher brancher;
 
     [Header("Refer to cheat sheet")]

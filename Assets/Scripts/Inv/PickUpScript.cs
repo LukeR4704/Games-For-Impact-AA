@@ -70,8 +70,9 @@ public class PickUpScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             if (raycastResult.gameObject.CompareTag("NPC"))
             {
                 Debug.Log("Npc given item!");
-                raycastResult.gameObject.GetComponent<DialogueBrancher>().itemID = item.itemID;
-                raycastResult.gameObject.GetComponent<DialogueBrancher>().TriggerDialogueItem();
+                DialogueBrancher branch = GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().brancher;
+                branch.itemID = item.itemID;
+                branch.TriggerDialogueItem();
                 return true;
             }
         }

@@ -158,4 +158,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   questObj: {fileID: 0}
-  questItem: {fileID: 0}
+  questItem: {fileID: 11400000, guid: df386cd4d5496cc4e947eef6ef6da99c, type: 2}

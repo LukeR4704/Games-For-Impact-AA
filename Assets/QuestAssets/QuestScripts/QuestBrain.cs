@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.Rendering;
 
 public class QuestBrain : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class QuestBrain : MonoBehaviour
     public List<GameObject> activeQuestObjs = new List<GameObject>();
     public GameObject[] questCatalogue;
     public int mainQuestState = 0; //0 = not started, 1 = active, 2 = finished
+    public bool[] optionalQuestsCleared; 
 
 
 
@@ -36,12 +36,13 @@ public class QuestBrain : MonoBehaviour
 
     private void ClearLog()
     {
+        mainQuestState = 0;
         activeQuestObjs.Clear();
         activeQuests.Clear();
 
         foreach (Transform child in transform)
         {
-            Destroy(child);
+            Destroy(child.gameObject);
         }
     }
 

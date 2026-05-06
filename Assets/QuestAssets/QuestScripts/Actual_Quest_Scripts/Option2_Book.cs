@@ -1,7 +1,8 @@
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Main1_FoodForChild : MonoBehaviour
+public class Option2_Book: MonoBehaviour
 {
     public int questStep = 0;
     private RoomBrain curRoom;
@@ -25,9 +26,6 @@ public class Main1_FoodForChild : MonoBehaviour
         brain = gameObject.GetComponent<QuestEventBrain>();
         brain.questProg.AddListener(ProgQuest);
         brain.questClose.AddListener(CloseQuest);
-
-
-        Debug.Log("Quest data file:" + data + " Child of: " + GetComponentInParent<Transform>());
 
         QuestUpdate();
 
@@ -58,7 +56,7 @@ public class Main1_FoodForChild : MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 2) //kitchen, sandwich
+                    if (curRoom.roomID == 1)
                     {
                         CreateInteractPoint(0, 0);
                     }
@@ -68,7 +66,7 @@ public class Main1_FoodForChild : MonoBehaviour
 
                 //this is when you find the item and must now bring it back to the required npc
                 case 1:
-                    if (curRoom.roomID == 1)
+                    if (curRoom.roomID == 2)
                     {
                         Inventory_Brain.instance.giveItem.AddListener(CheckIfCorrectItem);
                     }
@@ -92,6 +90,27 @@ public class Main1_FoodForChild : MonoBehaviour
             Debug.Log("Quest out of step bounds!");
             CloseQuest();
         }
+    }
+
+    //this is called when the player hands over an item while in the correct room for the quest. it will check if the item is correct, then incremement the quest while removing the player's item.
+    void CheckIfCorrectItem()
+    {
+        if(Inventory_Brain.instance.grabbedItem.itemID == questItem.itemID)
+        {
+            curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
+            return;
+        }
+        else 
+        { 
+            return;
+        }
+    }
+
+    void CorrectItem()
+    {
+        ProgQuest();
+        Inventory_Brain.instance.inventory.Remove(questItem);
+        curRoom.textBox.onDialogueComplete.RemoveListener(CorrectItem);
     }
 
 
@@ -119,27 +138,6 @@ public class Main1_FoodForChild : MonoBehaviour
         QuestBrain.instance.activeQuests.Remove(data);
         Destroy(gameObject);
 
-    }
-
-    //this is called when the player hands over an item while in the correct room for the quest. it will check if the item is correct, then incremement the quest while removing the player's item.
-    void CheckIfCorrectItem()
-    {
-        if (Inventory_Brain.instance.grabbedItem.itemID == questItem.itemID)
-        {
-            curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
-            return;
-        }
-        else
-        {
-            return;
-        }
-    }
-
-    void CorrectItem()
-    {
-        ProgQuest();
-        Inventory_Brain.instance.inventory.Remove(questItem);
-        curRoom.textBox.onDialogueComplete.RemoveListener(CorrectItem);
     }
 
     //method that creates item interaction points when the quest needs them. i = the item, p = the transform of the interact point

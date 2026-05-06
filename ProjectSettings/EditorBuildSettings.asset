@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/Kitchen.unity
     guid: 80e49811ded5e42458e46c8126dc0a00
+  - enabled: 1
+    path: Assets/Scenes/Epilogue.unity
+    guid: 4018e65d0246bd744ac8335d7b8a5448
+  - enabled: 1
+    path: Assets/Scenes/CalendarScene.unity
+    guid: 7dfbfead8d6b59d47820e922961ae096
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

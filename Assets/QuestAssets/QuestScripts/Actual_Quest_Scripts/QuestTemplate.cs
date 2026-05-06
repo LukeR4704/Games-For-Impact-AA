@@ -27,9 +27,6 @@ public class QuestTemplate : MonoBehaviour
         brain.questProg.AddListener(ProgQuest);
         brain.questClose.AddListener(CloseQuest);
 
-
-        Debug.Log("Quest data file:" + data + " Child of: " + GetComponentInParent<Transform>());
-
         QuestUpdate();
 
     }
@@ -47,7 +44,8 @@ public class QuestTemplate : MonoBehaviour
     public void QuestUpdate()
     {
 
-        try {
+        try
+        {
             switch (data.questStep)
             {
                 case 0:
@@ -58,23 +56,23 @@ public class QuestTemplate : MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 0)
+                    if (curRoom.roomID == 1)
                     {
-
+                        CreateInteractPoint(0, 0);
                     }
                     ;
 
                     break;
 
-                    //this is when you find the item and must now bring it back to the required npc
+                //this is when you find the item and must now bring it back to the required npc
                 case 1:
-                    if (curRoom.roomID == 0)
+                    if (curRoom.roomID == 2)
                     {
-
+                        Inventory_Brain.instance.giveItem.AddListener(CheckIfCorrectItem);
                     }
                     ;
                     break;
-                   //for when youve given the NPC the required item; quest is now clear
+                //for when youve given the NPC the required item; quest is now clear
                 case 2:
 
                     CloseQuest();
@@ -92,6 +90,27 @@ public class QuestTemplate : MonoBehaviour
             Debug.Log("Quest out of step bounds!");
             CloseQuest();
         }
+    }
+
+    //this is called when the player hands over an item while in the correct room for the quest. it will check if the item is correct, then incremement the quest while removing the player's item.
+    void CheckIfCorrectItem()
+    {
+        if (Inventory_Brain.instance.grabbedItem.itemID == questItem.itemID)
+        {
+            curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
+            return;
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    void CorrectItem()
+    {
+        ProgQuest();
+        Inventory_Brain.instance.inventory.Remove(questItem);
+        curRoom.textBox.onDialogueComplete.RemoveListener(CorrectItem);
     }
 
 
@@ -112,13 +131,13 @@ public class QuestTemplate : MonoBehaviour
     //method that erases the quest object and removes it from the active quest list
     public void CloseQuest()
     {
-        if(!data.isOptional)
+        if (!data.isOptional)
         {
             QuestBrain.instance.mainQuestState = 2;
         }
         QuestBrain.instance.activeQuests.Remove(data);
         Destroy(gameObject);
-        
+
     }
 
     //method that creates item interaction points when the quest needs them. i = the item, p = the transform of the interact point

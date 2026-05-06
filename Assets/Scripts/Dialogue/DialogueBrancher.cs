@@ -2,29 +2,44 @@ using UnityEngine;
 
 public class DialogueBrancher : MonoBehaviour
 {
+    public DialogueNode baseNode;
     public DialogueNode[] itemNodes;
     public DialogueNode[] talkNodes;
-    public int itemID;
-    public int questState = 0;
-    [Header("Does talking initiate a quest?")]
-    [SerializeField] private bool questOrigin;
+    [HideInInspector] public int itemID;
+    [HideInInspector] public int questState = 0; // 0 = start quest dialogue, 1 = mid quest dialogue, 2 = finished quest dialogue
+    public int questItem;
+    
+
+    [SerializeField] private int questDay;
     [SerializeField] private QuestStarter starter;
+
+
 
     private DialogueTrigger trigger;
     
     private void Start()
     {
+        
+
         trigger = GetComponent<DialogueTrigger>();
+
     }
 
     public void TriggerDialogueQuest()
     {
-        trigger.startingNode = talkNodes[questState];
-        trigger.TriggerDialogue();
-        if (questState == 0)
+        if (TimeManagerScript.Instance.currentDay != questDay)
         {
-            starter.StartQuest();
-            questState++;
+            trigger.startingNode = baseNode;
+        }
+        else
+        {
+            trigger.startingNode = talkNodes[questState];
+            trigger.TriggerDialogue();
+            if (questState == 0)
+            {
+                starter.StartQuest();
+                questState++;
+            }
         }
         
 
@@ -32,8 +47,16 @@ public class DialogueBrancher : MonoBehaviour
 
     public void TriggerDialogueItem()
     {
-        trigger.startingNode = itemNodes[itemID];
-        trigger.TriggerDialogue();
+        if (itemID == questItem)
+        {
+            trigger.startingNode = itemNodes[1];
+            trigger.TriggerDialogue();
+        }
+        else
+        {
+            trigger.startingNode = itemNodes[0];
+            trigger.TriggerDialogue();
+        }
     }
 
 

@@ -5,11 +5,12 @@ public class InteractionPointBrain : MonoBehaviour
 {
 
     private Button[] buttons;
-    public TextBox textBox;
+    private TextBox textBox;
     public bool looking = false;
 
     void Start()
     {
+        textBox = GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().textBox;
         UnloadInteractionPoints();
         textBox.onLineStart.AddListener(UnloadInteractionPoints);
         textBox.onDialogueComplete.AddListener(LoadInteractionPoints);

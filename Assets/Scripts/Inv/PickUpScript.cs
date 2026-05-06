@@ -53,7 +53,7 @@ public class PickUpScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         CheckForNPC(eventData);
         dragging = false;
-        Inventory_Brain.instance.grabbedItem = null;
+        //Inventory_Brain.instance.grabbedItem = null;
         transform.SetParent(parentBeforeDrag);
         transform.position = posBeforeDrag;
     }

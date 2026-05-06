@@ -6,14 +6,13 @@ public class Inventory_Brain : MonoBehaviour
 {
 
     public static Inventory_Brain instance;
-    public Transform invUI;
     public GameObject[] itemCatalogue;
     //public Item[] itemData;
     public List<Item> inventory = new List<Item>();
 
-    public Item grabbedItem;
+    [HideInInspector]public Item grabbedItem;
 
-    public UnityEvent giveItem;
+    [HideInInspector]public UnityEvent giveItem;
 
     private void Awake()
     {

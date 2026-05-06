@@ -3,10 +3,10 @@ using UnityEngine.EventSystems;
 
 public class RoomBrain : MonoBehaviour
 {
-    private int curTime;
-    private int curDay;
+    //private int curTime;
+    //private int curDay;
 
-    [SerializeField] GameObject[] day;
+    //[SerializeField] GameObject[] day;
 
     [Header("Assign major room components.")] 
     public EventSystem eventSystem;
@@ -24,7 +24,7 @@ public class RoomBrain : MonoBehaviour
     
 
 
-
+/*
     void Start()
     {
         curTime = TimeManagerScript.Instance.currentHour;
@@ -51,4 +51,5 @@ public class RoomBrain : MonoBehaviour
         }
         
     }
+*/
 }

@@ -50,6 +50,7 @@ MonoBehaviour:
   questCatalogue:
   - {fileID: 2229469834428379918, guid: 367c432304102d5468b54c2c732d024d, type: 3}
   mainQuestState: 0
+  optionalQuestsCleared: 
 --- !u!114 &453638224236361292
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,8 +3,12 @@ using UnityEngine.Rendering;
 
 public class InventoryScript : MonoBehaviour
 {
+
+    //This script instantiates the inventory ui elements and nothing else. It does not need to be referred to ever.
+
     private Transform ui;
     [SerializeField] private Transform[] ItemSlot;
+    [SerializeField] private Transform parentObj;
 
 
     private void OnEnable()
@@ -12,7 +16,10 @@ public class InventoryScript : MonoBehaviour
         ui = GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().ui;
         foreach (Transform child in ui)
         {
-            child.gameObject.SetActive(false);
+            if (child != parentObj.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
         }
 
         InvUpdate();
@@ -21,7 +28,7 @@ public class InventoryScript : MonoBehaviour
     
     public void LoadInv()
     {
-        Debug.Log(Inventory_Brain.instance.inventory);
+        
         gameObject.SetActive(true);
 
 
@@ -61,15 +68,14 @@ public class InventoryScript : MonoBehaviour
 
         foreach (Transform child in ui)
         {
-            child.gameObject.SetActive(true);
+            if (child != parentObj.transform)
+            {
+                child.gameObject.SetActive(true);
+            }
         }
 
         gameObject.SetActive(false);
 
     }
 
-    public void GiveItem(Item item)
-    {
-        Inventory_Brain.instance.inventory.Remove(item);
-    }
 }

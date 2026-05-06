@@ -7,6 +7,8 @@ public class ChoiceUI : MonoBehaviour
     [SerializeField] private Button leftButton;
     [SerializeField] private Button rightButton;
 
+    public bool questAvailable;
+    [SerializeField] private bool bedChoice;
     private TextBox textBox;
 
     public void ShowChoices(DialogueChoice[] choices, TextBox targetTextBox)
@@ -25,6 +27,15 @@ public class ChoiceUI : MonoBehaviour
 
             leftButton.onClick.RemoveAllListeners();
             leftButton.onClick.AddListener(() => Select(choices[0]));
+            if (bedChoice)
+            {
+                targetTextBox.onDialogueComplete.AddListener(TimeManagerScript.Instance.NextDay);
+            }
+            if (questAvailable)
+            {
+                gameObject.GetComponent<QuestStarter>().StartQuest();
+                questAvailable = false;
+            }
         }
 
         if (choices.Length > 1)

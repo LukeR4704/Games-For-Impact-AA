@@ -63,13 +63,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7840c854864be04bbe165aea7b7ea7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  invUI: {fileID: 0}
   itemCatalogue:
   - {fileID: 412175251854169590, guid: 58e79f68b09bd414a898a8bbee63ecc9, type: 3}
   - {fileID: 1516758866985868455, guid: be2f94c0ed237bf48ba6e40b4a86c0b2, type: 3}
   - {fileID: 5304214913223239841, guid: e66fd10a54cd9c945bc65b377e6451e5, type: 3}
   - {fileID: 5552139956647040551, guid: 6f0d2d95d89b8014695f152307f2b2f6, type: 3}
   - {fileID: 8055893679693738568, guid: 7acdaea9720ddf74e844caccf742c401, type: 3}
+  - {fileID: 8288977610162452383, guid: d21bd722a18e6484fa9e5ecc66f8cc39, type: 3}
+  - {fileID: 6954311450111355242, guid: f8da4981916e24b4396a973c1f20335f, type: 3}
+  - {fileID: 4281858526586243226, guid: c0fb7a574b0e91f4c9ec7580e1c30058, type: 3}
+  - {fileID: 4864507873270700384, guid: c9c173bd78c0e7044a0f5559779d75a3, type: 3}
+  - {fileID: 147544658406883729, guid: 982cd0a43b272cb4ba0edd9772868c73, type: 3}
   inventory: []
   grabbedItem: {fileID: 0}
   giveItem:

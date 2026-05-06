@@ -6,8 +6,7 @@ public class QuestInteraction : MonoBehaviour
     private TextBox textBox;
     private QuestEventBrain eventObj;
 
-    [SerializeField] private bool addItem;
-
+    [SerializeField] private Item questItem;
 
     void Start()
     {
@@ -28,6 +27,7 @@ public class QuestInteraction : MonoBehaviour
     void ProgEvent()
     {
         eventObj.questProg.Invoke();
+        Inventory_Brain.instance.AddItem(questItem);
     }
 
     void RemoveObj()

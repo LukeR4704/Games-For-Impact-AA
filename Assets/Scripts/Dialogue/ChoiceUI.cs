@@ -29,12 +29,12 @@ public class ChoiceUI : MonoBehaviour
             leftButton.onClick.AddListener(() => Select(choices[0]));
             if (bedChoice)
             {
-                targetTextBox.onDialogueComplete.AddListener(TimeManagerScript.Instance.NextDay);
+                leftButton.onClick.AddListener(GoToBed);
             }
             if (questAvailable)
             {
-                gameObject.GetComponent<QuestStarter>().StartQuest();
-                questAvailable = false;
+                leftButton.onClick.AddListener(AcceptQuest);
+
             }
         }
 
@@ -61,5 +61,16 @@ public class ChoiceUI : MonoBehaviour
 
         // Tell TextBox / system what the next node is
         DialogueManager.Instance.SetCurrentNode(choice.nextNode);
+    }
+
+    private void AcceptQuest()
+    {
+        gameObject.GetComponent<QuestStarter>().StartQuest();
+        questAvailable = false;
+    }
+
+    private void GoToBed()
+    {
+        textBox.onDialogueComplete.AddListener(TimeManagerScript.Instance.NextDay);
     }
 }

@@ -8,9 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 387219023193969059, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
+      propertyPath: startingNode.dialogue.Array.data[0].text
+      value: You made a sandwich.
+      objectReference: {fileID: 0}
+    - target: {fileID: 387219023193969059, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
+      propertyPath: startingNode.dialogue.Array.data[1].text
+      value: This should fill Lucas up.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927965216607709567, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3398628288854820158, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_Name
-      value: InteractPoint_Quest_
+      value: Q_Sandwich_InteractPoint
       objectReference: {fileID: 0}
     - target: {fileID: 4726722968264756561, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -66,11 +78,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 45.9447
+      value: 179.8404
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 74.5316
+      value: 172.3207
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,11 +114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 5.2656
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -2.2567
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -146,4 +158,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   questObj: {fileID: 0}
-  addItem: 0
+  questItem: {fileID: 0}

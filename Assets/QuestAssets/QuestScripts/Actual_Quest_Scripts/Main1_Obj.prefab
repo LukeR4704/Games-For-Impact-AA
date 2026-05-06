@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Main1_FoodForChild
   questStep: 0
-  questInteraction: []
+  questInteraction:
+  - {fileID: 6450670980970588174, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
   questNPC: []
   questItem: {fileID: 11400000, guid: 620c03dae4b0340418d827bd18f50d71, type: 2}
   data: {fileID: 11400000, guid: 10b9df8dc9714604497792f12404397e, type: 2}

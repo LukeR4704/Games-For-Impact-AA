@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2747257771574726400
+--- !u!1001 &1266529398593568566
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,22 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3978798361137176673, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3978798361137176673, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3978798361137176673, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3978798361137176673, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DialogueTrigger, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 4580578828387062711, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -50,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4580578828387062711, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 65.3815
+      value: 179.8404
       objectReference: {fileID: 0}
     - target: {fileID: 4580578828387062711, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 56.8779
+      value: 172.3207
       objectReference: {fileID: 0}
     - target: {fileID: 4580578828387062711, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: m_LocalPosition.x
@@ -86,11 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4580578828387062711, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9.7184
+      value: 5.2656
       objectReference: {fileID: 0}
     - target: {fileID: 4580578828387062711, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.8268
+      value: -2.2567
       objectReference: {fileID: 0}
     - target: {fileID: 4580578828387062711, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -106,37 +90,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6450670980970588174, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: m_Name
-      value: InteractPoint_Quest_TestStep2
+      value: Q_Book_InteractPoint Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 7813388416545129551, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 4a35d66ee5910754ea39114eae961291, type: 3}
     - target: {fileID: 8354340990255185043, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
       propertyPath: startingNode.dialogue.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8354340990255185043, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: 'startingNode.dialogue.Array.data[0]'
-      value: Another test quest objective.
+      propertyPath: startingNode.dialogue.Array.data[0].text
+      value: You found Lucas' novel!
       objectReference: {fileID: 0}
-    - target: {fileID: 8354340990255185043, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: 'startingNode.dialogue.Array.data[1]'
-      value: I call them quests in code and the editor, but in-game we should call
-        them "Tasks".
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354340990255185043, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: 'startingNode.dialogue.Array.data[2]'
-      value: This one will end the quest maybe?
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354340990255185043, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: 'startingNode.dialogue.Array.data[3]'
-      value: Unless I have time to make it work with an NPC for the final step.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354340990255185043, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
-      propertyPath: 'startingNode.dialogue.Array.data[4]'
+    - target: {fileID: 8930640054668768749, guid: 986bebcfd954fc04685133cb6bc68f14, type: 3}
+      propertyPath: questItem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 46b55dcca5ec8084e82c1050de732283, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

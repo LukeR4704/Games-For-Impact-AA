@@ -59,7 +59,10 @@ public class InteractionPointBrain : MonoBehaviour
             {
                 foreach (Button interactPoint in buttons)
                 {
-                    interactPoint.interactable = true;
+                    if (interactPoint != null)
+                    {
+                        interactPoint.interactable = true;
+                    }
                 }
             }
 

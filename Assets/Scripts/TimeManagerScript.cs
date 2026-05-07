@@ -55,33 +55,31 @@ public class TimeManagerScript : MonoBehaviour
 
     public void NextDay()
     {
-        if (currentDay <= finalDay)
-        {
             currentDay++;
             currentHour = 0;
 
             passDay?.Invoke();
 
             SceneManager.LoadScene("CalendarScene");
-        }
 
-        else if(currentDay > finalDay)
-        {
-            currentDay = 0;
-            currentHour = 0;
-            ProceedToEnding();
-        }
 
     }
 
     public void CalendarToRooms()
     {
-        SceneManager.LoadScene("Bedroom");
+        if (currentDay <= finalDay)
+        {
+            SceneManager.LoadScene("Bedroom");
+        }
+        else if (currentDay > finalDay)
+        {
+            ProceedToEnding();
+        }
     }
 
     public void ProceedToEnding()
     {
-        SceneManager.LoadScene("EndingScene");
+        SceneManager.LoadScene("Epilogue");
     }
 
 

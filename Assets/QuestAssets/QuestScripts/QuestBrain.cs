@@ -18,6 +18,8 @@ public class QuestBrain : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+
+            
         }
 
         else if (instance != this)

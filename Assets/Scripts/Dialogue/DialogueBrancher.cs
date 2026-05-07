@@ -6,22 +6,26 @@ public class DialogueBrancher : MonoBehaviour
     public DialogueNode[] itemNodes;
     public DialogueNode[] talkNodes;
     [HideInInspector] public int itemID;
-    [HideInInspector] public int questState = 0; // 0 = start quest dialogue, 1 = mid quest dialogue, 2 = finished quest dialogue
+
+    public int questStep = 0;
     public int[] questItem;
     
 
     [SerializeField] private int questDay;
     [SerializeField] private QuestStarter starter;
     [SerializeField] private bool childRoom;
-
+    [SerializeField] private QuestData quest;
 
 
     private DialogueTrigger trigger;
     
     private void Start()
     {
-        
 
+        if (QuestBrain.instance.activeQuests.Contains(quest))
+        {
+            questStep++;
+        }
         trigger = GetComponent<DialogueTrigger>();
 
     }
@@ -31,11 +35,14 @@ public class DialogueBrancher : MonoBehaviour
         if (TimeManagerScript.Instance.currentDay != questDay && !childRoom)
         {
             trigger.startingNode = baseNode;
+            trigger.TriggerDialogue();
         }
         else
         {
-            trigger.startingNode = talkNodes[questState];
+            trigger.startingNode = talkNodes[questStep];
             trigger.TriggerDialogue();
+            
+            
         }
         
 

@@ -20,6 +20,7 @@ public class TextBox : MonoBehaviour
     public UnityEvent onLineStart;
     public UnityEvent onLineComplete;
     public UnityEvent onDialogueComplete;
+    
     private bool inputEnabled = true;
     private bool dialogueActive = false;
     
@@ -207,6 +208,7 @@ public class TextBox : MonoBehaviour
             buttonCooldown.TriggerCooldown();
 
         onDialogueComplete?.Invoke();
+        
         gameObject.SetActive(false);
     }
 }

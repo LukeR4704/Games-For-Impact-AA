@@ -9,13 +9,14 @@ public class InteractionPointBrain : MonoBehaviour
     private TextBox textBox;
     public bool looking = false;
     public Transform[] questPoints;
+    public Transform bed;
 
     void Start()
     {
         textBox = GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().textBox;
         UnloadInteractionPoints();
-        textBox.onLineStart.AddListener(UnloadInteractionPoints);
-        textBox.onDialogueComplete.AddListener(LoadInteractionPoints);
+        textBox.onLineStart.AddListener(StopLooking);
+        textBox.onDialogueComplete.AddListener(StartLooking);
     }
 
     //disables interaction points regardless of state
@@ -39,19 +40,20 @@ public class InteractionPointBrain : MonoBehaviour
         {
             if (!buttons.Contains(q.GetComponentInChildren<Button>()))
             {
-                buttons.Add(q.GetComponentInChildren<Button>());
+                buttons.Remove(q.GetComponentInChildren<Button>());
             }
         }
 
-
-        foreach(Button interactPoint in buttons)
+        if(bed != null)
         {
-            if (interactPoint != null)
-            {
-                interactPoint.interactable = false;
-            }
+            buttons.Remove(bed.GetComponentInChildren<Button>());
         }
+
+        StopLooking();
+
     }
+
+
 
     //enables interaction buttons if the player is in the "looking" state
     public void LoadInteractionPoints()
@@ -76,16 +78,12 @@ public class InteractionPointBrain : MonoBehaviour
                 }
             }
 
-            if (looking)
+            if (bed != null)
             {
-                foreach (Button interactPoint in buttons)
-                {
-                    if (interactPoint != null)
-                    {
-                        interactPoint.interactable = true;
-                    }
-                }
+                buttons.Add(bed.GetComponentInChildren<Button>());
             }
+
+            StartLooking();
             Debug.Log(buttons);
 
 
@@ -96,13 +94,27 @@ public class InteractionPointBrain : MonoBehaviour
     public void StartLooking()
     {
         looking = true;
-        LoadInteractionPoints();
+        foreach (Button interactPoint in buttons)
+        {
+            if (interactPoint != null)
+            {
+                interactPoint.interactable = true;
+            }
+        }
+        
     }
 
     public void StopLooking()
     {
         looking = false;
-        UnloadInteractionPoints();
+
+        foreach (Button interactPoint in buttons)
+        {
+            if (interactPoint != null)
+            {
+                interactPoint.interactable = false;
+            }
+        }
     }
 
 

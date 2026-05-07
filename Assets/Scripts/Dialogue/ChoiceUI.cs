@@ -33,6 +33,7 @@ public class ChoiceUI : MonoBehaviour
             if (bedChoice)
             {
                 leftButton.onClick.AddListener(GoToBed);
+                
             }
             if (questAvailable || childChoice)
             {
@@ -81,6 +82,7 @@ public class ChoiceUI : MonoBehaviour
 
     private void GoToBed()
     {
+
         textBox.onDialogueComplete.AddListener(TimeManagerScript.Instance.NextDay);
     }
 }

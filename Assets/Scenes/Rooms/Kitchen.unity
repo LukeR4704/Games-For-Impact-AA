@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
   data: {fileID: 0}
+  brancher: {fileID: 0}
 --- !u!1001 &220380867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -765,7 +766,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1141363081}
         m_TargetAssemblyTypeName: InteractionPointBrain, Assembly-CSharp
-        m_MethodName: StopLooking
+        m_MethodName: UnloadInteractionPoints
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3228,7 +3229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: StartLooking
+      value: LoadInteractionPoints
       objectReference: {fileID: 0}
     - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName

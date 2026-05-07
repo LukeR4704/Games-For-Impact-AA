@@ -25,6 +25,10 @@ PrefabInstance:
       value: Q_Sandwich_InteractPoint
       objectReference: {fileID: 0}
     - target: {fileID: 4726722968264756561, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726722968264756561, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}

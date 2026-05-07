@@ -5,6 +5,7 @@ public class QuestStarter : MonoBehaviour
 
     public QuestData data;
     private TextBox textBox;
+    public DialogueBrancher brancher;
     
 
     private void Start()
@@ -34,7 +35,8 @@ public class QuestStarter : MonoBehaviour
     {
         data.questStep = 0;
         QuestBrain.instance.StartQuest(data);
-        gameObject.GetComponent<DialogueBrancher>().questState++;
+
+        brancher.questStep++;
         textBox.onDialogueComplete.RemoveListener(AddQuest);
 
     }

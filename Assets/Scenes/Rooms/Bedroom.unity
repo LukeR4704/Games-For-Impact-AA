@@ -483,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: StartLooking
+      value: LoadInteractionPoints
       objectReference: {fileID: 0}
     - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -2029,7 +2029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
       propertyPath: mainQuestState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2313,7 +2313,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2103773205}
         m_TargetAssemblyTypeName: InteractionPointBrain, Assembly-CSharp
-        m_MethodName: StopLooking
+        m_MethodName: UnloadInteractionPoints
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2393,8 +2393,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 242, y: 102}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 43.4, y: 14.9}
+  m_SizeDelta: {x: 48.6655, y: 59.4728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1257499986
 GameObject:
@@ -3084,8 +3084,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 789.643, y: -249.5}
-  m_SizeDelta: {x: 209.285, y: 200.714}
+  m_AnchoredPosition: {x: 131.4, y: -48}
+  m_SizeDelta: {x: 79.7339, y: 81.1284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1471267277
 GameObject:
@@ -3765,6 +3765,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4726722968264756561, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726722968264756561, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1627874027}
@@ -3802,11 +3806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 548.883
+      value: 104.6626
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 620.092
+      value: 117.1479
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3838,11 +3842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -381.622
+      value: -66.3786
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 12.442
+      value: 1.9719
       objectReference: {fileID: 0}
     - target: {fileID: 5277732043034902151, guid: cbc0da080e637584fb42a63e6c408275, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4237,6 +4241,10 @@ PrefabInstance:
       value: InteractionPoints
       objectReference: {fileID: 0}
     - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
+      propertyPath: bed
+      value: 
+      objectReference: {fileID: 1627874022}
+    - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
       propertyPath: questPoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -4282,15 +4290,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695552556061467913, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.17401592
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8695552556061467913, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.17401592
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8695552556061467913, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.17401592
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8695552556061467913, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
       propertyPath: m_LocalPosition.x

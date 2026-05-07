@@ -2,7 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Main3_MedWater : MonoBehaviour
+public class Main5_FirstAid : MonoBehaviour
 {
     public int questStep = 0;
     private RoomBrain curRoom;
@@ -12,14 +12,17 @@ public class Main3_MedWater : MonoBehaviour
     private QuestEventBrain brain;
 
 
-   
+    private int qi;
     private int iVal = 0;
     private int qVal = 0;
 
     private bool item1 = false;
     private bool item2 = false;
 
-
+    private void Update()
+    {
+        Debug.Log(data.questStep);
+    }
 
     private void Start()
     {
@@ -44,10 +47,6 @@ public class Main3_MedWater : MonoBehaviour
         if (Inventory_Brain.instance.inventory.Contains(questItem[0]))
         {
             item1 = true;
-        }
-        if (Inventory_Brain.instance.inventory.Contains(questItem[1]))
-        {
-            item2 = true;
         }
 
         curRoom = GameObject.FindGameObjectWithTag("RoomBrain").GetComponent<RoomBrain>();
@@ -78,17 +77,12 @@ public class Main3_MedWater : MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 2 && !item1)
+                    if (curRoom.roomID == 6 && !item1)
                     {
                         CreateInteractPoint(0, 1);
 
                     }
 
-                    if (curRoom.roomID == 5 && !item2)
-                    {
-                        CreateInteractPoint(1, 0);
-
-                    }
                     ;
 
                     break;
@@ -136,13 +130,6 @@ public class Main3_MedWater : MonoBehaviour
             curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
             return;
         }
-        else if (Inventory_Brain.instance.grabbedItem.itemID == questItem[1].itemID)
-        {
-
-            Inventory_Brain.instance.inventory.Remove(questItem[1]);
-            curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
-            return;
-        }
         else
         {
             return;
@@ -152,7 +139,7 @@ public class Main3_MedWater : MonoBehaviour
     void CorrectItem()
     {
         qVal++;
-        if (qVal >= 2)
+        if (qVal >= 1)
         {
             ProgQuest();
         }
@@ -163,15 +150,10 @@ public class Main3_MedWater : MonoBehaviour
     //standard increase quest by 1 script
     public void ProgQuest()
     {
-        if (iVal == 1)
-        {
-            Debug.Log("Progging quest");
-            data.questStep++;
-        }
-        else
-        {
-            iVal++;
-        }
+
+        Debug.Log("Progging quest");
+        data.questStep++;
+
         QuestUpdate();
     }
 

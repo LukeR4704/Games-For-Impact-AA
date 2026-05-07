@@ -1,4 +1,4 @@
-using System.Linq.Expressions;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,9 +11,13 @@ public class Main2_Towel : MonoBehaviour
     public QuestData data;
     private QuestEventBrain brain;
 
-    
+
     private int qi;
+    private int iVal = 0;
     private int qVal = 0;
+
+    private bool item1 = false;
+    private bool item2 = false;
 
     private void Update()
     {
@@ -40,8 +44,19 @@ public class Main2_Towel : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 
     {
-        curRoom = GameObject.FindGameObjectWithTag("RoomBrain").GetComponent<RoomBrain>();
+        if (Inventory_Brain.instance.inventory.Contains(questItem[0]))
+        {
+            item1 = true;
+        }
+        if (Inventory_Brain.instance.inventory.Contains(questItem[1]))
+        {
+            item2 = true;   
+        }
+
+            curRoom = GameObject.FindGameObjectWithTag("RoomBrain").GetComponent<RoomBrain>();
         QuestUpdate();
+
+        
     }
 
     private void OnDestroy()
@@ -66,14 +81,16 @@ public class Main2_Towel : MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 6 && !Inventory_Brain.instance.inventory.Contains(questItem[0]))
+                    if (curRoom.roomID == 6 && !item1)
                     {
                         CreateInteractPoint(0, 0);
+                        
                     }
 
-                    if (curRoom.roomID == 0 && !Inventory_Brain.instance.inventory.Contains(questItem[1]))
+                    if (curRoom.roomID == 0 && !item2)
                     {
                         CreateInteractPoint(1, 0);
+                        
                     }
                     ;
 
@@ -125,7 +142,7 @@ public class Main2_Towel : MonoBehaviour
         else if (Inventory_Brain.instance.grabbedItem.itemID == questItem[1].itemID)
         {
             
-            Inventory_Brain.instance.inventory.Remove(questItem[0]);
+            Inventory_Brain.instance.inventory.Remove(questItem[1]);
             curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
             return;
         }
@@ -149,10 +166,14 @@ public class Main2_Towel : MonoBehaviour
     //standard increase quest by 1 script
     public void ProgQuest()
     {
-        if (Inventory_Brain.instance.inventory.Contains(questItem[0]) && Inventory_Brain.instance.inventory.Contains(questItem[1]))
+        if (iVal == 1)
             {
             Debug.Log("Progging quest");
             data.questStep++;
+        }
+        else
+        {
+            iVal++;
         }
         QuestUpdate();
     }
@@ -177,7 +198,9 @@ public class Main2_Towel : MonoBehaviour
     {
         Debug.Log(i + " and " + p);
         GameObject obj = Instantiate(questInteraction[i], curRoom.questPoints[p]);
+        
         obj.GetComponent<QuestInteraction>().questObj = gameObject;
+        obj.GetComponent<Button>().interactable = false;
     }
 
 }

@@ -1,3 +1,4 @@
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -42,7 +43,7 @@ public class Main1_FoodForChild : MonoBehaviour
 
     private void OnDestroy()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
 
@@ -162,6 +163,7 @@ public class Main1_FoodForChild : MonoBehaviour
         Debug.Log(i + " and " + p);
         GameObject obj = Instantiate(questInteraction[i], curRoom.questPoints[p]);
         obj.GetComponent<QuestInteraction>().questObj = gameObject;
+        obj.GetComponent<Button>().interactable = false;
     }
 
 }

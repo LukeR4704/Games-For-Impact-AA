@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractionPoints
       objectReference: {fileID: 0}
+    - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
+      propertyPath: questPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
+      propertyPath: 'questPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 762498688}
     - target: {fileID: 8695552556061467913, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2845,6 +2853,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1378223612}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 44565969}
+        m_TargetAssemblyTypeName: InteractionPointBrain, Assembly-CSharp
+        m_MethodName: StopLooking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

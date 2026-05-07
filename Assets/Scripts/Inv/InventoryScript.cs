@@ -12,7 +12,7 @@ public class InventoryScript : MonoBehaviour
 
     private void Start()
     {
-        Inventory_Brain.instance.giveItem.AddListener(InvUpdate);
+        Inventory_Brain.instance.giveItem.AddListener(GiveItem);
     }
 
     private void OnEnable()
@@ -66,6 +66,13 @@ public class InventoryScript : MonoBehaviour
             Instantiate(Inventory_Brain.instance.itemCatalogue[item.itemID], ItemSlot[i]);
             i++;
         }
+        GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().textBox.onDialogueComplete.RemoveListener(InvUpdate);
+    }
+
+    void GiveItem()
+    {
+
+        GameObject.FindWithTag("RoomBrain").GetComponent<RoomBrain>().textBox.onDialogueComplete.AddListener(InvUpdate); 
     }
 
     public void CloseInv()

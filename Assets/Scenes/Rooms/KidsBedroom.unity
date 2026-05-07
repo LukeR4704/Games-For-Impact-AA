@@ -384,9 +384,10 @@ MonoBehaviour:
   talkNodes: []
   itemID: 0
   questState: 0
-  questItem: 0
+  questItem: 
   questDay: 0
   starter: {fileID: 0}
+  childRoom: 0
 --- !u!114 &180207492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1334,6 +1335,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3111116066499450354, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: currentDay
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3519341065931946936, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
       propertyPath: m_Name
       value: TimeManager
@@ -1856,6 +1861,8 @@ GameObject:
   m_Component:
   - component: {fileID: 840816615}
   - component: {fileID: 840816614}
+  - component: {fileID: 840816617}
+  - component: {fileID: 840816616}
   m_Layer: 0
   m_Name: Day3Dialogue
   m_TagString: Untagged
@@ -1925,6 +1932,120 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180207490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &840816616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840816613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 4b2a80b306203b94c90c9ce5e97f6279, type: 2}
+--- !u!114 &840816617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840816613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue:
+    - text: Mam, I don't feel well.
+      faceToShow: {fileID: 464262689}
+    - text: I have a headache.
+      faceToShow: {fileID: 464262689}
+    - text: Can you get me something to help please?
+      faceToShow: {fileID: 1364797963}
+    choices:
+    - choiceText: Paracetamol
+      nextNode:
+        dialogue:
+        - text: That's good.
+          faceToShow: {fileID: 1284924271}
+        - text: And some water as well please.
+          faceToShow: {fileID: 1284924271}
+        choices: []
+    - choiceText: Flat 7-Up
+      nextNode:
+        dialogue:
+        - text: I don't think that'll help
+          faceToShow: {fileID: 37669064}
+        choices:
+        - choiceText: Sure it will!
+          nextNode:
+            dialogue:
+            - text: No I think paracetamol and water will do.
+              faceToShow: {fileID: 1285793367}
+            choices: []
+        - choiceText: OK, something else then
+          nextNode:
+            dialogue:
+            - text: Yes, paracetamol and some water please
+              faceToShow: {fileID: 1284924271}
+            choices: []
+  itemNodes:
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 0}
+    choices: []
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 0}
+    choices: []
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 0}
+    choices: []
+  talkNodes:
+  - dialogue:
+    - text: Mam, I don't feel well.
+      faceToShow: {fileID: 464262689}
+    - text: I have a headache.
+      faceToShow: {fileID: 464262689}
+    - text: Can you get me something to help please?
+      faceToShow: {fileID: 1364797963}
+    choices:
+    - choiceText: Flat 7-Up
+      nextNode:
+        dialogue:
+        - text: I don't think that'll help
+          faceToShow: {fileID: 37669064}
+        choices:
+        - choiceText: Sure it will!
+          nextNode:
+            dialogue:
+            - text: No I think paracetamol and water will do.
+              faceToShow: {fileID: 1285793367}
+            choices: []
+        - choiceText: OK, something else then
+          nextNode:
+            dialogue:
+            - text: Yes, paracetamol and some water please
+              faceToShow: {fileID: 1284924271}
+            choices: []
+    - choiceText: Paracetamol
+      nextNode:
+        dialogue:
+        - text: That's good.
+          faceToShow: {fileID: 1284924271}
+        - text: And some water as well please.
+          faceToShow: {fileID: 1284924271}
+        choices: []
+  itemID: 0
+  questState: 0
+  questItem: 0200000004000000
+  questDay: 2
+  starter: {fileID: 840816616}
+  childRoom: 1
 --- !u!1 &863860098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2847,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1673467163}
+        m_TargetAssemblyTypeName: InteractionPointBrain, Assembly-CSharp
+        m_MethodName: StopLooking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1246853863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,6 +3028,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: questCatalogue.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: 'questCatalogue.Array.data[2]'
+      value: 
+      objectReference: {fileID: 194889642144609507, guid: b9c4eecf7d6a98b49a9e228af7ded4fa, type: 3}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: 'questCatalogue.Array.data[3]'
+      value: 
+      objectReference: {fileID: 6906951691155191828, guid: ccd1ace6b5cbc834c8369584c9d6e786, type: 3}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: 'questCatalogue.Array.data[4]'
+      value: 
+      objectReference: {fileID: 7988183664783333281, guid: db07a7cd220a74e449f9fba68b8a2335, type: 3}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: 'questCatalogue.Array.data[5]'
+      value: 
+      objectReference: {fileID: 9172981622141859796, guid: 0de07493f771cad4cbb9dff9bc1b27b6, type: 3}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: 'questCatalogue.Array.data[6]'
+      value: 
+      objectReference: {fileID: 9172981622141859796, guid: 0de07493f771cad4cbb9dff9bc1b27b6, type: 3}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: 'questCatalogue.Array.data[7]'
+      value: 
+      objectReference: {fileID: 9172981622141859796, guid: 0de07493f771cad4cbb9dff9bc1b27b6, type: 3}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: 'questCatalogue.Array.data[8]'
+      value: 
+      objectReference: {fileID: 9172981622141859796, guid: 0de07493f771cad4cbb9dff9bc1b27b6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3412,6 +3577,14 @@ PrefabInstance:
       value: MenuUI
       objectReference: {fileID: 0}
     - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1246853860}
@@ -3424,8 +3597,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 37489052}
     - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1673467163}
+    - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: StartLooking
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: InteractionPointBrain, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529433611988866377, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4715846249518569713, guid: 88928ca0d8f7e334da664625ca279bc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3781,9 +3974,10 @@ MonoBehaviour:
         choices: []
   itemID: 0
   questState: 0
-  questItem: 6
+  questItem: 06000000
   questDay: 0
   starter: {fileID: 1491197734}
+  childRoom: 1
 --- !u!1 &1526311328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,6 +4373,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1610416607}
   - component: {fileID: 1610416608}
+  - component: {fileID: 1610416610}
+  - component: {fileID: 1610416609}
   m_Layer: 0
   m_Name: Day4Dialogue
   m_TagString: Untagged
@@ -4236,6 +4432,72 @@ MonoBehaviour:
         - text: I'll be careful.
           faceToShow: {fileID: 1364797963}
         choices: []
+--- !u!114 &1610416609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610416606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 96712a569f32d0d49acae31565e0194d, type: 2}
+--- !u!114 &1610416610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610416606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue: []
+    choices: []
+  itemNodes:
+  - dialogue:
+    - text: What's this?
+      faceToShow: {fileID: 0}
+    - text: Thanks, mam!
+      faceToShow: {fileID: 0}
+    - text: Thanks, mam!
+      faceToShow: {fileID: 0}
+    choices: []
+  talkNodes:
+  - dialogue:
+    - text: Mam, it's hard to see in here 'cause my light isn't working.
+      faceToShow: {fileID: 1364797963}
+    choices:
+    - choiceText: You want candles?
+      nextNode:
+        dialogue:
+        - text: Yeah, they'd be a great help thank you!
+          faceToShow: {fileID: 1284924271}
+        - text: I'll be careful.
+          faceToShow: {fileID: 1364797963}
+        choices: []
+    - choiceText: What do you want?
+      nextNode:
+        dialogue:
+        - text: Um... Candles? I guess.
+          faceToShow: {fileID: 37669064}
+        - text: Please.
+          faceToShow: {fileID: 1364797963}
+        - text: I'll be careful.
+          faceToShow: {fileID: 1364797963}
+        choices: []
+  itemID: 0
+  questState: 0
+  questItem: 0800000001000000
+  questDay: 0
+  starter: {fileID: 1610416609}
+  childRoom: 1
 --- !u!1001 &1673467162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4248,6 +4510,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractionPoints
       objectReference: {fileID: 0}
+    - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
+      propertyPath: questPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
+      propertyPath: 'questPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 863860099}
     - target: {fileID: 8695552556061467913, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4570,6 +4840,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1848591072}
   - component: {fileID: 1848591073}
+  - component: {fileID: 1848591075}
+  - component: {fileID: 1848591074}
   m_Layer: 0
   m_Name: Day5Dialogue
   m_TagString: Untagged
@@ -4631,14 +4903,138 @@ MonoBehaviour:
             - text: Please get me a bandage. It hurts.
               faceToShow: {fileID: 1285793367}
             choices: []
-    - choiceText: Are you OK?
+--- !u!114 &1848591074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848591071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue: []
+    choices: []
+  itemNodes:
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 1284924271}
+    choices: []
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 1284924271}
+    - text: ...
+      faceToShow: {fileID: 1284924271}
+    - text: Are things gonna go back to normal soon?
+      faceToShow: {fileID: 1364797963}
+    choices:
+    - choiceText: Yes, very soon!
       nextNode:
         dialogue:
-        - text: No, it hurts.
+        - text: Okay...
+          faceToShow: {fileID: 0}
+        - text: I wanna go outside again. I'm so bored...
+          faceToShow: {fileID: 0}
+        - text: ...
+          faceToShow: {fileID: 0}
+        - text: 'I''m gonna go to bed now. '
+          faceToShow: {fileID: 0}
+        choices:
+        - choiceText: Goodnight!
+          nextNode:
+            dialogue:
+            - text: Goodnight!
+              faceToShow: {fileID: 0}
+            choices: []
+    - choiceText: I don't know.
+      nextNode:
+        dialogue:
+        - text: I'm so bored!
           faceToShow: {fileID: 464262689}
-        - text: Please get me something to help.
+        - text: I wanna go outside again.
           faceToShow: {fileID: 464262689}
-        choices: []
+        - text: I can't charge any of my stuff either...
+          faceToShow: {fileID: 464262689}
+        - text: ...
+          faceToShow: {fileID: 464262689}
+        - text: I'm gonna go to bed.
+          faceToShow: {fileID: 1364797963}
+        choices:
+        - choiceText: Goodnight.
+          nextNode:
+            dialogue:
+            - text: Goodnight.
+              faceToShow: {fileID: 0}
+            choices: []
+  talkNodes:
+  - dialogue:
+    - text: Ahhhh!
+      faceToShow: {fileID: 37669064}
+    - text: Mam, I burnt myself on the candle.
+      faceToShow: {fileID: 464262689}
+    choices:
+    - choiceText: Told ya
+      nextNode:
+        dialogue:
+        - text: I know you told me not to go near it I'm sorry.
+          faceToShow: {fileID: 464262689}
+        - text: Please help.
+          faceToShow: {fileID: 464262689}
+        choices:
+        - choiceText: First Aid Kit
+          nextNode:
+            dialogue:
+            - text: Yes, thank you.
+              faceToShow: {fileID: 1284924271}
+            choices: []
+        - choiceText: Too bad
+          nextNode:
+            dialogue:
+            - text: Please get me a bandage. It hurts.
+              faceToShow: {fileID: 1285793367}
+            choices: []
+    - choiceText: Told ya
+      nextNode:
+        dialogue:
+        - text: I know you told me not to go near it I'm sorry.
+          faceToShow: {fileID: 464262689}
+        - text: Please help.
+          faceToShow: {fileID: 464262689}
+        choices:
+        - choiceText: First Aid Kit
+          nextNode:
+            dialogue:
+            - text: Yes, thank you.
+              faceToShow: {fileID: 1284924271}
+            choices: []
+        - choiceText: Too bad
+          nextNode:
+            dialogue:
+            - text: Please get me a bandage. It hurts.
+              faceToShow: {fileID: 1285793367}
+            choices: []
+  itemID: 0
+  questState: 0
+  questItem: 00000000
+  questDay: 0
+  starter: {fileID: 1848591075}
+  childRoom: 1
+--- !u!114 &1848591075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848591071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 179b6fcce13587242a54c10ed9850cd0, type: 2}
 --- !u!224 &1937500173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4836,6 +5232,7 @@ GameObject:
   - component: {fileID: 1997395446}
   - component: {fileID: 1997395445}
   - component: {fileID: 1997395447}
+  - component: {fileID: 1997395448}
   m_Layer: 0
   m_Name: Day2Dialogue
   m_TagString: Untagged
@@ -4939,8 +5336,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
   baseNode:
     dialogue:
-    - text: 
-      faceToShow: {fileID: 0}
+    - text: Yay, thanks Mam. I love you.
+      faceToShow: {fileID: 1284924271}
+    - text: Goodnight.
+      faceToShow: {fileID: 1364797963}
     choices:
     - choiceText: You OK?
       nextNode:
@@ -4992,7 +5391,19 @@ MonoBehaviour:
             - text: I'm sorry. I appreciate all you do for me...
               faceToShow: {fileID: 464262689}
             choices: []
-  itemNodes: []
+  itemNodes:
+  - dialogue:
+    - text: What's that?
+      faceToShow: {fileID: 1285793367}
+    choices: []
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 1284924271}
+    choices: []
+  - dialogue:
+    - text: Thanks, mam!
+      faceToShow: {fileID: 1284924271}
+    choices: []
   talkNodes:
   - dialogue:
     - text: Morning.
@@ -5050,9 +5461,23 @@ MonoBehaviour:
             choices: []
   itemID: 0
   questState: 0
-  questItem: 0
-  questDay: 0
-  starter: {fileID: 0}
+  questItem: 0300000007000000
+  questDay: 1
+  starter: {fileID: 1997395448}
+  childRoom: 1
+--- !u!114 &1997395448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997395444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 8fd46a64d51ee5f459202c5a09eb3132, type: 2}
 --- !u!1 &2102590070
 GameObject:
   m_ObjectHideFlags: 0

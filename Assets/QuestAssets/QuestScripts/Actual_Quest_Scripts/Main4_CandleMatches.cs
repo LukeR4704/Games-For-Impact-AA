@@ -1,18 +1,28 @@
-using System.Linq.Expressions;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class QuestTemplate : MonoBehaviour
+public class Main4_CandlesMatches : MonoBehaviour
 {
     public int questStep = 0;
     private RoomBrain curRoom;
     [SerializeField] GameObject[] questInteraction;
-    public Item questItem;
+    public Item[] questItem;
     public QuestData data;
     private QuestEventBrain brain;
 
 
+    private int qi;
+    private int iVal = 0;
+    private int qVal = 0;
 
+    private bool item1 = false;
+    private bool item2 = false;
+
+    private void Update()
+    {
+        Debug.Log(data.questStep);
+    }
 
     private void Start()
     {
@@ -34,19 +44,31 @@ public class QuestTemplate : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 
     {
+        if (Inventory_Brain.instance.inventory.Contains(questItem[0]))
+        {
+            item1 = true;
+        }
+        if (Inventory_Brain.instance.inventory.Contains(questItem[1]))
+        {
+            item2 = true;
+        }
+
         curRoom = GameObject.FindGameObjectWithTag("RoomBrain").GetComponent<RoomBrain>();
         QuestUpdate();
+
+
     }
 
     private void OnDestroy()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
 
     //run this whenever the quest status is updated
     public void QuestUpdate()
     {
-
+        Debug.Log(data.questStep);
         try
         {
             switch (data.questStep)
@@ -59,9 +81,16 @@ public class QuestTemplate : MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 1)
+                    if (curRoom.roomID == 0 && !item1)
                     {
-                        CreateInteractPoint(0, 0);
+                        CreateInteractPoint(0, 1);
+
+                    }
+
+                    if (curRoom.roomID == 4 && !item2)
+                    {
+                        CreateInteractPoint(1, 0);
+
                     }
                     ;
 
@@ -69,11 +98,16 @@ public class QuestTemplate : MonoBehaviour
 
                 //this is when you find the item and must now bring it back to the required npc
                 case 1:
-                    if (curRoom.roomID == 2)
+                    if (curRoom.roomID == 1)
                     {
                         Inventory_Brain.instance.giveItem.AddListener(CheckIfCorrectItem);
                     }
-                    ;
+                    else
+                    {
+                        Inventory_Brain.instance.giveItem.RemoveListener(CheckIfCorrectItem);
+                    }
+
+                        ;
                     break;
                 //for when youve given the NPC the required item; quest is now clear
                 case 2:
@@ -98,8 +132,17 @@ public class QuestTemplate : MonoBehaviour
     //this is called when the player hands over an item while in the correct room for the quest. it will check if the item is correct, then incremement the quest while removing the player's item.
     void CheckIfCorrectItem()
     {
-        if (Inventory_Brain.instance.grabbedItem.itemID == questItem.itemID)
+        if (Inventory_Brain.instance.grabbedItem.itemID == questItem[0].itemID)
         {
+
+            Inventory_Brain.instance.inventory.Remove(questItem[0]);
+            curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
+            return;
+        }
+        else if (Inventory_Brain.instance.grabbedItem.itemID == questItem[1].itemID)
+        {
+
+            Inventory_Brain.instance.inventory.Remove(questItem[1]);
             curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
             return;
         }
@@ -111,8 +154,11 @@ public class QuestTemplate : MonoBehaviour
 
     void CorrectItem()
     {
-        ProgQuest();
-        Inventory_Brain.instance.inventory.Remove(questItem);
+        qVal++;
+        if (qVal >= 2)
+        {
+            ProgQuest();
+        }
         curRoom.textBox.onDialogueComplete.RemoveListener(CorrectItem);
     }
 
@@ -120,16 +166,19 @@ public class QuestTemplate : MonoBehaviour
     //standard increase quest by 1 script
     public void ProgQuest()
     {
-        data.questStep++;
+        if (iVal == 1)
+        {
+            Debug.Log("Progging quest");
+            data.questStep++;
+        }
+        else
+        {
+            iVal++;
+        }
         QuestUpdate();
     }
 
-    //set quest step to a specified value
-    public void SetQuestStep(int step)
-    {
-        data.questStep = step;
-        QuestUpdate();
-    }
+
 
     //method that erases the quest object and removes it from the active quest list
     public void CloseQuest()
@@ -138,6 +187,7 @@ public class QuestTemplate : MonoBehaviour
         {
             QuestBrain.instance.mainQuestState = 2;
         }
+
         QuestBrain.instance.activeQuests.Remove(data);
         Destroy(gameObject);
 
@@ -148,7 +198,9 @@ public class QuestTemplate : MonoBehaviour
     {
         Debug.Log(i + " and " + p);
         GameObject obj = Instantiate(questInteraction[i], curRoom.questPoints[p]);
+
         obj.GetComponent<QuestInteraction>().questObj = gameObject;
+        obj.GetComponent<Button>().interactable = false;
     }
 
 }

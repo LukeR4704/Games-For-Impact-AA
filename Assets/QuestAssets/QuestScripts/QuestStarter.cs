@@ -16,7 +16,16 @@ public class QuestStarter : MonoBehaviour
 
     public void StartQuest()
     {
+        if (!QuestBrain.instance.activeQuests.Contains(data))
+        {
+            textBox.onDialogueComplete.RemoveListener(AddQuest);
             textBox.onDialogueComplete.AddListener(AddQuest);
+            return;
+        }
+        else
+        {
+            return;
+        }
 
 
     }

@@ -4236,6 +4236,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractionPoints
       objectReference: {fileID: 0}
+    - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
+      propertyPath: questPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
+      propertyPath: 'questPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1428595816}
+    - target: {fileID: 6164395700658658257, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
+      propertyPath: 'questPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1233104973}
     - target: {fileID: 8695552556061467913, guid: b86dd93f3a47ef34a851a911a70e4daa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

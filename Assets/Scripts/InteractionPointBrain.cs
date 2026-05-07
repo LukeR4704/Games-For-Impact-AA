@@ -8,6 +8,7 @@ public class InteractionPointBrain : MonoBehaviour
     public List<Button> buttons = new List<Button>();
     private TextBox textBox;
     public bool looking = false;
+    public Transform[] questPoints;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class InteractionPointBrain : MonoBehaviour
     //disables interaction points regardless of state
     public void UnloadInteractionPoints()
     {
+        /*
         foreach (Transform child in transform)
         {
             try
@@ -28,9 +30,19 @@ public class InteractionPointBrain : MonoBehaviour
             }
             catch
             {
-                Debug.Log("No button found on this object");
+                buttons.Remove(child.GetChild(0).GetComponent<Button>()); 
             }
         }
+        */
+
+        foreach (Transform q in questPoints)
+        {
+            if (!buttons.Contains(q.GetComponentInChildren<Button>()))
+            {
+                buttons.Add(q.GetComponentInChildren<Button>());
+            }
+        }
+
 
         foreach(Button interactPoint in buttons)
         {
@@ -46,13 +58,22 @@ public class InteractionPointBrain : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
+            /*
             try
             {
                 buttons.Add(child.GetComponent<Button>());
             }
             catch
             {
-                Debug.Log("No button found on this object");
+                buttons.Add(child.GetChild(0).GetComponent<Button>()); 
+            }
+            */
+            foreach (Transform q in questPoints)
+            {
+                if (!buttons.Contains(q.GetComponentInChildren<Button>()))
+                {
+                    buttons.Add(q.GetComponentInChildren<Button>());
+                }
             }
 
             if (looking)
@@ -65,6 +86,7 @@ public class InteractionPointBrain : MonoBehaviour
                     }
                 }
             }
+            Debug.Log(buttons);
 
 
 

@@ -2,7 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Main3_MedWater : MonoBehaviour
+public class Main4_CandlesMatches : MonoBehaviour
 {
     public int questStep = 0;
     private RoomBrain curRoom;
@@ -12,14 +12,17 @@ public class Main3_MedWater : MonoBehaviour
     private QuestEventBrain brain;
 
 
-   
+    private int qi;
     private int iVal = 0;
     private int qVal = 0;
 
     private bool item1 = false;
     private bool item2 = false;
 
-
+    private void Update()
+    {
+        Debug.Log(data.questStep);
+    }
 
     private void Start()
     {
@@ -78,13 +81,13 @@ public class Main3_MedWater : MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 2 && !item1)
+                    if (curRoom.roomID == 0 && !item1)
                     {
                         CreateInteractPoint(0, 1);
 
                     }
 
-                    if (curRoom.roomID == 5 && !item2)
+                    if (curRoom.roomID == 4 && !item2)
                     {
                         CreateInteractPoint(1, 0);
 

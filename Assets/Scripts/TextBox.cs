@@ -42,7 +42,7 @@ public class TextBox : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip blipSound;
     [SerializeField] private int lettersPerBlip = 2;
-    [SerializeField] private float pitchVariation = 0.1f;
+    // [SerializeField] private float pitchVariation = 0.1f;
 
     public bool IsLastLine()
     {

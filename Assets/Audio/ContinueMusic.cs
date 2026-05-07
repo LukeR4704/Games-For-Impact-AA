@@ -53,4 +53,10 @@ public class ContinueMusic : MonoBehaviour
         ambienceSource.loop = true;
         ambienceSource.Play();
     }
+
+    public void StopAllAudio()
+    {
+        musicSource.Stop();
+        ambienceSource.Stop();
+    }
 }

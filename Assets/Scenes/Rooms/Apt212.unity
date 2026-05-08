@@ -995,14 +995,6 @@ PrefabInstance:
       value: PlayerManager
       objectReference: {fileID: 0}
     - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
-      propertyPath: questCatalogue.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
-      propertyPath: 'questCatalogue.Array.data[7]'
-      value: 
-      objectReference: {fileID: 2036878155031620204, guid: 900c3786715b53743bc256b6d911c048, type: 3}
-    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
       propertyPath: optionalQuestsCleared.Array.size
       value: 3
       objectReference: {fileID: 0}

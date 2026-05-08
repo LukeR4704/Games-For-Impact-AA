@@ -56,6 +56,7 @@ MonoBehaviour:
   - {fileID: 7988183664783333281, guid: db07a7cd220a74e449f9fba68b8a2335, type: 3}
   - {fileID: 5381859563191536005, guid: 6e5f44fbdbc60c24c89e7361cb015721, type: 3}
   - {fileID: 5620561162293463, guid: 331392da065ec7c42afd99a4c4710af7, type: 3}
+  - {fileID: 2036878155031620204, guid: 900c3786715b53743bc256b6d911c048, type: 3}
   mainQuestState: 0
   optionalQuestsCleared: 00000000
 --- !u!114 &453638224236361292

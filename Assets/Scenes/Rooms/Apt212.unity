@@ -4386,6 +4386,17 @@ MonoBehaviour:
             to get me some water.
           faceToShow: {fileID: 639010263}
         choices: []
+    - choiceText: I don't have time
+      nextNode:
+        dialogue:
+        - text: Oh, that's OK.
+          faceToShow: {fileID: 683076375}
+        - text: I've only had this plant for years and named it after my late wife.
+          faceToShow: {fileID: 965436795}
+        - text: But I understand if you can't take time out of your busy schedule
+            to get me some water.
+          faceToShow: {fileID: 639010263}
+        choices: []
 --- !u!114 &1926514436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4444,6 +4455,12 @@ MonoBehaviour:
             to get me some water.
           faceToShow: {fileID: 639010263}
         choices: []
+  - dialogue:
+    - text: I need water for my plant please. Can you check your kitchen?
+      faceToShow: {fileID: 1189405829}
+    - text: I appreciate you aiding me like this, ma'am.
+      faceToShow: {fileID: 1189405829}
+    choices: []
   itemID: 0
   questStep: 0
   questItem: 04000000

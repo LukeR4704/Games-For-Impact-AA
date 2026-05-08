@@ -2317,9 +2317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: Please help me with this, I'll be forever grateful.
-      faceToShow: {fileID: 787306032}
-    - text: I need some pads. Do you have any in your bathroom?
+    - text: Hello miss. Nice to meet you
       faceToShow: {fileID: 787306032}
     choices: []
 --- !u!1 &762498687

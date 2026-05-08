@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: I appreciate you aiding me like this, ma'am.
+    - text: Hello, ma'am. Pleased to make your acquaintance.
       faceToShow: {fileID: 1189405829}
     choices: []
 --- !u!1 &929876102

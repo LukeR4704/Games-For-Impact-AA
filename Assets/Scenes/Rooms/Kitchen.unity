@@ -1009,7 +1009,9 @@ MonoBehaviour:
     choices: []
   - dialogue:
     - text: Thanks so much, Em!
-      faceToShow: {fileID: 0}
+      faceToShow: {fileID: 1628594948}
+    - text: When this flood is over, you should come have dinner with me and Cody.
+      faceToShow: {fileID: 1392735173}
     choices: []
   - dialogue:
     - text: Thanks so much, Em!
@@ -1037,6 +1039,8 @@ MonoBehaviour:
           faceToShow: {fileID: 2135094245}
         choices: []
   - dialogue:
+    - text: Hey, Em. Don't forget to grab me that book from Lucas' room.
+      faceToShow: {fileID: 1768651032}
     - text: Thanks for doing this for me, Em.
       faceToShow: {fileID: 1768651032}
     choices: []

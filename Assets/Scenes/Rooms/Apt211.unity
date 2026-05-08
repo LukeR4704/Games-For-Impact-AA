@@ -732,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: 'Oh, hi. Emily isn''t it?
+    - text: 'Oh, hi. Emma isn''t it?
 
         If you need something just ask.'
       faceToShow: {fileID: 1694657495}
@@ -1347,13 +1347,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: Hey, Emily...
+    - text: Hey, Emma...
       faceToShow: {fileID: 886205910}
     choices:
     - choiceText: Hi
       nextNode:
         dialogue:
-        - text: ...
+        - text: Could you grab me some pads please? Thank you.
           faceToShow: {fileID: 886205910}
         choices: []
     - choiceText: Are you OK?
@@ -1392,7 +1392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
   baseNode:
     dialogue:
-    - text: "Oh. Hi Emily. \nHere to borrow some matches again?"
+    - text: "Oh. Hi Emma. \nHere to borrow some matches again?"
       faceToShow: {fileID: 0}
     choices: []
   itemNodes:
@@ -1401,9 +1401,9 @@ MonoBehaviour:
       faceToShow: {fileID: 0}
     choices: []
   - dialogue:
-    - text: 'Thank you!
-
-        Thank you so much!'
+    - text: Oh, Em.
+      faceToShow: {fileID: 555416977}
+    - text: Thanks so much!
       faceToShow: {fileID: 1694657495}
     choices: []
   - dialogue:
@@ -1414,13 +1414,13 @@ MonoBehaviour:
     choices: []
   talkNodes:
   - dialogue:
-    - text: Hey, Emily...
+    - text: Hey, Emma...
       faceToShow: {fileID: 886205910}
     choices:
     - choiceText: Hi
       nextNode:
         dialogue:
-        - text: ...
+        - text: Could you grab me some pads please? Thank you.
           faceToShow: {fileID: 886205910}
         choices: []
     - choiceText: Are you OK?
@@ -1446,6 +1446,8 @@ MonoBehaviour:
               faceToShow: {fileID: 1616891206}
             choices: []
   - dialogue:
+    - text: I need some pads. Do you have any in your bathroom?
+      faceToShow: {fileID: 787306032}
     - text: Please help me with this, I'll be forever grateful.
       faceToShow: {fileID: 886205910}
     choices: []
@@ -2316,6 +2318,8 @@ MonoBehaviour:
   startingNode:
     dialogue:
     - text: Please help me with this, I'll be forever grateful.
+      faceToShow: {fileID: 787306032}
+    - text: I need some pads. Do you have any in your bathroom?
       faceToShow: {fileID: 787306032}
     choices: []
 --- !u!1 &762498687

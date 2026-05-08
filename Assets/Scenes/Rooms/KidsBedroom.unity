@@ -5256,7 +5256,7 @@ MonoBehaviour:
         dialogue:
         - text: No. I didn't sleep great last night.
           faceToShow: {fileID: 1364797963}
-        - text: I'm cold.
+        - text: I'm cold. I need a blanket.
           faceToShow: {fileID: 1364797963}
         choices:
         - choiceText: You also stink

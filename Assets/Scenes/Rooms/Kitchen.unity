@@ -399,9 +399,11 @@ GameObject:
   m_Component:
   - component: {fileID: 180207490}
   - component: {fileID: 180207489}
+  - component: {fileID: 180207491}
+  - component: {fileID: 180207492}
   m_Layer: 0
   m_Name: Dialogues
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,27 +422,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: Hey... I'm David.
+    - text: 'Hey, Em.
+
+        What''s up?'
       faceToShow: {fileID: 2135094245}
     choices: []
---- !u!4 &180207490
-Transform:
+--- !u!224 &180207490
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180207488}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1280, y: 370, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 410050009}
+  - {fileID: 2087425899}
   - {fileID: 1263982797}
   - {fileID: 1292855494}
+  - {fileID: 1522505032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 381.0573, y: 220.30113}
+  m_SizeDelta: {x: 930.467, y: 881.249}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &180207491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180207488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa211efb99fa24cb030f4006c3575f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  dialogues:
+  - {fileID: 2087425898}
+  - {fileID: 410050008}
+  - {fileID: 1292855493}
+  talk: {fileID: 1767491265}
+  quest: {fileID: 11400000, guid: 94b88e0b0d17e594bafdb2be1f950bc8, type: 2}
+  QuestDay: 0
+  textBox: {fileID: 1908057786}
+--- !u!222 &180207492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180207488}
+  m_CullTransparentMesh: 1
 --- !u!1 &180397490
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceUI
   leftButton: {fileID: 577017794}
   rightButton: {fileID: 71415475}
-  questAvailable: 0
+  questAvailable: 1
   bedChoice: 0
   childChoice: 0
 --- !u!114 &180397493
@@ -509,8 +547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
-  data: {fileID: 0}
-  brancher: {fileID: 0}
+  data: {fileID: 11400000, guid: 94b88e0b0d17e594bafdb2be1f950bc8, type: 2}
+  brancher: {fileID: 410050011}
 --- !u!1001 &220380867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -519,6 +557,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3111116066499450354, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: currentDay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3519341065931946936, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
       propertyPath: m_Name
       value: TimeManager
@@ -881,6 +923,9 @@ GameObject:
   m_Component:
   - component: {fileID: 410050009}
   - component: {fileID: 410050010}
+  - component: {fileID: 410050011}
+  - component: {fileID: 410050012}
+  - component: {fileID: 410050014}
   m_Layer: 0
   m_Name: QuestDialogue
   m_TagString: Untagged
@@ -888,14 +933,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &410050009
-Transform:
+--- !u!224 &410050009
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410050008}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -903,6 +947,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180207490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.4219, y: 33.2487}
+  m_SizeDelta: {x: 279.09, y: 250.3179}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &410050010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,6 +966,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
+    - text: Hey, Em.
+      faceToShow: {fileID: 1768651032}
+    - text: What's y
+      faceToShow: {fileID: 1392735173}
+    choices:
+    - choiceText: No problem
+      nextNode:
+        dialogue:
+        - text: Thanks Em, you're the best!
+          faceToShow: {fileID: 1392735173}
+        choices: []
+    - choiceText: Grab it yourself
+      nextNode:
+        dialogue:
+        - text: Wow, rude, only thought I'd ask.
+          faceToShow: {fileID: 620682679}
+        - text: I'll make dinner tonight if you help.
+          faceToShow: {fileID: 2135094245}
+        choices: []
+--- !u!114 &410050011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410050008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue:
+    - text: Hey Em, what's up?
+      faceToShow: {fileID: 0}
+    choices: []
+  itemNodes:
+  - dialogue:
+    - text: What's this now?
+      faceToShow: {fileID: 0}
+    choices: []
+  - dialogue:
+    - text: Thanks so much, Em!
+      faceToShow: {fileID: 0}
+    choices: []
+  - dialogue:
+    - text: Thanks so much, Em!
+      faceToShow: {fileID: 0}
+    choices: []
+  talkNodes:
+  - dialogue:
     - text: Hey, sis, do you mind grabbing me that book from Lucas' room?
       faceToShow: {fileID: 1768651032}
     - text: He said I could read it once he was done.
@@ -936,6 +1036,39 @@ MonoBehaviour:
         - text: I'll make dinner tonight if you help.
           faceToShow: {fileID: 2135094245}
         choices: []
+  - dialogue:
+    - text: Thanks for doing this for me, Em.
+      faceToShow: {fileID: 1768651032}
+    choices: []
+  itemID: 0
+  questStep: 0
+  questItem: 09000000
+  questDay: 1
+  starter: {fileID: 410050012}
+  childRoom: 0
+  quest: {fileID: 11400000, guid: 94b88e0b0d17e594bafdb2be1f950bc8, type: 2}
+--- !u!114 &410050012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410050008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 94b88e0b0d17e594bafdb2be1f950bc8, type: 2}
+  brancher: {fileID: 410050011}
+--- !u!222 &410050014
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410050008}
+  m_CullTransparentMesh: 1
 --- !u!1001 &438391547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1799,7 +1932,7 @@ GameObject:
   - component: {fileID: 620682681}
   m_Layer: 5
   m_Name: AngryMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2172,7 +2305,7 @@ GameObject:
   - component: {fileID: 869468661}
   m_Layer: 5
   m_Name: ManFaces
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2664,13 +2797,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1263982797}
   - component: {fileID: 1263982798}
+  - component: {fileID: 1263982799}
   m_Layer: 0
   m_Name: QuestTakenDialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1263982797
 Transform:
   m_ObjectHideFlags: 0
@@ -2703,6 +2837,34 @@ MonoBehaviour:
     - text: It's nice of you to do this for me, sis.
       faceToShow: {fileID: 1768651032}
     choices: []
+--- !u!114 &1263982799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263982796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue: []
+    choices: []
+  itemNodes: []
+  talkNodes:
+  - dialogue:
+    - text: It's nice of you to do this for me, sis.
+      faceToShow: {fileID: 1768651032}
+    choices: []
+  itemID: 0
+  questStep: 0
+  questItem: 09000000
+  questDay: 1
+  starter: {fileID: 0}
+  childRoom: 0
+  quest: {fileID: 0}
 --- !u!1 &1292855493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,7 +2929,7 @@ GameObject:
   - component: {fileID: 1392735175}
   m_Layer: 5
   m_Name: HappyMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2829,6 +2991,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392735173}
   m_CullTransparentMesh: 1
+--- !u!1 &1522505031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522505032}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1522505032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522505031}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180207490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526311328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,7 +3314,7 @@ GameObject:
   - component: {fileID: 1628594950}
   m_Layer: 5
   m_Name: ShockedMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3419,7 +3612,7 @@ GameObject:
   - component: {fileID: 1768651033}
   m_Layer: 5
   m_Name: NeutralMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4031,7 +4224,6 @@ MonoBehaviour:
   audioSource: {fileID: 1908057785}
   blipSound: {fileID: 8300000, guid: 8c2fcf8f48faf08429bc768b2519ede4, type: 3}
   lettersPerBlip: 10
-  pitchVariation: 0.15
   faceParent: {fileID: 869468661}
 --- !u!114 &1908057787
 MonoBehaviour:
@@ -4208,6 +4400,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003232012}
   m_CullTransparentMesh: 1
+--- !u!1 &2087425898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087425899}
+  - component: {fileID: 2087425900}
+  m_Layer: 0
+  m_Name: NoQuestDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087425899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087425898}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180207490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087425900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087425898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff41284d8a1c8b0498218d8f11cc6984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  startingNode:
+    dialogue:
+    - text: Hey Em, what's up?
+      faceToShow: {fileID: 1392735173}
+    choices: []
 --- !u!1001 &2091886963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4420,7 +4661,7 @@ GameObject:
   - component: {fileID: 2135094247}
   m_Layer: 5
   m_Name: SadMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

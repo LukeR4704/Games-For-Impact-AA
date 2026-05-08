@@ -2,7 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Option2_Book: MonoBehaviour
+public class Option2_Book : MonoBehaviour
 {
     public int questStep = 0;
     private RoomBrain curRoom;
@@ -25,6 +25,9 @@ public class Option2_Book: MonoBehaviour
         brain = gameObject.GetComponent<QuestEventBrain>();
         brain.questProg.AddListener(ProgQuest);
         brain.questClose.AddListener(CloseQuest);
+
+
+        Debug.Log("Quest data file:" + data + " Child of: " + GetComponentInParent<Transform>());
 
         QuestUpdate();
 
@@ -60,7 +63,7 @@ public class Option2_Book: MonoBehaviour
                     }
 
                     //first quest step; this is the default when the quest is first started. go find the next step (usually an item)
-                    if (curRoom.roomID == 1)
+                    if (curRoom.roomID == 1 && !Inventory_Brain.instance.inventory.Contains(questItem)) //kitchen, sandwich
                     {
                         CreateInteractPoint(0, 0);
                     }
@@ -72,9 +75,15 @@ public class Option2_Book: MonoBehaviour
                 case 1:
                     if (curRoom.roomID == 2)
                     {
+                        Debug.Log("Waiting for item");
                         Inventory_Brain.instance.giveItem.AddListener(CheckIfCorrectItem);
                     }
-                    ;
+                    else
+                    {
+                        Debug.Log("No longer waiting for item");
+                        Inventory_Brain.instance.giveItem.RemoveListener(CheckIfCorrectItem);
+                    }
+                        ;
                     break;
                 //for when youve given the NPC the required item; quest is now clear
                 case 2:
@@ -94,27 +103,6 @@ public class Option2_Book: MonoBehaviour
             Debug.Log("Quest out of step bounds!");
             CloseQuest();
         }
-    }
-
-    //this is called when the player hands over an item while in the correct room for the quest. it will check if the item is correct, then incremement the quest while removing the player's item.
-    void CheckIfCorrectItem()
-    {
-        if(Inventory_Brain.instance.grabbedItem.itemID == questItem.itemID)
-        {
-            curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
-            return;
-        }
-        else 
-        { 
-            return;
-        }
-    }
-
-    void CorrectItem()
-    {
-        ProgQuest();
-        Inventory_Brain.instance.inventory.Remove(questItem);
-        curRoom.textBox.onDialogueComplete.RemoveListener(CorrectItem);
     }
 
 
@@ -140,8 +128,34 @@ public class Option2_Book: MonoBehaviour
             QuestBrain.instance.mainQuestState = 2;
         }
         QuestBrain.instance.activeQuests.Remove(data);
+        QuestBrain.instance.optionalQuestsCleared[data.questID - 5] = true;
         Destroy(gameObject);
 
+    }
+
+    //this is called when the player hands over an item while in the correct room for the quest. it will check if the item is correct, then incremement the quest while removing the player's item.
+    public void CheckIfCorrectItem()
+    {
+        if (Inventory_Brain.instance.grabbedItem.itemID == questItem.itemID)
+        {
+            Debug.Log("Correct item given!");
+            curRoom.textBox.onDialogueComplete.AddListener(CorrectItem);
+            Inventory_Brain.instance.inventory.Remove(questItem);
+            return;
+
+        }
+        else
+        {
+            Debug.Log("Wrong item given!");
+            return;
+        }
+    }
+
+    void CorrectItem()
+    {
+        Debug.Log("Correct item taken!");
+        ProgQuest();
+        curRoom.textBox.onDialogueComplete.RemoveListener(CorrectItem);
     }
 
     //method that creates item interaction points when the quest needs them. i = the item, p = the transform of the interact point
@@ -151,7 +165,6 @@ public class Option2_Book: MonoBehaviour
         GameObject obj = Instantiate(questInteraction[i], curRoom.questPoints[p]);
         obj.GetComponent<QuestInteraction>().questObj = gameObject;
         obj.GetComponent<Button>().interactable = false;
-
     }
 
 }

@@ -32,7 +32,7 @@ public class DialogueBrancher : MonoBehaviour
 
     public void TriggerDialogueQuest()
     {
-        if (TimeManagerScript.Instance.currentDay != questDay && !childRoom)
+        if (TimeManagerScript.Instance.currentDay < questDay && !childRoom)
         {
             trigger.startingNode = baseNode;
             trigger.TriggerDialogue();

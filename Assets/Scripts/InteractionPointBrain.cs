@@ -58,8 +58,7 @@ public class InteractionPointBrain : MonoBehaviour
     //enables interaction buttons if the player is in the "looking" state
     public void LoadInteractionPoints()
     {
-        foreach (Transform child in transform)
-        {
+
             /*
             try
             {
@@ -88,7 +87,6 @@ public class InteractionPointBrain : MonoBehaviour
 
 
 
-        }
     }
 
     public void StartLooking()

@@ -47,11 +47,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   activeQuests: []
   activeQuestObjs: []
+  StartedQuests: 000000000000000000
   questCatalogue:
   - {fileID: 2229469834428379918, guid: 367c432304102d5468b54c2c732d024d, type: 3}
   - {fileID: 9172981622141859796, guid: 0de07493f771cad4cbb9dff9bc1b27b6, type: 3}
+  - {fileID: 194889642144609507, guid: b9c4eecf7d6a98b49a9e228af7ded4fa, type: 3}
+  - {fileID: 6906951691155191828, guid: ccd1ace6b5cbc834c8369584c9d6e786, type: 3}
+  - {fileID: 7988183664783333281, guid: db07a7cd220a74e449f9fba68b8a2335, type: 3}
+  - {fileID: 9172981622141859796, guid: 0de07493f771cad4cbb9dff9bc1b27b6, type: 3}
+  - {fileID: 5620561162293463, guid: 331392da065ec7c42afd99a4c4710af7, type: 3}
   mainQuestState: 0
-  optionalQuestsCleared: 
+  optionalQuestsCleared: 00000000
 --- !u!114 &453638224236361292
 MonoBehaviour:
   m_ObjectHideFlags: 0

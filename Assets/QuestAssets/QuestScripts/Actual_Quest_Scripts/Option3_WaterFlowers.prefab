@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2036878155031620204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6631204954010380823}
+  - component: {fileID: 2012506564270436309}
+  - component: {fileID: 6717677476436245616}
+  m_Layer: 0
+  m_Name: Option3_WaterFlowers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6631204954010380823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036878155031620204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 303.87402, y: 193.24039, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2012506564270436309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036878155031620204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17146f9fb66fe34cb19a20258d07a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Option3_WaterFlowers
+  questStep: 0
+  questInteraction:
+  - {fileID: 2561623509045915921, guid: 421797fd9480fd84e90920e0485eb6ac, type: 3}
+  questItem: {fileID: 11400000, guid: 620c03dae4b0340418d827bd18f50d71, type: 2}
+  data: {fileID: 11400000, guid: 5022cd9f10335e54394f8ad347a1b4f3, type: 2}
+--- !u!114 &6717677476436245616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036878155031620204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cadc39e79c7475479c03e962510e36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestEventBrain
+  questProg:
+    m_PersistentCalls:
+      m_Calls: []
+  questClose:
+    m_PersistentCalls:
+      m_Calls: []

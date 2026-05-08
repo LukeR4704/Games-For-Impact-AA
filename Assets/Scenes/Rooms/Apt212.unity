@@ -410,6 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 180207490}
   - component: {fileID: 180207489}
+  - component: {fileID: 180207491}
   m_Layer: 0
   m_Name: Dialogues
   m_TagString: Untagged
@@ -452,6 +453,26 @@ Transform:
   - {fileID: 1480253658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180207491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180207488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa211efb99fa24cb030f4006c3575f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcManager
+  dialogues:
+  - {fileID: 884398911}
+  - {fileID: 1926514433}
+  - {fileID: 1480253657}
+  talk: {fileID: 769732901}
+  quest: {fileID: 11400000, guid: 5022cd9f10335e54394f8ad347a1b4f3, type: 2}
+  QuestDay: 3
+  textBox: {fileID: 1209873634}
 --- !u!1001 &220380867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460,6 +481,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3111116066499450354, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: currentDay
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3519341065931946936, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
       propertyPath: m_Name
       value: TimeManager
@@ -626,7 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceUI
   leftButton: {fileID: 600459513}
   rightButton: {fileID: 1813336273}
-  questAvailable: 0
+  questAvailable: 1
   bedChoice: 0
   childChoice: 0
 --- !u!1 &517274576
@@ -855,7 +880,7 @@ GameObject:
   - component: {fileID: 559810204}
   m_Layer: 5
   m_Name: HappyOldMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -968,6 +993,18 @@ PrefabInstance:
     - target: {fileID: 2722059884582888807, guid: c18f41d924e733842ba43727381cafbf, type: 3}
       propertyPath: m_Name
       value: PlayerManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: questCatalogue.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: 'questCatalogue.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2036878155031620204, guid: 900c3786715b53743bc256b6d911c048, type: 3}
+    - target: {fileID: 7380217516303405389, guid: c18f41d924e733842ba43727381cafbf, type: 3}
+      propertyPath: optionalQuestsCleared.Array.size
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1132,7 +1169,7 @@ GameObject:
   - component: {fileID: 639010265}
   m_Layer: 5
   m_Name: AngryOldMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1207,7 +1244,7 @@ GameObject:
   - component: {fileID: 683076377}
   m_Layer: 5
   m_Name: ShockedOldMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2108,7 +2145,7 @@ GameObject:
   - component: {fileID: 965436797}
   m_Layer: 5
   m_Name: SadOldMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2526,7 +2563,7 @@ GameObject:
   - component: {fileID: 1189405830}
   m_Layer: 5
   m_Name: NeutralOldMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2792,7 +2829,6 @@ MonoBehaviour:
   audioSource: {fileID: 1209873631}
   blipSound: {fileID: 8300000, guid: 8c2fcf8f48faf08429bc768b2519ede4, type: 3}
   lettersPerBlip: 10
-  pitchVariation: 0.15
   faceParent: {fileID: 1296600557}
 --- !u!1 &1257499986
 GameObject:
@@ -2884,7 +2920,7 @@ GameObject:
   - component: {fileID: 1296600557}
   m_Layer: 5
   m_Name: OldManFaces
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4294,6 +4330,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1926514434}
   - component: {fileID: 1926514435}
+  - component: {fileID: 1926514436}
+  - component: {fileID: 1926514437}
   m_Layer: 0
   m_Name: QuestDialogue
   m_TagString: Untagged
@@ -4356,6 +4394,85 @@ MonoBehaviour:
             to get me some water.
           faceToShow: {fileID: 639010263}
         choices: []
+--- !u!114 &1926514436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926514433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue:
+    - text: "Why, hello miss. \nDid you need something?"
+      faceToShow: {fileID: 0}
+    choices: []
+  itemNodes:
+  - dialogue:
+    - text: What is this, now?
+      faceToShow: {fileID: 0}
+    choices: []
+  - dialogue:
+    - text: Oh, thank you very much!
+      faceToShow: {fileID: 559810202}
+    choices: []
+  - dialogue:
+    - text: Oh, thank you very much!
+      faceToShow: {fileID: 559810202}
+    choices: []
+  talkNodes:
+  - dialogue:
+    - text: Hello there.
+      faceToShow: {fileID: 1189405829}
+    - text: Would you be so kind as to grab me some water for my plant?
+      faceToShow: {fileID: 1189405829}
+    - text: 'She''s starting to wilt and I have no running water in my apartment. '
+      faceToShow: {fileID: 965436795}
+    choices:
+    - choiceText: Of course
+      nextNode:
+        dialogue:
+        - text: Thank you, ma'am.
+          faceToShow: {fileID: 1189405829}
+        - text: You have no idea how much this plant means to me.
+          faceToShow: {fileID: 559810202}
+        choices: []
+    - choiceText: I don't have time
+      nextNode:
+        dialogue:
+        - text: Oh, that's OK.
+          faceToShow: {fileID: 683076375}
+        - text: I've only had this plant for years and named it after my late wife.
+          faceToShow: {fileID: 965436795}
+        - text: But I understand if you can't take time out of your busy schedule
+            to get me some water.
+          faceToShow: {fileID: 639010263}
+        choices: []
+  itemID: 0
+  questStep: 0
+  questItem: 04000000
+  questDay: 3
+  starter: {fileID: 1926514437}
+  childRoom: 0
+  quest: {fileID: 11400000, guid: 5022cd9f10335e54394f8ad347a1b4f3, type: 2}
+--- !u!114 &1926514437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926514433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: 5022cd9f10335e54394f8ad347a1b4f3, type: 2}
+  brancher: {fileID: 1926514436}
 --- !u!1 &1935544093
 GameObject:
   m_ObjectHideFlags: 0

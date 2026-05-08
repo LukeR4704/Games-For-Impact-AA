@@ -710,6 +710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 180207490}
   - component: {fileID: 180207489}
+  - component: {fileID: 180207491}
   m_Layer: 0
   m_Name: Dialogues
   m_TagString: Untagged
@@ -731,7 +732,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: Sup? I'm Niamh.
+    - text: 'Oh, hi. Emily isn''t it?
+
+        If you need something just ask.'
       faceToShow: {fileID: 1694657495}
     choices: []
 --- !u!4 &180207490
@@ -752,6 +755,26 @@ Transform:
   - {fileID: 881475180}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180207491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180207488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa211efb99fa24cb030f4006c3575f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcManager
+  dialogues:
+  - {fileID: 602683355}
+  - {fileID: 401718316}
+  - {fileID: 881475179}
+  talk: {fileID: 1145951325}
+  quest: {fileID: 11400000, guid: 94b88e0b0d17e594bafdb2be1f950bc8, type: 2}
+  QuestDay: 2
+  textBox: {fileID: 992913996}
 --- !u!1001 &208612690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1223,6 +1246,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3111116066499450354, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
+      propertyPath: currentDay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3519341065931946936, guid: 2483623389eafe34db8efcd32b7ea210, type: 3}
       propertyPath: m_Name
       value: TimeManager
@@ -1282,6 +1309,8 @@ GameObject:
   m_Component:
   - component: {fileID: 401718317}
   - component: {fileID: 401718318}
+  - component: {fileID: 401718319}
+  - component: {fileID: 401718320}
   m_Layer: 0
   m_Name: QuestDialogue
   m_TagString: Untagged
@@ -1318,7 +1347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: Hi, miss.
+    - text: Hey, Emily...
       faceToShow: {fileID: 886205910}
     choices:
     - choiceText: Hi
@@ -1349,6 +1378,98 @@ MonoBehaviour:
             - text: Why not?
               faceToShow: {fileID: 1616891206}
             choices: []
+--- !u!114 &401718319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401718316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b18966dcb76e47831c7a86d39be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBrancher
+  baseNode:
+    dialogue:
+    - text: "Oh. Hi Emily. \nHere to borrow some matches again?"
+      faceToShow: {fileID: 0}
+    choices: []
+  itemNodes:
+  - dialogue:
+    - text: What is that?
+      faceToShow: {fileID: 0}
+    choices: []
+  - dialogue:
+    - text: 'Thank you!
+
+        Thank you so much!'
+      faceToShow: {fileID: 1694657495}
+    choices: []
+  - dialogue:
+    - text: 'Thank you!
+
+        Thank you so much!'
+      faceToShow: {fileID: 1694657495}
+    choices: []
+  talkNodes:
+  - dialogue:
+    - text: Hey, Emily...
+      faceToShow: {fileID: 886205910}
+    choices:
+    - choiceText: Hi
+      nextNode:
+        dialogue:
+        - text: ...
+          faceToShow: {fileID: 886205910}
+        choices: []
+    - choiceText: Are you OK?
+      nextNode:
+        dialogue:
+        - text: Um. My period started and I ran out of pads...
+          faceToShow: {fileID: 787306032}
+        - text: Could you please grab me some?
+          faceToShow: {fileID: 787306032}
+        choices:
+        - choiceText: Yes of course
+          nextNode:
+            dialogue:
+            - text: Thank you, miss. I appreciate it.
+              faceToShow: {fileID: 1694657495}
+            choices: []
+        - choiceText: Sorry I can't
+          nextNode:
+            dialogue:
+            - text: Seriously?
+              faceToShow: {fileID: 555416977}
+            - text: Why not?
+              faceToShow: {fileID: 1616891206}
+            choices: []
+  - dialogue:
+    - text: Please help me with this, I'll be forever grateful.
+      faceToShow: {fileID: 886205910}
+    choices: []
+  itemID: 0
+  questStep: 0
+  questItem: 05000000
+  questDay: 2
+  starter: {fileID: 401718320}
+  childRoom: 0
+  quest: {fileID: 11400000, guid: f35dcfc65853ba4429b2a2b5b155bf45, type: 2}
+--- !u!114 &401718320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401718316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: f35dcfc65853ba4429b2a2b5b155bf45, type: 2}
+  brancher: {fileID: 401718319}
 --- !u!1 &433780221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,7 +2120,7 @@ GameObject:
   - component: {fileID: 555416979}
   m_Layer: 5
   m_Name: ShockedLady
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2245,7 +2366,7 @@ GameObject:
   - component: {fileID: 787306033}
   m_Layer: 5
   m_Name: NeutralLady
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2353,7 +2474,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   startingNode:
     dialogue:
-    - text: Hey, thanks miss.
+    - text: 'Hey, Em!
+
+        Thanks again.'
       faceToShow: {fileID: 555416977}
     - text: That was really kind of you to help me out.
       faceToShow: {fileID: 1694657495}
@@ -2371,7 +2494,7 @@ GameObject:
   - component: {fileID: 886205912}
   m_Layer: 5
   m_Name: SadLady
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2651,7 +2774,6 @@ MonoBehaviour:
   audioSource: {fileID: 992913995}
   blipSound: {fileID: 8300000, guid: d14090150015d65429f5a82882a47451, type: 3}
   lettersPerBlip: 10
-  pitchVariation: 0.15
   faceParent: {fileID: 1060184330}
 --- !u!114 &992913997
 MonoBehaviour:
@@ -2702,7 +2824,7 @@ GameObject:
   - component: {fileID: 1060184330}
   m_Layer: 5
   m_Name: LadyFaces
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3553,6 +3675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488419486}
   - component: {fileID: 1488419487}
+  - component: {fileID: 1488419488}
   m_Layer: 5
   m_Name: Decisions
   m_TagString: Untagged
@@ -3595,9 +3718,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceUI
   leftButton: {fileID: 1577574694}
   rightButton: {fileID: 55079857}
-  questAvailable: 0
+  questAvailable: 1
   bedChoice: 0
   childChoice: 0
+--- !u!114 &1488419488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488419485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f19f595fc8bb4681404066e611ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestStarter
+  data: {fileID: 11400000, guid: f35dcfc65853ba4429b2a2b5b155bf45, type: 2}
+  brancher: {fileID: 401718319}
 --- !u!1 &1517991829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,7 +4060,7 @@ GameObject:
   - component: {fileID: 1616891208}
   m_Layer: 5
   m_Name: AngryLady
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4135,7 +4272,7 @@ GameObject:
   - component: {fileID: 1694657497}
   m_Layer: 5
   m_Name: HappyLady
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
